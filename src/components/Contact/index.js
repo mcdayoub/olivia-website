@@ -128,7 +128,12 @@ class Contact extends Component {
                 <Link to="/contact">contact--></Link>
               </div>
             </div>
-            <form className="contact-form" onSubmit={e => this.formSubmit(e)}>
+            <form
+              className="contact-form"
+              action="POST"
+              data-netlify="true"
+              onSubmit={e => this.formSubmit(e)}
+            >
               <label class="message" htmlFor="message-input">
                 Your Message
               </label>
