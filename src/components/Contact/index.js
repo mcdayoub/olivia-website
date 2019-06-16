@@ -118,6 +118,7 @@ class Contact extends Component {
               className="contact-form"
               method="POST"
               data-netlify="true"
+              netlify="true"
               onSubmit={e => this.formSubmit(e)}
             >
               <label class="message" htmlFor="message-input">
