@@ -1,0 +1,42 @@
+return (
+      <div>
+        <Display>
+          <div className="container">
+            <div className="container-2">
+              <Link to="/">
+                <img
+                  className="logo"
+                  src={require('../../weblogoolivia-01.png')}
+                  alt="hello"
+                />
+              </Link>
+              <div className="linkItem">
+                <Link to="/work">work</Link>
+              </div>
+              <div className="linkItem">
+                <Link to="/about">about</Link>
+              </div>
+              <div className="linkItem">
+                <Link to="/instagram">instagram</Link>
+              </div>
+              <div className="linkItem">
+                <Link to="/resume">resume</Link>
+              </div>
+            </div>
+            <div className="section">
+              {this.state.photos.map((photo, key) => {
+                return (
+                  <div className="media" key={photo.id}>
+                    <img
+                      className="media"
+                      src={photo.images.standard_resolution.url}
+                      alt={photo.caption}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </Display>
+      </div>
+    );
