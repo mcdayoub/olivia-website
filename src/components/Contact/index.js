@@ -71,21 +71,6 @@ class Contact extends Component {
     this.setState({
       buttonText: '...sending'
     });
-
-    let data = {
-      name: this.state.name,
-      email: this.state.email,
-      message: this.state.message
-    };
-
-    axios
-      .post('API_URI', data)
-      .then(res => {
-        this.setState({ sent: true }, this.resetForm());
-      })
-      .catch(() => {
-        console.log('Message not sent');
-      });
   };
   resetForm = () => {
     this.setState({
@@ -130,7 +115,7 @@ class Contact extends Component {
             </div>
             <form
               className="contact-form"
-              action="POST"
+              method="POST"
               data-netlify="true"
               onSubmit={e => this.formSubmit(e)}
             >
