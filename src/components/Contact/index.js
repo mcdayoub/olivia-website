@@ -57,6 +57,12 @@ const Paragraph = styled.ul`
   font-size: 18px;
 `;
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 class Contact extends Component {
   state = {
     name: '',
@@ -65,12 +71,19 @@ class Contact extends Component {
     sent: false,
     buttonText: 'Send Message'
   };
-  formSubmit = e => {
-    e.preventDefault();
-
+  handleSubmit = e => {
     this.setState({
       buttonText: '...sending'
     });
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...this.state })
+    })
+      .then(() => alert('Success!'))
+      .catch(error => alert(error));
+
+    e.preventDefault();
   };
   resetForm = () => {
     this.setState({
@@ -119,7 +132,7 @@ class Contact extends Component {
               method="POST"
               data-netlify="true"
               netlify="true"
-              onSubmit={e => this.formSubmit(e)}
+              onSubmit={e => this.handleSubmit(e)}
             >
               <label class="message" htmlFor="message-input">
                 Your Message
