@@ -132,8 +132,11 @@ class Contact extends Component {
               method="POST"
               data-netlify="true"
               netlify="true"
+              name="contact"
               onSubmit={e => this.handleSubmit(e)}
             >
+              <input type="hidden" name="form-name" value="contact" />
+
               <label class="message" htmlFor="message-input">
                 Your Message
               </label>
