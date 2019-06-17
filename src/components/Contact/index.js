@@ -63,18 +63,15 @@ const encode = data => {
     .join('&');
 };
 
-class Contact extends Component {
-  state = {
-    name: '',
-    message: '',
-    email: '',
-    sent: false,
-    buttonText: 'Send Message'
-  };
+class ContactForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: '', email: '', message: '' };
+  }
+
+  /* Here’s the juicy bit for posting the form submission */
+
   handleSubmit = e => {
-    this.setState({
-      buttonText: '...sending'
-    });
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -85,107 +82,177 @@ class Contact extends Component {
 
     e.preventDefault();
   };
-  resetForm = () => {
-    this.setState({
-      name: '',
-      message: '',
-      email: '',
-      buttonText: 'Message Sent'
-    });
-  };
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
+    const { name, email, message } = this.state;
     return (
-      <div>
-        <Display>
-          <div className="container">
-            <div className="container-2">
-              <Link to="/">
-                <img
-                  className="logo"
-                  src={require('../../weblogoolivia-01.png')}
-                  alt="hello"
-                />
-              </Link>
-              <div className="linkItem">
-                <Link to="/work">work</Link>
-              </div>
-              <div className="linkItem">
-                <Link to="/about">about</Link>
-              </div>
-              <div className="linkItem">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.instagram.com/rgbqueen/"
-                >
-                  instagram
-                </a>
-              </div>
-              <div className="linkItem">
-                <Link to="/contact">contact--></Link>
-              </div>
-            </div>
-            <form
-              id="emailform"
-              className="contact-form"
-              method="POST"
-              data-netlify="true"
-              netlify="true"
-              name="contact"
-              onSubmit={e => this.handleSubmit(e)}
-            >
-              <input type="hidden" name="form-name" value="contact" />
-
-              <label class="message" htmlFor="message-input">
-                Your Message
-              </label>
-              <textarea
-                onChange={e => this.setState({ message: e.target.value })}
-                name="message"
-                class="message-input"
-                type="text"
-                placeholder="Please write your message here"
-                value={this.state.message}
-                required
-              />
-
-              <label class="message-name" htmlFor="message-name">
-                Your Name
-              </label>
-              <input
-                onChange={e => this.setState({ name: e.target.value })}
-                name="name"
-                class="message-name"
-                type="text"
-                placeholder="Your Name"
-                value={this.state.name}
-              />
-
-              <label class="message-email" htmlFor="message-email">
-                Your Email
-              </label>
-              <input
-                onChange={e => this.setState({ email: e.target.value })}
-                name="email"
-                class="message-email"
-                type="email"
-                placeholder="your@email.com"
-                required
-                value={this.state.email}
-              />
-
-              <div className="button--container">
-                <button type="submit" className="button button-primary">
-                  {this.state.buttonText}
-                </button>
-              </div>
-            </form>
-          </div>
-        </Display>
-      </div>
+      <form onSubmit={this.handleSubmit}>
+        <p>
+          <label>
+            Your Name:{' '}
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={this.handleChange}
+            />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Email:{' '}
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={this.handleChange}
+            />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message:{' '}
+            <textarea
+              name="message"
+              value={message}
+              onChange={this.handleChange}
+            />
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
     );
   }
 }
 
-export default Contact;
+// class Contact extends Component {
+//   state = {
+//     name: '',
+//     message: '',
+//     email: '',
+//     sent: false,
+//     buttonText: 'Send Message'
+//   };
+//   handleSubmit = e => {
+//     this.setState({
+//       buttonText: '...sending'
+//     });
+//     fetch('/', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+//       body: encode({ 'form-name': 'contact', ...this.state })
+//     })
+//       .then(() => alert('Success!'))
+//       .catch(error => alert(error));
+
+//     e.preventDefault();
+//   };
+
+//   resetForm = () => {
+//     this.setState({
+//       name: '',
+//       message: '',
+//       email: '',
+//       buttonText: 'Message Sent'
+//     });
+//   };
+
+//   render() {
+//     return (
+//       <div>
+//         <Display>
+//           <div className="container">
+//             <div className="container-2">
+//               <Link to="/">
+//                 <img
+//                   className="logo"
+//                   src={require('../../weblogoolivia-01.png')}
+//                   alt="hello"
+//                 />
+//               </Link>
+//               <div className="linkItem">
+//                 <Link to="/work">work</Link>
+//               </div>
+//               <div className="linkItem">
+//                 <Link to="/about">about</Link>
+//               </div>
+//               <div className="linkItem">
+//                 <a
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   href="https://www.instagram.com/rgbqueen/"
+//                 >
+//                   instagram
+//                 </a>
+//               </div>
+//               <div className="linkItem">
+//                 <Link to="/contact">contact--></Link>
+//               </div>
+//             </div>
+//             <form
+//               id="emailform"
+//               className="contact-form"
+//               method="POST"
+//               data-netlify="true"
+//               netlify="true"
+//               name="contact"
+//               onSubmit={e => this.handleSubmit(e)}
+//             >
+//               <input type="hidden" name="form-name" value="contact" />
+
+//               <label class="message" htmlFor="message-input">
+//                 Your Message
+//               </label>
+//               <textarea
+//                 onChange={e => this.setState({ message: e.target.value })}
+//                 name="message"
+//                 class="message-input"
+//                 type="text"
+//                 placeholder="Please write your message here"
+//                 value={this.state.message}
+//                 required
+//               />
+
+//               <label class="message-name" htmlFor="message-name">
+//                 Your Name
+//               </label>
+//               <input
+//                 onChange={e => this.setState({ name: e.target.value })}
+//                 name="name"
+//                 class="message-name"
+//                 type="text"
+//                 placeholder="Your Name"
+//                 value={this.state.name}
+//               />
+
+//               <label class="message-email" htmlFor="message-email">
+//                 Your Email
+//               </label>
+//               <input
+//                 onChange={e => this.setState({ email: e.target.value })}
+//                 name="email"
+//                 class="message-email"
+//                 type="email"
+//                 placeholder="your@email.com"
+//                 required
+//                 value={this.state.email}
+//               />
+
+//               <div className="button--container">
+//                 <button type="submit" className="button button-primary">
+//                   {this.state.buttonText}
+//                 </button>
+//               </div>
+//             </form>
+//           </div>
+//         </Display>
+//       </div>
+//     );
+//   }
+// }
+
+export default ContactForm;
