@@ -90,11 +90,13 @@ class ContactForm extends React.Component {
     return (
       <form
         onSubmit={this.handleSubmit}
+        name="contact"
         netlify="true"
         data-netlify="true"
-        method="POST"
+        method="post"
         data-netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="bot-field" />
         <p>
           <label>
             Your Name:{' '}
