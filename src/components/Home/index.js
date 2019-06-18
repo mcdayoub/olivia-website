@@ -90,27 +90,6 @@ const Display = styled.ul`
       transform: rotate(360deg);
     }
   }
-  .logo:hover {
-    -webkit-animation: reversespin 25s linear infinite;
-    -moz-animation: reversespin 25s linear infinite;
-    animation: reversespin 25s linear infinite;
-  }
-  @-moz-keyframes reversespin {
-    100% {
-      -moz-transform: rotate(-360deg);
-    }
-  }
-  @-webkit-keyframes reversespin {
-    100% {
-      -webkit-transform: rotate(-360deg);
-    }
-  }
-  @keyframes reversespin {
-    100% {
-      -webkit-transform: rotate(-360deg);
-      transform: rotate(-360deg);
-    }
-  }
 
   left {
     order: 1;
@@ -149,6 +128,11 @@ const Home = ({ theme }) => (
           <img
             className="logo center"
             src={require('../Logos/LogoRed.png')}
+            alt="hello"
+          />
+          <img
+            className="logo center"
+            src={context => theme.theme.picture}
             alt="hello"
           />
         </div>
