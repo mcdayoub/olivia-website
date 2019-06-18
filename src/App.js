@@ -26,7 +26,7 @@ class App extends Component {
     let currentHour = date.getHours();
     console.log(currentHour);
     if (currentHour >= 20 || currentHour <= 8) {
-      this.setState({ theme: themes.dark });
+      //this.setState({ theme: themes.dark });
       console.log('hey');
     }
   }

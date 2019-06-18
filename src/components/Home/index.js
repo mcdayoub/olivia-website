@@ -5,17 +5,15 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 const Display = styled.ul`
   background: ${props => props.theme.theme.background};
   color: ${props => props.theme.theme.color};
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
 
   .App {
-    background-color: #f8f3f0;
+    background-color: #f4f2f2;
     height: 100vh;
     width: 100%;
   }
 
-  .logo {
-    height: 400px;
-  }
   .container {
     display: flex;
     justify-content: space-evenly;
@@ -39,14 +37,49 @@ const Display = styled.ul`
     padding: 35px;
   }
 
+  /* .container-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } */
+
   .container-4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+  }
+
+  .spinner {
+  }
+  .logo {
+    height: 375px;
+    position: absolute;
   }
 
   center {
     order: 2;
+  }
+  .spin {
+    -webkit-animation: spin 25s linear infinite;
+    -moz-animation: spin 25s linear infinite;
+    animation: spin 25s linear infinite;
+  }
+  @-moz-keyframes spin {
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
   }
 
   left {
@@ -79,8 +112,13 @@ const Home = ({ theme }) => (
         </div>
         <div className="container-4">
           <img
+            className="logo spin"
+            src={require('../Logos/LogoRedSpin.png')}
+            alt="hello"
+          />
+          <img
             className="logo center"
-            src={require('../../weblogoolivia-01.png')}
+            src={require('../Logos/LogoRed.png')}
             alt="hello"
           />
         </div>

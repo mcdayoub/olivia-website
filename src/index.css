@@ -69,14 +69,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 @font-face {
-  font-family: 'AndaleMono';
+  font-family: 'Courier';
   font-style: normal;
   font-weight: normal;
   src: url('AndaleMono.ttf') format('truetype');
 }
 
 html {
-  font-family: 'AndaleMono', sans-serif;
+  font-family: 'Courier', sans-serif;
   margin: 0;
   width: 100%;
 }
