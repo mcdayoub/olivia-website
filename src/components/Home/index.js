@@ -130,11 +130,6 @@ const Home = ({ theme }) => (
             src={require('../Logos/LogoRed.png')}
             alt="hello"
           />
-          <img
-            className="logo center"
-            src={context => theme.theme.picture}
-            alt="hello"
-          />
         </div>
         <div className="right container-3">
           <div className="topRight">
