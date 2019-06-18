@@ -128,16 +128,6 @@ const Display = styled.ul`
   }
 `;
 
-function LogoChooser() {
-  return (
-    <img
-      className="logo center"
-      key={props => props.theme.theme.picture}
-      src={props => props.theme.theme.picture}
-      alt=""
-    />
-  );
-}
 const Home = ({ theme }) => (
   <div>
     <Display>
@@ -161,7 +151,6 @@ const Home = ({ theme }) => (
             src={require('../Logos/LogoRed.png')}
             alt="hello"
           />
-          <LogoChooser />
         </div>
         <div className="right container-3">
           <div className="topRight">
