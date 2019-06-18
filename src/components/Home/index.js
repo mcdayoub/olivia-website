@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import imgLogoRed from './LogoRed.png';
+import imgLogoGreen from './LogoGreen.png';
+import imgLogoBlue from './LogoBlue.png';
+import imgLogoRedSpin from './LogoRedSpin.png';
+import imgLogoGreenSpin from './LogoGreenSpin.png';
+import imgLogoBlueSpin from './LogoBlueSpin.png';
 
 const Display = styled.ul`
   background: ${props => props.theme.theme.background};
@@ -84,6 +90,27 @@ const Display = styled.ul`
       transform: rotate(360deg);
     }
   }
+  .logo:hover {
+    -webkit-animation: reversespin 25s linear infinite;
+    -moz-animation: reversespin 25s linear infinite;
+    animation: reversespin 25s linear infinite;
+  }
+  @-moz-keyframes reversespin {
+    100% {
+      -moz-transform: rotate(-360deg);
+    }
+  }
+  @-webkit-keyframes reversespin {
+    100% {
+      -webkit-transform: rotate(-360deg);
+    }
+  }
+  @keyframes reversespin {
+    100% {
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+  }
 
   left {
     order: 1;
@@ -101,6 +128,16 @@ const Display = styled.ul`
   }
 `;
 
+function LogoChooser() {
+  return (
+    <img
+      className="logo center"
+      key={props => props.theme.theme.picture}
+      src={props => props.theme.theme.picture}
+      alt=""
+    />
+  );
+}
 const Home = ({ theme }) => (
   <div>
     <Display>
@@ -124,6 +161,7 @@ const Home = ({ theme }) => (
             src={require('../Logos/LogoRed.png')}
             alt="hello"
           />
+          <LogoChooser />
         </div>
         <div className="right container-3">
           <div className="topRight">
