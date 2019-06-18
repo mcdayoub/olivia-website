@@ -9,7 +9,6 @@ const Display = styled.ul`
   font-weight: bold;
 
   .App {
-    background-color: #f4f2f2;
     height: 100vh;
     width: 100%;
   }
@@ -55,6 +54,10 @@ const Display = styled.ul`
   .logo {
     height: 375px;
     position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -187.5px;
+    margin-top: -187.5px;
   }
 
   center {
