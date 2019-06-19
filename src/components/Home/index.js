@@ -30,7 +30,9 @@ const DisplayRed = styled.ul`
     justify-content: space-between;
     width: 100%;
     text-align: left;
-    padding: 35px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 25px;
   }
 
   .container-3 {
@@ -39,7 +41,9 @@ const DisplayRed = styled.ul`
     justify-content: space-between;
     width: 100%;
     text-align: right;
-    padding: 35px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-right: 25px;
   }
 
   .container-4 {
