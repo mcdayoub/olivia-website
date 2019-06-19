@@ -69,14 +69,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 @font-face {
-  font-family: 'Courier';
+  font-family: 'Courier New', serif;
   font-style: normal;
   font-weight: normal;
-  src: url('AndaleMono.ttf') format('truetype');
 }
 
 html {
-  font-family: 'Courier', sans-serif;
+  font-family: 'Courier New', serif;
   margin: 0;
   width: 100%;
 }
