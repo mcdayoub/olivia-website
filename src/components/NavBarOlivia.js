@@ -18,6 +18,7 @@ const NavBarStyle = styled.ul`
   }
   a {
     text-decoration: none;
+    color: inherit;
   }
   a:visited {
     color: ${props => props.color};

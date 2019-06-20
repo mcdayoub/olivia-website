@@ -98,6 +98,7 @@ const DisplayRed = styled.ul`
   }
   a {
     text-decoration: none;
+    color: inherit;
   }
 
   a:visited {
