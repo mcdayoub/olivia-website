@@ -192,7 +192,7 @@ class Home extends Component {
   render() {
     return (
       <DisplayRed color={this.state.color}>
-        <div className="container">
+        <div className="container" onClick={this.handleChange}>
           <div className="left container-2">
             <div className="topLeft">
               <Link to="/work">work</Link>
