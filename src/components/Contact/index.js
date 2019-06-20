@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import axios from 'axios';
+import NavBarOlivia from '../NavBarOlivia';
+import Logo from './LogoBlue.png';
 
 const Display = styled.ul`
   background: white;
@@ -34,9 +35,6 @@ const Display = styled.ul`
     flex-basis: 20%;
   }
 
-  .logo {
-    height: 200px;
-  }
   .polaroid {
     height: 500px;
   }
@@ -62,6 +60,8 @@ const encode = data => {
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 };
+const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
+const notbold = { 'padding-right': '60px' };
 
 class ContactForm extends React.Component {
   constructor(props) {
@@ -88,50 +88,60 @@ class ContactForm extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form
-        onSubmit={this.handleSubmit}
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <p>
-          <label>
-            Your Name:
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:
-            <textarea
-              name="message"
-              value={message}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+      <div>
+        <NavBarOlivia
+          Logo={Logo}
+          work={notbold}
+          instagram={notbold}
+          about={notbold}
+          contact={bold}
+          color={'#425bea'}
+        />
+        <form
+          onSubmit={this.handleSubmit}
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p>
+            <label>
+              Your Name:
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={this.handleChange}
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Email
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message:
+              <textarea
+                name="message"
+                value={message}
+                onChange={this.handleChange}
+              />
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+      </div>
     );
   }
 }

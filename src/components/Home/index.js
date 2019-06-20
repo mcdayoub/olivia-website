@@ -104,33 +104,90 @@ const DisplayRed = styled.ul`
     color: ${props => props.color};
   }
 `;
+const colorArray = ['#EF514D', '#04ad84', '#425bea'];
+const redImgArray = [imgLogoRed, imgLogoRedSpin];
+const greenImgArray = [imgLogoGreen, imgLogoGreenSpin];
+const blueImgArray = [imgLogoBlue, imgLogoBlueSpin];
+const fullImgArray = [redImgArray, greenImgArray, blueImgArray];
 
 class Home extends Component {
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
+
     this.state = {
       color: '#EF514D',
-      logo: imgLogoRed,
-      logoSpin: imgLogoRedSpin
+      logo: '',
+      logoSpin: '',
+      number: 0
     };
   }
 
-  componentWillMount() {
-    //let random = Math.floor(Math.random() * 3);
+  componentDidMount() {
     let min = Math.ceil(3);
     let max = Math.floor(0);
     let random = Math.floor(Math.random() * (max - min)) + min;
-    let colorArray = ['#EF514D', '#04ad84', '#425bea'];
-    let redImgArray = [imgLogoRed, imgLogoRedSpin];
-    let greenImgArray = [imgLogoGreen, imgLogoGreenSpin];
-    let blueImgArray = [imgLogoBlue, imgLogoBlueSpin];
-    let fullImgArray = [redImgArray, greenImgArray, blueImgArray];
     this.setState({
       color: colorArray[random],
       logo: fullImgArray[random][0],
-      logoSpin: fullImgArray[random][1]
+      logoSpin: fullImgArray[random][1],
+      number: random
     });
   }
+  handleChange() {
+    if (this.state.number === 0 || this.state.number === 1) {
+      this.setState({
+        color: colorArray[this.state.number + 1],
+        logo: fullImgArray[this.state.number + 1][0],
+        logoSpin: fullImgArray[this.state.number + 1][1],
+        number: this.state.number + 1
+      });
+    } else {
+      this.setState({
+        color: colorArray[0],
+        logo: fullImgArray[0][0],
+        logoSpin: fullImgArray[0][1],
+        number: 0
+      });
+    }
+  }
+  content() {
+    return (
+      <DisplayRed color={this.state.color}>
+        <div className="container">
+          <div className="left container-2">
+            <div className="topLeft">
+              <Link to="/work">work</Link>
+            </div>
+            <div className="bottomLeft">
+              <Link to="/about">about</Link>
+            </div>
+          </div>
+          <div className="container-4">
+            <img className="logo spin" src={this.state.logoSpin} alt="hello" />
+            <Link to="/">
+              <img className="logo center" src={this.state.logo} alt="hello" />
+            </Link>
+          </div>
+          <div className="right container-3">
+            <div className="topRight">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/rgbqueen/"
+              >
+                instagram
+              </a>
+            </div>
+            <div className="bottomRight">
+              <Link to="/contact">contact</Link>
+            </div>
+          </div>
+        </div>
+      </DisplayRed>
+    );
+  }
+
   render() {
     return (
       <DisplayRed color={this.state.color}>
@@ -145,7 +202,12 @@ class Home extends Component {
           </div>
           <div className="container-4">
             <img className="logo spin" src={this.state.logoSpin} alt="hello" />
-            <img className="logo center" src={this.state.logo} alt="hello" />
+            <img
+              className="logo center"
+              src={this.state.logo}
+              alt="hello"
+              onClick={this.handleChange}
+            />
           </div>
           <div className="right container-3">
             <div className="topRight">

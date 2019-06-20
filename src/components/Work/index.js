@@ -3,18 +3,20 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import request from 'superagent';
 import Preview from './Preview';
+import NavBarOlivia from '../NavBarOlivia';
+import Logo from './LogoRed.png';
 
 const Display = styled.ul`
   background: white;
   color: black;
-  .whiteBar {
+  /* .whiteBar {
     position: fixed;
     top: 0;
     width: 100%;
     height: 30px;
     z-index: 100;
     background-color: white;
-  }
+  } */
   .whiteBar2 {
     position: fixed;
     bottom: 0;
@@ -163,6 +165,9 @@ function PreviewPhotos() {
   );
 }
 
+const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
+const notbold = { 'padding-right': '60px' };
+
 class Instagram extends Component {
   constructor(props) {
     super(props);
@@ -212,6 +217,14 @@ class Instagram extends Component {
     }
     return (
       <div>
+        <NavBarOlivia
+          Logo={Logo}
+          work={bold}
+          instagram={notbold}
+          about={notbold}
+          contact={notbold}
+          color={'#fc4242'}
+        />
         <Display>
           <div className="whiteBar" />
           <div className="container">

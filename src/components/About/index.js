@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import NavBarOlivia from '../NavBarOlivia';
+import Logo from './LogoGreen.png';
 
 const Display = styled.ul`
   background: white;
@@ -55,9 +57,19 @@ const Display = styled.ul`
 const Paragraph = styled.ul`
   font-size: 18px;
 `;
+const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
+const notbold = { 'padding-right': '60px' };
 
 const About = () => (
   <div>
+    <NavBarOlivia
+      Logo={Logo}
+      work={notbold}
+      instagram={notbold}
+      about={bold}
+      contact={notbold}
+      color={'#04ad84'}
+    />
     <Display>
       <div className="container">
         <div className="container-2">
