@@ -5,18 +5,12 @@ import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoGreen.png';
 
 const Display = styled.ul`
-  background: white;
+  background: #f4f4f4;
   color: black;
   .container {
     display: flex;
     justify-content: flex-start;
-    height: 100vh;
-  }
-  .container-2 {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding-left: 35px;
+    height: 100%;
   }
   .container-3 {
     display: flex;
@@ -25,6 +19,8 @@ const Display = styled.ul`
     margin-left: auto;
     margin-right: 40px;
     justify-content: center;
+    padding-top: 75px;
+    padding-left: 50px;
   }
   .container-4 {
     display: flex;
@@ -48,10 +44,6 @@ const Display = styled.ul`
   a:visited {
     color: black;
   }
-  .linkItem {
-    padding-left: 25px;
-    padding-bottom: 10px;
-  }
 `;
 
 const Paragraph = styled.ul`
@@ -72,33 +64,6 @@ const About = () => (
     />
     <Display>
       <div className="container">
-        <div className="container-2">
-          <Link to="/">
-            <img
-              className="logo"
-              src={require('../../weblogoolivia-01.png')}
-              alt="hello"
-            />
-          </Link>
-          <div className="linkItem">
-            <Link to="/work">work</Link>
-          </div>
-          <div className="linkItem">
-            <Link to="/about">about--></Link>
-          </div>
-          <div className="linkItem">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/rgbqueen/"
-            >
-              instagram
-            </a>
-          </div>
-          <div className="linkItem">
-            <Link to="/contact">contact</Link>
-          </div>
-        </div>
         <div className="container-3">
           {' '}
           <img

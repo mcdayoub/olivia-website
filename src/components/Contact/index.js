@@ -3,19 +3,14 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoBlue.png';
+import './index.css';
 
 const Display = styled.ul`
   background: #f4f4f4;
   color: black;
-  html {
-    height: 100%;
-  }
 
   .container {
     display: flex;
-    height: 100%;
-  }
-  .fullscreen {
     height: 100%;
   }
 
@@ -29,10 +24,11 @@ const Display = styled.ul`
     text-align: center;
     top: 50%;
     left: 50%;
-    padding-top: 100px;
+    padding-top: 75px;
   }
   h3 {
     font-weight: normal;
+    text-decoration: underline;
   }
   .note {
     padding-bottom: 10px;
@@ -74,6 +70,9 @@ const Display = styled.ul`
     font-size: 14px;
     font-family: 'Courier New';
   }
+  .buttonDiv {
+    padding-top: 20px;
+  }
 `;
 
 const encode = data => {
@@ -107,7 +106,7 @@ class ContactForm extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <div style={{ height: '100%', margin: '0' }}>
+      <div>
         <NavBarOlivia
           Logo={Logo}
           work={notbold}
@@ -116,49 +115,51 @@ class ContactForm extends React.Component {
           contact={bold}
           color={'#425bea'}
         />
-        <Display>
-          <form
-            onSubmit={this.handleSubmit}
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-          >
-            <div className="note">
-              <h3>leave me a note</h3>
-            </div>
-            <input type="hidden" name="form-name" value="contact" />
-            <p>
-              <input
-                type="text"
-                name="name"
-                value={name}
-                onChange={this.handleChange}
-                placeholder="your name"
-              />
-            </p>
-            <p>
-              <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={this.handleChange}
-                placeholder="your email"
-              />
-            </p>
-            <p>
-              <textarea
-                name="message"
-                value={message}
-                onChange={this.handleChange}
-                placeholder="your message to me"
-              />
-            </p>
-            <p>
-              <button type="submit">send it!</button>
-            </p>
-          </form>
-        </Display>
+        <div className="container">
+          <Display>
+            <form
+              onSubmit={this.handleSubmit}
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              <div className="note">
+                <h3>leave me a note</h3>
+              </div>
+              <input type="hidden" name="form-name" value="contact" />
+              <p>
+                <input
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={this.handleChange}
+                  placeholder="your name"
+                />
+              </p>
+              <p>
+                <input
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={this.handleChange}
+                  placeholder="your email"
+                />
+              </p>
+              <p>
+                <textarea
+                  name="message"
+                  value={message}
+                  onChange={this.handleChange}
+                  placeholder="your message to me"
+                />
+              </p>
+              <div className="buttonDiv">
+                <button type="submit">send it!</button>
+              </div>
+            </form>
+          </Display>
+        </div>
       </div>
     );
   }
