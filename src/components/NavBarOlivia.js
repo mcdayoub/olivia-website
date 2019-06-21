@@ -33,7 +33,7 @@ const NavBarStyle = styled.ul`
   .column2 {
     flex-direction: column;
     float: right;
-    padding-top: 12px;
+    padding-top: 13px;
   }
   .links {
     padding-right: 60px;

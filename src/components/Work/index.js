@@ -21,7 +21,6 @@ const Display = styled.ul`
     background-color: white;
   } */
   .whiteBar2 {
-    position: fixed;
     bottom: 0;
     width: 100%;
     height: 30px;
@@ -112,13 +111,13 @@ const Display = styled.ul`
   .descriptionColumnOne {
     flex-direction: column;
     float: left;
-    width: 33%;
+    width: 28%;
     padding-right: 10px;
   }
   .descriptionColumnTwo {
     flex-direction: column;
     float: right;
-    width: 33%;
+    width: 28%;
     padding-left: 10px;
   }
   .imageContainer {
@@ -126,7 +125,7 @@ const Display = styled.ul`
   }
   .imageContainer img {
     width: 1000px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
 `;
 
