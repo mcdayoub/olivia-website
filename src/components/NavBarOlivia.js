@@ -54,9 +54,14 @@ export default class NavBarOlivia extends Component {
             <Link to="/work" style={this.props.work}>
               work
             </Link>
-            <Link to="/instagram" style={this.props.instagram}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/rgbqueen/"
+              style={this.props.instagram}
+            >
               instagram
-            </Link>
+            </a>
             <Link to="/about" style={this.props.about}>
               about
             </Link>

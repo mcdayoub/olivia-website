@@ -5,54 +5,75 @@ import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoBlue.png';
 
 const Display = styled.ul`
-  background: white;
+  background: #f4f4f4;
   color: black;
+  html {
+    height: 100%;
+  }
+
   .container {
     display: flex;
-    justify-content: flex-start;
-    height: 100vh;
+    height: 100%;
   }
-  .container-2 {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding-left: 35px;
-  }
-  .container-3 {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-left: auto;
-    margin-right: 40px;
-    justify-content: center;
-  }
-  .container-4 {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-right: auto;
-    justify-content: center;
-    flex-basis: 20%;
+  .fullscreen {
+    height: 100%;
   }
 
-  .polaroid {
-    height: 500px;
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
   }
-  a {
-    text-decoration: none;
+  form {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    padding-top: 100px;
   }
-
-  a:visited {
-    color: black;
+  h3 {
+    font-weight: normal;
   }
-  .linkItem {
-    padding-left: 25px;
+  .note {
     padding-bottom: 10px;
   }
-`;
 
-const Paragraph = styled.ul`
-  font-size: 18px;
+  input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: transparent;
+    border-bottom: 10px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid black;
+    font-size: 14px;
+    font-family: 'Courier New';
+  }
+  textarea {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: transparent;
+    height: 200px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid black;
+    resize: none;
+    font-size: 14px;
+    font-family: 'Courier New';
+  }
+  button {
+    background-color: #425bea;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Courier New';
+  }
 `;
 
 const encode = data => {
@@ -76,9 +97,7 @@ class ContactForm extends React.Component {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state })
-    })
-      .then(() => alert('Success!'))
-      .catch(error => alert(error));
+    }).catch(error => alert(error));
 
     e.preventDefault();
   };
@@ -88,7 +107,7 @@ class ContactForm extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <div>
+      <div style={{ height: '100%', margin: '0' }}>
         <NavBarOlivia
           Logo={Logo}
           work={notbold}
@@ -97,179 +116,52 @@ class ContactForm extends React.Component {
           contact={bold}
           color={'#425bea'}
         />
-        <form
-          onSubmit={this.handleSubmit}
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>
-              Your Name:
+        <Display>
+          <form
+            onSubmit={this.handleSubmit}
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <div className="note">
+              <h3>leave me a note</h3>
+            </div>
+            <input type="hidden" name="form-name" value="contact" />
+            <p>
               <input
                 type="text"
                 name="name"
                 value={name}
                 onChange={this.handleChange}
+                placeholder="your name"
               />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Email
+            </p>
+            <p>
               <input
                 type="email"
                 name="email"
                 value={email}
                 onChange={this.handleChange}
+                placeholder="your email"
               />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message:
+            </p>
+            <p>
               <textarea
                 name="message"
                 value={message}
                 onChange={this.handleChange}
+                placeholder="your message to me"
               />
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+            </p>
+            <p>
+              <button type="submit">send it!</button>
+            </p>
+          </form>
+        </Display>
       </div>
     );
   }
 }
-
-// class Contact extends Component {
-//   state = {
-//     name: '',
-//     message: '',
-//     email: '',
-//     sent: false,
-//     buttonText: 'Send Message'
-//   };
-//   handleSubmit = e => {
-//     this.setState({
-//       buttonText: '...sending'
-//     });
-//     fetch('/', {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-//       body: encode({ 'form-name': 'contact', ...this.state })
-//     })
-//       .then(() => alert('Success!'))
-//       .catch(error => alert(error));
-
-//     e.preventDefault();
-//   };
-
-//   resetForm = () => {
-//     this.setState({
-//       name: '',
-//       message: '',
-//       email: '',
-//       buttonText: 'Message Sent'
-//     });
-//   };
-
-//   render() {
-//     return (
-//       <div>
-//         <Display>
-//           <div className="container">
-//             <div className="container-2">
-//               <Link to="/">
-//                 <img
-//                   className="logo"
-//                   src={require('../../weblogoolivia-01.png')}
-//                   alt="hello"
-//                 />
-//               </Link>
-//               <div className="linkItem">
-//                 <Link to="/work">work</Link>
-//               </div>
-//               <div className="linkItem">
-//                 <Link to="/about">about</Link>
-//               </div>
-//               <div className="linkItem">
-//                 <a
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                   href="https://www.instagram.com/rgbqueen/"
-//                 >
-//                   instagram
-//                 </a>
-//               </div>
-//               <div className="linkItem">
-//                 <Link to="/contact">contact--></Link>
-//               </div>
-//             </div>
-//             <form
-//               id="emailform"
-//               className="contact-form"
-//               method="POST"
-//               data-netlify="true"
-//               netlify="true"
-//               name="contact"
-//               onSubmit={e => this.handleSubmit(e)}
-//             >
-//               <input type="hidden" name="form-name" value="contact" />
-
-//               <label class="message" htmlFor="message-input">
-//                 Your Message
-//               </label>
-//               <textarea
-//                 onChange={e => this.setState({ message: e.target.value })}
-//                 name="message"
-//                 class="message-input"
-//                 type="text"
-//                 placeholder="Please write your message here"
-//                 value={this.state.message}
-//                 required
-//               />
-
-//               <label class="message-name" htmlFor="message-name">
-//                 Your Name
-//               </label>
-//               <input
-//                 onChange={e => this.setState({ name: e.target.value })}
-//                 name="name"
-//                 class="message-name"
-//                 type="text"
-//                 placeholder="Your Name"
-//                 value={this.state.name}
-//               />
-
-//               <label class="message-email" htmlFor="message-email">
-//                 Your Email
-//               </label>
-//               <input
-//                 onChange={e => this.setState({ email: e.target.value })}
-//                 name="email"
-//                 class="message-email"
-//                 type="email"
-//                 placeholder="your@email.com"
-//                 required
-//                 value={this.state.email}
-//               />
-
-//               <div className="button--container">
-//                 <button type="submit" className="button button-primary">
-//                   {this.state.buttonText}
-//                 </button>
-//               </div>
-//             </form>
-//           </div>
-//         </Display>
-//       </div>
-//     );
-//   }
-// }
 
 export default ContactForm;
