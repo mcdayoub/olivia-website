@@ -7,7 +7,7 @@ import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoRed.png';
 
 const Display = styled.ul`
-  background: white;
+  background: #f4f4f4;
   color: black;
   /* .whiteBar {
     position: fixed;
@@ -23,12 +23,11 @@ const Display = styled.ul`
     width: 100%;
     height: 30px;
     z-index: 100;
-    background-color: white;
+    background-color: #f4f4f4;
   }
   .container {
     display: flex;
     justify-content: flex-start;
-    height: 100vh;
   }
   .container-2 {
     display: flex;
@@ -82,6 +81,43 @@ const Display = styled.ul`
     height: 300px;
     width: 300px;
   }
+  .title {
+    font-size: 32px;
+    font-weight: normal;
+    border-bottom: 2px solid currentColor;
+  }
+  .subtitle {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .description {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .titleContainer {
+    padding-top: 20px;
+    text-align: center;
+  }
+  .subtitleContainer {
+    padding-top: 10px;
+    text-align: center;
+  }
+  .descriptionContainer {
+    display: flex;
+    padding-top: 40px;
+    text-align: center;
+    justify-content: center;
+  }
+  .descriptionColumnOne {
+    flex-direction: column;
+    float: left;
+    width: 33%;
+  }
+  .descriptionColumnTwo {
+    flex-direction: column;
+    float: right;
+    width: 33%;
+  }
 `;
 
 let imageListOne = [
@@ -123,9 +159,21 @@ function Gallery(props) {
   });
   return (
     <div>
-      <h1>{props.title}</h1>
-      <h2>{props.description}</h2>
-      <div>{images}</div>
+      <div className="titleContainer">
+        <span className="title">{props.title}</span>
+      </div>
+      <div className="subtitleContainer">
+        <h2 className="subtitle">{props.subtitle}</h2>
+      </div>
+      <div className="descriptionContainer">
+        <div className="descriptionColumnOne">
+          <h3 className="description">{props.descriptionOne}</h3>
+        </div>
+        <div className="descriptionColumnTwo">
+          <h3 className="description">{props.descriptionTwo}</h3>
+        </div>
+      </div>
+      <div className="imageContainer">{images}</div>
     </div>
   );
 }
@@ -168,14 +216,17 @@ function PreviewPhotos() {
 const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
 const notbold = { 'padding-right': '60px' };
 
-class Instagram extends Component {
+class Work extends Component {
   constructor(props) {
     super(props);
     this.state = {
       previewPhotos: true,
       photos: [],
       title: '',
-      description: ''
+      subtitle: '',
+      description: '',
+      descriptionOne: '',
+      descriptionTwo: ''
     };
   }
 
@@ -184,9 +235,12 @@ class Instagram extends Component {
       this.setState(state => ({
         previewPhotos: false,
         photos: imageListOne,
-        title: 'Project One',
-        description:
-          'Wench trysail sloop man-of-war. Spike coffer topsail long clothes. Pink bilge pirate dead men tell no tales. Chandler piracy swing the lead hulk.'
+        title: "IT'S NOT FUCKING NUTS",
+        subtitle: 'business concept & branding',
+        descriptionOne:
+          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie',
+        descriptionTwo:
+          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie'
       }));
     };
     const imageClickTwo = () => {
@@ -228,40 +282,15 @@ class Instagram extends Component {
         <Display>
           <div className="whiteBar" />
           <div className="container">
-            <div className="container-2">
-              <Link to="/">
-                <img
-                  className="logo"
-                  src={require('../../weblogoolivia-01.png')}
-                  alt="hello"
-                />
-              </Link>
-              <div className="linkItem">
-                <Link to="/work">work--></Link>
-              </div>
-              <div className="linkItem">
-                <Link to="/about">about</Link>
-              </div>
-              <div className="linkItem">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.instagram.com/rgbqueen/"
-                >
-                  instagram
-                </a>
-              </div>
-              <div className="linkItem">
-                <Link to="/contact">contact</Link>
-              </div>
-            </div>
             <div className="container-3">
               <div>{projects}</div>
               <Gallery
                 className="gallery"
                 imgList={this.state.photos}
                 title={this.state.title}
-                description={this.state.description}
+                subtitle={this.state.subtitle}
+                descriptionOne={this.state.descriptionOne}
+                descriptionTwo={this.state.descriptionTwo}
                 action={this.state.action}
               />
             </div>
@@ -273,4 +302,4 @@ class Instagram extends Component {
   }
 }
 
-export default Instagram;
+export default Work;
