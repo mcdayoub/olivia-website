@@ -5,6 +5,9 @@ import request from 'superagent';
 import Preview from './Preview';
 import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoRed.png';
+import Nuts1 from './Nuts/Nuts1.png';
+import Nuts2 from './Nuts/Nuts2.png';
+import Nuts3 from './Nuts/Nuts3.png';
 
 const Display = styled.ul`
   background: #f4f4f4;
@@ -45,19 +48,11 @@ const Display = styled.ul`
     overflow-y: auto;
     justify-content: center;
   }
-  .galleryImage {
-    padding: 10px;
-    height: 100px;
-    width: 100px;
-  }
   .container-3::-webkit-scrollbar {
     display: none;
   }
   .photoDiv {
     padding: 5px;
-  }
-  img {
-    height: 400px;
   }
 
   .logo {
@@ -81,6 +76,11 @@ const Display = styled.ul`
     height: 300px;
     width: 300px;
   }
+  .previewImage {
+    height: 200px;
+    width: 200px;
+  }
+
   .title {
     font-size: 32px;
     font-weight: normal;
@@ -105,27 +105,32 @@ const Display = styled.ul`
   .descriptionContainer {
     display: flex;
     padding-top: 40px;
-    text-align: center;
     justify-content: center;
+    text-align: left;
+    padding-bottom: 40px;
   }
   .descriptionColumnOne {
     flex-direction: column;
     float: left;
     width: 33%;
+    padding-right: 10px;
   }
   .descriptionColumnTwo {
     flex-direction: column;
     float: right;
     width: 33%;
+    padding-left: 10px;
+  }
+  .imageContainer {
+    text-align: center;
+  }
+  .imageContainer img {
+    width: 1000px;
+    padding-bottom: 30px;
   }
 `;
 
-let imageListOne = [
-  './previews/four.png',
-  './previews/one.png',
-  './previews/one.png',
-  './previews/polaroid.png'
-];
+let imageListOne = [Nuts1, Nuts2, Nuts3];
 
 let imageListTwo = [
   './previews/bladee.png',
@@ -148,14 +153,7 @@ let previewImages = ['./previews/one.png', './previews/bladee.png'];
 
 function Gallery(props) {
   const images = props.imgList.map(image => {
-    return (
-      <img
-        className="galleryImage"
-        key={image}
-        src={require('' + image)}
-        alt=""
-      />
-    );
+    return <img className="galleryImage" key={image} src={image} alt="" />;
   });
   return (
     <div>
@@ -200,11 +198,13 @@ function PreviewPhotos() {
   return (
     <div className="container-3">
       <img
+        className="previewImage"
         src={require('./previews/one.png')}
         alt=""
         onClick={() => imageClickOne()}
       />
       <img
+        className="previewImage"
         src={require('./previews/bladee.png')}
         alt=""
         onClick={() => imageClickTwo()}
@@ -257,11 +257,13 @@ class Work extends Component {
       projects = (
         <div>
           <img
+            className="previewImage"
             src={require('./previews/one.png')}
             alt=""
             onClick={() => imageClickOne()}
           />
           <img
+            className="previewImage"
             src={require('./previews/bladee.png')}
             alt=""
             onClick={() => imageClickTwo()}
