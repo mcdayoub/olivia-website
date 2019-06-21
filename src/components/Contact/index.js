@@ -86,7 +86,13 @@ const notbold = { 'padding-right': '60px' };
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: '', email: '', message: '', buttonText: 'send it!' };
+    this.state = {
+      name: '',
+      email: '',
+      message: '',
+      buttonText: 'send it!',
+      title: 'leave me a note'
+    };
   }
 
   /* Here’s the juicy bit for posting the form submission */
@@ -97,7 +103,12 @@ class ContactForm extends React.Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state })
     })
-      .then(() => alert('Success!'))
+      .then(
+        this.setState({
+          buttonText: 'sent!',
+          title: 'thanks for your message!'
+        })
+      )
       .catch(error => alert(error));
     e.preventDefault();
   };
@@ -126,7 +137,7 @@ class ContactForm extends React.Component {
               data-netlify-honeypot="bot-field"
             >
               <div className="note">
-                <h3>leave me a note</h3>
+                <h3>{this.state.title}</h3>
               </div>
               <input type="hidden" name="form-name" value="contact" />
               <p>
