@@ -5,7 +5,7 @@ import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoGreen.png';
 
 const Display = styled.ul`
-  background: #f4f4f4;
+  background: white;
   color: black;
   .container {
     display: flex;

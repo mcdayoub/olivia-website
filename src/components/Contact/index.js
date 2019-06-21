@@ -6,7 +6,7 @@ import Logo from './LogoBlue.png';
 import './index.css';
 
 const Display = styled.ul`
-  background: #f4f4f4;
+  background: white;
   color: black;
 
   .container {
@@ -86,7 +86,7 @@ const notbold = { 'padding-right': '60px' };
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: '', email: '', message: '' };
+    this.state = { name: '', email: '', message: '', buttonText: 'send it!' };
   }
 
   /* Here’s the juicy bit for posting the form submission */
@@ -96,8 +96,9 @@ class ContactForm extends React.Component {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state })
-    }).catch(error => alert(error));
-
+    })
+      .then(() => alert('Success!'))
+      .catch(error => alert(error));
     e.preventDefault();
   };
 
@@ -134,7 +135,8 @@ class ContactForm extends React.Component {
                   name="name"
                   value={name}
                   onChange={this.handleChange}
-                  placeholder="your name"
+                  placeholder="your name "
+                  required
                 />
               </p>
               <p>
@@ -144,6 +146,7 @@ class ContactForm extends React.Component {
                   value={email}
                   onChange={this.handleChange}
                   placeholder="your email"
+                  required
                 />
               </p>
               <p>
@@ -152,10 +155,11 @@ class ContactForm extends React.Component {
                   value={message}
                   onChange={this.handleChange}
                   placeholder="your message to me"
+                  required
                 />
               </p>
               <div className="buttonDiv">
-                <button type="submit">send it!</button>
+                <button type="submit">{this.state.buttonText}</button>
               </div>
             </form>
           </Display>

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const NavBarStyle = styled.ul`
-  background: #f4f4f4;
+  background: white;
   color: ${props => props.color};
   font-size: 16px;
   position: sticky;

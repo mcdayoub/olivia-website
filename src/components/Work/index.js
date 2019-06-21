@@ -10,7 +10,7 @@ import Nuts2 from './Nuts/Nuts2.png';
 import Nuts3 from './Nuts/Nuts3.png';
 
 const Display = styled.ul`
-  background: #f4f4f4;
+  background: white;
   color: black;
   /* .whiteBar {
     position: fixed;
@@ -25,7 +25,7 @@ const Display = styled.ul`
     width: 100%;
     height: 30px;
     z-index: 100;
-    background-color: #f4f4f4;
+    background-color: white;
   }
   .container {
     display: flex;
