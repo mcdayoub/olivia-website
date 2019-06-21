@@ -7,6 +7,8 @@ const NavBarStyle = styled.ul`
   background: #f4f4f4;
   color: ${props => props.color};
   font-size: 16px;
+  position: sticky;
+  top: 0;
 
   .container {
     overflow: hidden;

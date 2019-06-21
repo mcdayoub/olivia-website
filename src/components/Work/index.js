@@ -99,7 +99,7 @@ const Display = styled.ul`
     text-align: center;
   }
   .subtitleContainer {
-    padding-top: 10px;
+    padding-top: 15px;
     text-align: center;
   }
   .descriptionContainer {
