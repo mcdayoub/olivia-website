@@ -238,7 +238,10 @@ class Work extends Component {
       description: '',
       descriptionOne: '',
       descriptionTwo: '',
-      heightOfContainer: '100%'
+      heightOfContainer: '100%',
+      isHiddenImage1: true,
+      isHiddenImage2: true,
+      isHiddenImage3: true
     };
     this.handleMouseOverImage1 = this.handleMouseOverImage1.bind(this);
     this.handleMouseOverImage2 = this.handleMouseOverImage2.bind(this);
@@ -247,19 +250,28 @@ class Work extends Component {
   handleMouseOverImage1() {
     this.setState({
       centerImgBoolean: true,
-      centerImg: Image1
+      centerImg: Image1,
+      isHiddenImage1: false,
+      isHiddenImage2: true,
+      isHiddenImage3: true
     });
   }
   handleMouseOverImage2() {
     this.setState({
       centerImgBoolean: true,
-      centerImg: Image2
+      centerImg: Image2,
+      isHiddenImage1: true,
+      isHiddenImage2: false,
+      isHiddenImage3: true
     });
   }
   handleMouseOverImage3() {
     this.setState({
       centerImgBoolean: true,
-      centerImg: Image3
+      centerImg: Image3,
+      isHiddenImage1: true,
+      isHiddenImage2: true,
+      isHiddenImage3: false
     });
   }
 
@@ -282,10 +294,28 @@ class Work extends Component {
       this.setState(state => ({
         isHidden: true,
         galleryIsHidden: false,
-        photos: imageListTwo,
-        title: 'Project Two',
-        description:
-          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonum'
+        heightOfContainer: '',
+        photos: imageListOne,
+        title: 'TAQ DEL SOL',
+        subtitle: 'business concept & branding',
+        descriptionOne:
+          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie',
+        descriptionTwo:
+          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie'
+      }));
+    };
+    const imageClickThree = () => {
+      this.setState(state => ({
+        isHidden: true,
+        galleryIsHidden: false,
+        heightOfContainer: '',
+        photos: imageListOne,
+        title: 'BLADEE',
+        subtitle: 'business concept & branding',
+        descriptionOne:
+          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie',
+        descriptionTwo:
+          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie'
       }));
     };
     let projects = (
@@ -318,7 +348,7 @@ class Work extends Component {
               className="previewImage"
               src={require('./previews/one.png')}
               alt=""
-              onClick={() => imageClickOne()}
+              onClick={() => imageClickThree()}
             />
             IT'S NOT NUTS
           </span>
@@ -331,9 +361,24 @@ class Work extends Component {
         <div className="container-2">
           <img
             className="centerImage"
-            src={this.state.centerImg}
+            src={Image1}
             alt="hello"
             onClick={() => imageClickOne()}
+            hidden={this.state.isHiddenImage1}
+          />
+          <img
+            className="centerImage"
+            src={Image2}
+            alt="hello"
+            onClick={() => imageClickTwo()}
+            hidden={this.state.isHiddenImage2}
+          />
+          <img
+            className="centerImage"
+            src={Image3}
+            alt="hello"
+            onClick={() => imageClickThree()}
+            hidden={this.state.isHiddenImage3}
           />
         </div>
       );
@@ -370,7 +415,6 @@ class Work extends Component {
                   subtitle={this.state.subtitle}
                   descriptionOne={this.state.descriptionOne}
                   descriptionTwo={this.state.descriptionTwo}
-                  action={this.state.action}
                 />
               </div>
             </div>
