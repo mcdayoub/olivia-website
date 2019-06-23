@@ -8,6 +8,13 @@ import Logo from './LogoRed.png';
 import Nuts1 from './Nuts/Nuts1.png';
 import Nuts2 from './Nuts/Nuts2.png';
 import Nuts3 from './Nuts/Nuts3.png';
+import DisplayRed from './DisplayRed';
+import CenterImg from './Nuts/Nuts1.png';
+import './index.css';
+import CenterImgPicker from './CenterImgPicker';
+import Image1 from './Nuts/Nuts1.png';
+import Image2 from './Nuts/Nuts2.png';
+import Image3 from './Nuts/Nuts3.png';
 
 const Display = styled.ul`
   background: white;
@@ -30,6 +37,7 @@ const Display = styled.ul`
   .container {
     display: flex;
     justify-content: flex-start;
+    height: 100%;
   }
   .container-2 {
     display: flex;
@@ -43,7 +51,7 @@ const Display = styled.ul`
     flex-direction: row;
     padding-left: 0px;
     flex-wrap: wrap;
-    padding-top: 0px;
+    padding-top: 100px;
     overflow-y: auto;
     justify-content: center;
   }
@@ -138,6 +146,7 @@ let imageListTwo = [
 ];
 
 let previewImages = ['./previews/one.png', './previews/bladee.png'];
+const centerImages = [Image1, Image2, Image3];
 
 // let previewList = {
 //   projectOne: {
@@ -175,42 +184,42 @@ function Gallery(props) {
   );
 }
 
-function PreviewPhotos() {
-  const imageClickOne = () => {
-    this.setState(state => ({
-      photos: imageListOne,
-      title: 'Project One',
-      description:
-        'Wench trysail sloop man-of-war. Spike coffer topsail long clothes. Pink bilge pirate dead men tell no tales. Chandler piracy swing the lead hulk.',
-      previewPhotos: false
-    }));
-  };
-  const imageClickTwo = () => {
-    this.setState(state => ({
-      photos: imageListTwo,
-      title: 'Project Two',
-      description:
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonum',
-      previewPhotos: true
-    }));
-  };
-  return (
-    <div className="container-3">
-      <img
-        className="previewImage"
-        src={require('./previews/one.png')}
-        alt=""
-        onClick={() => imageClickOne()}
-      />
-      <img
-        className="previewImage"
-        src={require('./previews/bladee.png')}
-        alt=""
-        onClick={() => imageClickTwo()}
-      />
-    </div>
-  );
-}
+// function PreviewPhotos() {
+//   const imageClickOne = () => {
+//     this.setState(state => ({
+//       photos: imageListOne,
+//       title: 'Project One',
+//       description:
+//         'Wench trysail sloop man-of-war. Spike coffer topsail long clothes. Pink bilge pirate dead men tell no tales. Chandler piracy swing the lead hulk.',
+//       previewPhotos: false
+//     }));
+//   };
+//   const imageClickTwo = () => {
+//     this.setState(state => ({
+//       photos: imageListTwo,
+//       title: 'Project Two',
+//       description:
+//         'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonum',
+//       previewPhotos: true
+//     }));
+//   };
+//   return (
+//     <div className="container-3">
+//       <img
+//         className="previewImage"
+//         src={require('./previews/one.png')}
+//         alt=""
+//         onClick={() => imageClickOne()}
+//       />
+//       <img
+//         className="previewImage"
+//         src={require('./previews/bladee.png')}
+//         alt=""
+//         onClick={() => imageClickTwo()}
+//       />
+//     </div>
+//   );
+// }
 
 const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
 const notbold = { 'padding-right': '60px' };
@@ -219,20 +228,47 @@ class Work extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      previewPhotos: true,
+      isHidden: false,
+      galleryIsHidden: true,
+      centerImg: CenterImg,
+      centerImgBoolean: false,
       photos: [],
       title: '',
       subtitle: '',
       description: '',
       descriptionOne: '',
-      descriptionTwo: ''
+      descriptionTwo: '',
+      heightOfContainer: '100%'
     };
+    this.handleMouseOverImage1 = this.handleMouseOverImage1.bind(this);
+    this.handleMouseOverImage2 = this.handleMouseOverImage2.bind(this);
+    this.handleMouseOverImage3 = this.handleMouseOverImage3.bind(this);
+  }
+  handleMouseOverImage1() {
+    this.setState({
+      centerImgBoolean: true,
+      centerImg: Image1
+    });
+  }
+  handleMouseOverImage2() {
+    this.setState({
+      centerImgBoolean: true,
+      centerImg: Image2
+    });
+  }
+  handleMouseOverImage3() {
+    this.setState({
+      centerImgBoolean: true,
+      centerImg: Image3
+    });
   }
 
   render() {
     const imageClickOne = () => {
       this.setState(state => ({
-        previewPhotos: false,
+        isHidden: true,
+        galleryIsHidden: false,
+        heightOfContainer: '',
         photos: imageListOne,
         title: "IT'S NOT FUCKING NUTS",
         subtitle: 'business concept & branding',
@@ -244,34 +280,66 @@ class Work extends Component {
     };
     const imageClickTwo = () => {
       this.setState(state => ({
-        previewPhotos: false,
+        isHidden: true,
+        galleryIsHidden: false,
         photos: imageListTwo,
         title: 'Project Two',
         description:
           'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonum'
       }));
     };
-    let projects = <div />;
-    if (this.state.previewPhotos) {
-      projects = (
-        <div>
+    let projects = (
+      <div className="container-3">
+        <div onMouseOver={this.handleMouseOverImage1}>
+          <span>
+            <img
+              className="previewImage"
+              src={require('./previews/one.png')}
+              alt=""
+              onClick={() => imageClickOne()}
+            />
+            IT'S NOT NUTS
+          </span>
+        </div>
+        <div onMouseOver={this.handleMouseOverImage2}>
+          <span>
+            <img
+              className="previewImage"
+              src={require('./previews/bladee.png')}
+              alt=""
+              onClick={() => imageClickTwo()}
+            />
+            BLADEE
+          </span>
+        </div>
+        <div onMouseOver={this.handleMouseOverImage3}>
+          <span>
+            <img
+              className="previewImage"
+              src={require('./previews/one.png')}
+              alt=""
+              onClick={() => imageClickOne()}
+            />
+            IT'S NOT NUTS
+          </span>
+        </div>
+      </div>
+    );
+    let centerImageDiv = <div />;
+    if (this.state.centerImgBoolean) {
+      centerImageDiv = (
+        <div className="container-2">
           <img
-            className="previewImage"
-            src={require('./previews/one.png')}
-            alt=""
+            className="centerImage"
+            src={this.state.centerImg}
+            alt="hello"
             onClick={() => imageClickOne()}
-          />
-          <img
-            className="previewImage"
-            src={require('./previews/bladee.png')}
-            alt=""
-            onClick={() => imageClickTwo()}
           />
         </div>
       );
     }
     return (
-      <div>
+      <div style={{ height: this.state.heightOfContainer }}>
         <NavBarOlivia
           Logo={Logo}
           work={bold}
@@ -280,24 +348,34 @@ class Work extends Component {
           contact={notbold}
           color={'#fc4242'}
         />
-        <Display>
-          <div className="whiteBar" />
-          <div className="container">
-            <div className="container-3">
+        <div
+          hidden={this.state.isHidden}
+          style={{ height: 'calc(100% - 75px)' }}
+        >
+          <DisplayRed>
+            <div className="containerForPreview">
               <div>{projects}</div>
-              <Gallery
-                className="gallery"
-                imgList={this.state.photos}
-                title={this.state.title}
-                subtitle={this.state.subtitle}
-                descriptionOne={this.state.descriptionOne}
-                descriptionTwo={this.state.descriptionTwo}
-                action={this.state.action}
-              />
+              <div>{centerImageDiv}</div>
             </div>
-          </div>
-          <div className="whiteBar2" />
-        </Display>
+          </DisplayRed>
+        </div>
+        <div hidden={this.state.galleryIsHidden}>
+          <Display>
+            <div className="container">
+              <div className="container-3">
+                <Gallery
+                  className="gallery"
+                  imgList={this.state.photos}
+                  title={this.state.title}
+                  subtitle={this.state.subtitle}
+                  descriptionOne={this.state.descriptionOne}
+                  descriptionTwo={this.state.descriptionTwo}
+                  action={this.state.action}
+                />
+              </div>
+            </div>
+          </Display>
+        </div>
       </div>
     );
   }

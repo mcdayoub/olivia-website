@@ -39,23 +39,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <ThemeContext.Provider value={this.state}>
-          {/* <ThemeSwitcher toggleTheme={this.toggleTheme} /> */}
-          <ThemeContext.Consumer>
-            {theme => (
-              <ThemeProvider theme={theme}>
-                <div>
-                  <Route exact={true} path="/" component={Home} />
-                  <Route exact={true} path="/about" component={About} />
-                  <Route exact={true} path="/work" component={Work} />
-                  <Route exact={true} path="/instagram" component={Instagram} />
-                  <Route exact={true} path="/contact" component={Contact} />
-                </div>
-              </ThemeProvider>
-            )}
-          </ThemeContext.Consumer>
-        </ThemeContext.Provider>
+      <div className="App" style={{ height: '100%' }}>
+        {/* <ThemeSwitcher toggleTheme={this.toggleTheme} /> */}
+        <div style={{ height: '100%' }}>
+          <Route exact={true} path="/" component={Home} />
+          <Route exact={true} path="/about" component={About} />
+          <Route exact={true} path="/work" component={Work} />
+          <Route exact={true} path="/instagram" component={Instagram} />
+          <Route exact={true} path="/contact" component={Contact} />
+        </div>
       </div>
     );
   }

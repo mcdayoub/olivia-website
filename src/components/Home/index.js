@@ -53,8 +53,6 @@ const DisplayRed = styled.ul`
     width: 100%;
   }
 
-  .spinner {
-  }
   .logo {
     height: 375px;
     position: absolute;
@@ -64,9 +62,6 @@ const DisplayRed = styled.ul`
     margin-top: -187.5px;
   }
 
-  center {
-    order: 2;
-  }
   .spin {
     -webkit-animation: spin 25s linear infinite;
     -moz-animation: spin 25s linear infinite;
@@ -87,14 +82,6 @@ const DisplayRed = styled.ul`
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
-  }
-
-  left {
-    order: 1;
-  }
-
-  right {
-    order: 3;
   }
   a {
     text-decoration: none;
@@ -156,13 +143,9 @@ class Home extends Component {
     return (
       <DisplayRed color={this.state.color}>
         <div className="container">
-          <div className="left container-2">
-            <div className="topLeft">
-              <Link to="/work">work</Link>
-            </div>
-            <div className="bottomLeft">
-              <Link to="/about">about</Link>
-            </div>
+          <div className="container-2">
+            <Link to="/work">work</Link>
+            <Link to="/about">about</Link>
           </div>
           <div className="container-4">
             <img className="logo spin" src={this.state.logoSpin} alt="hello" />
@@ -170,19 +153,15 @@ class Home extends Component {
               <img className="logo center" src={this.state.logo} alt="hello" />
             </Link>
           </div>
-          <div className="right container-3">
-            <div className="topRight">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.instagram.com/rgbqueen/"
-              >
-                instagram
-              </a>
-            </div>
-            <div className="bottomRight">
-              <Link to="/contact">contact</Link>
-            </div>
+          <div className="container-3">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/rgbqueen/"
+            >
+              instagram
+            </a>
+            <Link to="/contact">contact</Link>
           </div>
         </div>
       </DisplayRed>

@@ -14,6 +14,7 @@ const NavBarStyle = styled.ul`
     overflow: hidden;
     padding-top: 15px;
     padding-bottom: 15px;
+    position: flex;
   }
   .logo {
     height: 40px;
