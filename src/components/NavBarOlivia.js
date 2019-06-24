@@ -52,7 +52,10 @@ export default class NavBarOlivia extends Component {
             </Link>
           </div>
           <div className="column2">
-            <Link to="/work" style={this.props.work}>
+            <Link
+              to={{ pathname: '/work', state: 'desiredState' }}
+              style={this.props.work}
+            >
               work
             </Link>
             <a

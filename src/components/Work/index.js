@@ -184,43 +184,6 @@ function Gallery(props) {
   );
 }
 
-// function PreviewPhotos() {
-//   const imageClickOne = () => {
-//     this.setState(state => ({
-//       photos: imageListOne,
-//       title: 'Project One',
-//       description:
-//         'Wench trysail sloop man-of-war. Spike coffer topsail long clothes. Pink bilge pirate dead men tell no tales. Chandler piracy swing the lead hulk.',
-//       previewPhotos: false
-//     }));
-//   };
-//   const imageClickTwo = () => {
-//     this.setState(state => ({
-//       photos: imageListTwo,
-//       title: 'Project Two',
-//       description:
-//         'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonum',
-//       previewPhotos: true
-//     }));
-//   };
-//   return (
-//     <div className="container-3">
-//       <img
-//         className="previewImage"
-//         src={require('./previews/one.png')}
-//         alt=""
-//         onClick={() => imageClickOne()}
-//       />
-//       <img
-//         className="previewImage"
-//         src={require('./previews/bladee.png')}
-//         alt=""
-//         onClick={() => imageClickTwo()}
-//       />
-//     </div>
-//   );
-// }
-
 const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
 const notbold = { 'padding-right': '60px' };
 
@@ -241,11 +204,33 @@ class Work extends Component {
       heightOfContainer: '100%',
       isHiddenImage1: true,
       isHiddenImage2: true,
-      isHiddenImage3: true
+      isHiddenImage3: true,
+      selected: ''
     };
     this.handleMouseOverImage1 = this.handleMouseOverImage1.bind(this);
     this.handleMouseOverImage2 = this.handleMouseOverImage2.bind(this);
     this.handleMouseOverImage3 = this.handleMouseOverImage3.bind(this);
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.location.state === 'desiredState') {
+      this.setState({
+        isHidden: false,
+        galleryIsHidden: true,
+        centerImg: CenterImg,
+        centerImgBoolean: false,
+        photos: [],
+        title: '',
+        subtitle: '',
+        description: '',
+        descriptionOne: '',
+        descriptionTwo: '',
+        heightOfContainer: '100%',
+        isHiddenImage1: true,
+        isHiddenImage2: true,
+        isHiddenImage3: true,
+        selected: ''
+      });
+    }
   }
   handleMouseOverImage1() {
     this.setState({
@@ -287,8 +272,10 @@ class Work extends Component {
         descriptionOne:
           'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie',
         descriptionTwo:
-          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie'
+          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie',
+        selected: 'itsnotnuts'
       }));
+      this.props.history.push(`/work#itsnotnuts`);
     };
     const imageClickTwo = () => {
       this.setState(state => ({
