@@ -21,6 +21,7 @@ import { Redirect } from 'react-router';
 const Display = styled.ul`
   background: white;
   color: black;
+  height: 100%;
   /* .whiteBar {
     position: fixed;
     top: 0;

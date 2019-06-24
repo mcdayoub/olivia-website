@@ -8,11 +8,12 @@ import './index.css';
 const Display = styled.ul`
   background: white;
   color: black;
-
-  .container {
-    display: flex;
+  html,
+  body {
+    margin: 0;
     height: 100%;
   }
+  height: 100%;
 
   input:focus,
   select:focus,
@@ -24,9 +25,6 @@ const Display = styled.ul`
     text-align: center;
     justify-content: center;
     align-items: center;
-    top: 50%;
-    left: 50%;
-    padding-top: 75px;
   }
   h3 {
     font-weight: normal;
@@ -75,6 +73,13 @@ const Display = styled.ul`
   .buttonDiv {
     padding-top: 20px;
   }
+  .container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    padding-top: 75px;
+  }
 `;
 
 const encode = data => {
@@ -120,7 +125,7 @@ class ContactForm extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <div>
+      <div classname="hey" style={{ height: '100%' }}>
         <NavBarOlivia
           Logo={Logo}
           work={notbold}
@@ -129,53 +134,54 @@ class ContactForm extends React.Component {
           contact={bold}
           color={'#425bea'}
         />
-        <div className="container">
+        <div style={{ height: 'calc(100% - 75px)' }}>
           <Display>
-            <form
-              style={{ height: 'calc(100% - 75px)' }}
-              onSubmit={this.handleSubmit}
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-            >
-              <div className="note">
-                <h3>{this.state.title}</h3>
-              </div>
-              <input type="hidden" name="form-name" value="contact" />
-              <p>
-                <input
-                  type="text"
-                  name="name"
-                  value={name}
-                  onChange={this.handleChange}
-                  placeholder="your name "
-                  required
-                />
-              </p>
-              <p>
-                <input
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={this.handleChange}
-                  placeholder="your email"
-                  required
-                />
-              </p>
-              <p>
-                <textarea
-                  name="message"
-                  value={message}
-                  onChange={this.handleChange}
-                  placeholder="your message to me"
-                  required
-                />
-              </p>
-              <div className="buttonDiv">
-                <button type="submit">{this.state.buttonText}</button>
-              </div>
-            </form>
+            <div className="container">
+              <form
+                onSubmit={this.handleSubmit}
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+              >
+                <div className="note">
+                  <h3>{this.state.title}</h3>
+                </div>
+                <input type="hidden" name="form-name" value="contact" />
+                <p>
+                  <input
+                    type="text"
+                    name="name"
+                    value={name}
+                    onChange={this.handleChange}
+                    placeholder="your name"
+                    required
+                  />
+                </p>
+                <p>
+                  <input
+                    type="email"
+                    name="email"
+                    value={email}
+                    onChange={this.handleChange}
+                    placeholder="your email"
+                    required
+                  />
+                </p>
+                <p>
+                  <textarea
+                    name="message"
+                    value={message}
+                    onChange={this.handleChange}
+                    placeholder="your message to me"
+                    required
+                  />
+                </p>
+                <div className="buttonDiv">
+                  <button type="submit">{this.state.buttonText}</button>
+                </div>
+              </form>
+            </div>
           </Display>
         </div>
       </div>
