@@ -15,6 +15,7 @@ import CenterImgPicker from './CenterImgPicker';
 import Image1 from './Nuts/Nuts1.png';
 import Image2 from './Nuts/Nuts2.png';
 import Image3 from './Nuts/Nuts3.png';
+import Photo1 from './TDS/Photo1.png';
 
 const Display = styled.ul`
   background: white;
@@ -137,7 +138,7 @@ const Display = styled.ul`
   }
 `;
 
-let imageListOne = [Nuts1, Nuts2, Nuts3];
+let imageListOne = [Nuts1, Nuts2, Nuts3, Photo1];
 
 let imageListTwo = [
   './previews/bladee.png',
