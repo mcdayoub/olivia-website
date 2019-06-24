@@ -63,7 +63,7 @@ const About = () => (
       color={'#04ad84'}
     />
     <Display>
-      <div className="container">
+      <div className="container" style={{ height: 'calc(100% - 75px)' }}>
         <div className="container-3">
           {' '}
           <img

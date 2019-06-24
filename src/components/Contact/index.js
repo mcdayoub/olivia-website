@@ -132,6 +132,7 @@ class ContactForm extends React.Component {
         <div className="container">
           <Display>
             <form
+              style={{ height: 'calc(100% - 75px)' }}
               onSubmit={this.handleSubmit}
               name="contact"
               method="POST"
