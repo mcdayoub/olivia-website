@@ -24,20 +24,23 @@
 // }
 // export default Gallery;
 
-import React from 'react';
+// import React from 'react';
 
-function Gallery(props) {
-  const images = this.props.imgList.map(image => {
-    return (
-      <img
-        key={image}
-        src={require('' + image)}
-        alt=""
-        className="img-responsive"
-      />
-    );
-  });
-}
+// export default function Gallery(props) {
+//   const images = this.props.imgList.map(image => {
+//     return (
+//       <img
+//         key={image}
+//         src={require('' + image)}
+//         alt=""
+//         className="img-responsive"
+//       />
+//     );
+//   });
+//   return(
+
+//   )
+// }
 
 //   render() {
 //     return (

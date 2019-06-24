@@ -22,6 +22,8 @@ const Display = styled.ul`
   }
   form {
     text-align: center;
+    justify-content: center;
+    align-items: center;
     top: 50%;
     left: 50%;
     padding-top: 75px;

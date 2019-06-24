@@ -16,6 +16,7 @@ import Image1 from './Nuts/Nuts1.png';
 import Image2 from './Nuts/Nuts2.png';
 import Image3 from './Nuts/Nuts3.png';
 import Photo1 from './TDS/Photo1.png';
+import { Redirect } from 'react-router';
 
 const Display = styled.ul`
   background: white;
@@ -212,6 +213,46 @@ class Work extends Component {
     this.handleMouseOverImage2 = this.handleMouseOverImage2.bind(this);
     this.handleMouseOverImage3 = this.handleMouseOverImage3.bind(this);
   }
+  //   componentDidMount(nextProps) {
+  //     this.setState({
+  //       isHidden: false,
+  //       galleryIsHidden: true,
+  //       centerImg: CenterImg,
+  //       centerImgBoolean: false,
+  //       photos: [],
+  //       title: '',
+  //       subtitle: '',
+  //       description: '',
+  //       descriptionOne: '',
+  //       descriptionTwo: '',
+  //       heightOfContainer: '100%',
+  //       isHiddenImage1: true,
+  //       isHiddenImage2: true,
+  //       isHiddenImage3: true,
+  //       selected: ''
+  //     });
+  //   }
+
+  componentWillMount() {
+    this.setState({
+      isHidden: false,
+      galleryIsHidden: true,
+      centerImg: CenterImg,
+      centerImgBoolean: false,
+      photos: [],
+      title: '',
+      subtitle: '',
+      description: '',
+      descriptionOne: '',
+      descriptionTwo: '',
+      heightOfContainer: '100%',
+      isHiddenImage1: true,
+      isHiddenImage2: true,
+      isHiddenImage3: true,
+      selected: ''
+    });
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.location.state === 'desiredState') {
       this.setState({
@@ -276,7 +317,7 @@ class Work extends Component {
           'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie',
         selected: 'itsnotnuts'
       }));
-      this.props.history.push(`/work#itsnotnuts`);
+      this.props.history.push('/work/itsnotnuts');
     };
     const imageClickTwo = () => {
       this.setState(state => ({
@@ -310,12 +351,14 @@ class Work extends Component {
       <div className="container-3">
         <div onMouseOver={this.handleMouseOverImage1}>
           <span>
-            <img
-              className="previewImage"
-              src={require('./previews/one.png')}
-              alt=""
-              onClick={() => imageClickOne()}
-            />
+            <Link to="/itsnotnutstests">
+              {' '}
+              <img
+                className="previewImage"
+                src={require('./previews/one.png')}
+                alt=""
+              />
+            </Link>
             IT'S NOT NUTS
           </span>
         </div>
