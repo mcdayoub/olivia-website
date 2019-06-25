@@ -112,9 +112,23 @@ class HomeMobile extends Component {
       color: '#EF514D',
       logo: '',
       logoSpin: '',
-      number: 0
+      number: 0,
+      height: window.innerHeight
     };
   }
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  // make sure to remove the listener
+  // when the component is not mounted anymore
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  handleWindowSizeChange = () => {
+    this.setState({ height: window.innerHeight });
+  };
 
   componentDidMount() {
     let min = Math.ceil(3);
@@ -147,7 +161,11 @@ class HomeMobile extends Component {
   render() {
     return (
       <DisplayMobile color={this.state.color}>
-        <div className="container" onClick={this.handleChange}>
+        <div
+          className="container"
+          onClick={this.handleChange}
+          style={{ height: this.state.height }}
+        >
           <img className="logo spin" src={this.state.logoSpin} alt="hello" />
           <img
             className="logo center"
