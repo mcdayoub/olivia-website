@@ -107,7 +107,8 @@ class MobileNavBarOlivia extends Component {
     super(props);
 
     this.state = {
-      showlinks: false
+      showlinks: false,
+      color: this.props.color
     };
   }
 
@@ -125,7 +126,12 @@ class MobileNavBarOlivia extends Component {
               </Link>
             </div>
             <div className="column2">
-              <Link to="/navmobile" color={this.props.color}>
+              <Link
+                to={{
+                  pathname: '/navmobile',
+                  aboutProps: { color: this.props.color }
+                }}
+              >
                 <img
                   src={this.props.Hamburger}
                   className="hamburger"

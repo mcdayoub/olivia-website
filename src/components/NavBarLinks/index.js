@@ -89,7 +89,8 @@ class NavBarLinksMobile extends Component {
 
     this.state = {
       showlinks: false,
-      height: window.innerHeight
+      height: window.innerHeight,
+      color: props.location.aboutProps.color
     };
   }
   goBack() {
@@ -105,7 +106,7 @@ class NavBarLinksMobile extends Component {
     };
     return (
       <div style={{ height: this.state.height }}>
-        <LinksStyle color={'#fc4242'}>
+        <LinksStyle color={this.state.color}>
           <div className="topRight">
             <img
               src={RedX}
