@@ -65,6 +65,11 @@ const DisplayMobile = styled.ul`
       padding-bottom: 12%;
     }
   }
+  @media ${device.mobileS} {
+    .nav-items {
+      padding-bottom: 12%;
+    }
+  }
 `;
 
 const DisplayLogo = styled.ul`
@@ -96,6 +101,16 @@ const DisplayLogo = styled.ul`
       top: 30%;
       margin-left: -150px;
       margin-top: -150px;
+    }
+  }
+  @media ${device.mobileM} {
+    .logo {
+      height: 280px;
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      margin-left: -140px;
+      margin-top: -140px;
     }
   }
 
