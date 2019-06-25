@@ -93,7 +93,7 @@ const DisplayMobile = styled.ul`
     color: ${props => props.color};
   }
   .nav-items {
-    padding-bottom: 15%;
+    padding-bottom: 10%;
   }
 `;
 
