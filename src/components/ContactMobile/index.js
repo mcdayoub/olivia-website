@@ -107,7 +107,7 @@ class ContactFormMobile extends React.Component {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state })
+      body: encode({ 'form-name': 'contact-mobile', ...this.state })
     })
       .then(
         this.setState({
@@ -138,7 +138,7 @@ class ContactFormMobile extends React.Component {
             <div className="container">
               <form
                 onSubmit={this.handleSubmit}
-                name="contact"
+                name="contact-mobile"
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
@@ -146,7 +146,7 @@ class ContactFormMobile extends React.Component {
                 <div className="note">
                   <h3>{this.state.title}</h3>
                 </div>
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="contact-mobile" />
                 <p>
                   <input
                     type="text"
