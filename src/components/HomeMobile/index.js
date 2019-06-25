@@ -67,7 +67,7 @@ const DisplayMobile = styled.ul`
   }
   @media ${device.mobileS} {
     .nav-items {
-      padding-bottom: 12%;
+      padding-bottom: 11%;
     }
   }
 `;
