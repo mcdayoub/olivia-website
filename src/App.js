@@ -16,6 +16,8 @@ import Nuts3 from './components/Work/Nuts/Nuts3.png';
 
 //MOBILE IMPORTS
 import HomeMobile from './components/HomeMobile';
+import AboutMobile from './components/AboutMobile';
+import ContactFormMobile from './components/ContactMobile';
 
 import * as themes from './styles/themes';
 import ThemeContext from './styles/themes/context';
@@ -73,6 +75,8 @@ class App extends Component {
       return (
         <div>
           <Route exact={true} path="/" component={HomeMobile} />
+          <Route exact={true} path="/about" component={AboutMobile} />
+          <Route exact={true} path="/contact" component={ContactFormMobile} />
         </div>
       );
     }
