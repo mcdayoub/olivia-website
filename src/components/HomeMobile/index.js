@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import imgLogoRed from './LogoRed.png';
-import imgLogoGreen from './LogoGreen.png';
-import imgLogoBlue from './LogoBlue.png';
-import imgLogoRedSpin from './LogoRedSpin.png';
-import imgLogoGreenSpin from './LogoGreenSpin.png';
-import imgLogoBlueSpin from './LogoBlueSpin.png';
+import imgLogoRed from '../Home/LogoRed.png';
+import imgLogoGreen from '../Home/LogoGreen.png';
+import imgLogoBlue from '../Home/LogoBlue.png';
+import imgLogoRedSpin from '../Home/LogoRedSpin.png';
+import imgLogoGreenSpin from '../Home/LogoGreenSpin.png';
+import imgLogoBlueSpin from '../Home/LogoBlueSpin.png';
 
-const DisplayRed = styled.ul`
+const DisplayMobile = styled.ul`
   background: #f4f4f4;
   color: ${props => props.color};
   font-size: 16px;
@@ -49,15 +49,16 @@ const DisplayRed = styled.ul`
   .container-4 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
+    text-align: center;
   }
 
   .logo {
     height: 375px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 30%;
     margin-left: -187.5px;
     margin-top: -187.5px;
   }
@@ -91,14 +92,18 @@ const DisplayRed = styled.ul`
   a:visited {
     color: ${props => props.color};
   }
+  .nav-items {
+    padding-bottom: 10%;
+  }
 `;
+
 const colorArray = ['#EF514D', '#04ad84', '#425bea'];
 const redImgArray = [imgLogoRed, imgLogoRedSpin];
 const greenImgArray = [imgLogoGreen, imgLogoGreenSpin];
 const blueImgArray = [imgLogoBlue, imgLogoBlueSpin];
 const fullImgArray = [redImgArray, greenImgArray, blueImgArray];
 
-class Home extends Component {
+class HomeMobile extends Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
@@ -139,30 +144,28 @@ class Home extends Component {
       });
     }
   }
-
   render() {
     return (
-      <DisplayRed color={this.state.color}>
+      <DisplayMobile color={this.state.color}>
         <div className="container" onClick={this.handleChange}>
-          <div className="left container-2">
-            <div className="topLeft">
+          <img className="logo spin" src={this.state.logoSpin} alt="hello" />
+          <img
+            className="logo center"
+            src={this.state.logo}
+            alt="hello"
+            onClick={this.handleChange}
+          />
+          <div className="container-4">
+            <div className="nav-items">
               <Link to="/work">work</Link>
             </div>
-            <div className="bottomLeft">
+            <div className="nav-items">
               <Link to="/about">about</Link>
             </div>
-          </div>
-          <div className="container-4">
-            <img className="logo spin" src={this.state.logoSpin} alt="hello" />
-            <img
-              className="logo center"
-              src={this.state.logo}
-              alt="hello"
-              onClick={this.handleChange}
-            />
-          </div>
-          <div className="right container-3">
-            <div className="topRight">
+            <div className="nav-items">
+              <Link to="/contact">contact</Link>
+            </div>
+            <div className="nav-items">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -171,14 +174,10 @@ class Home extends Component {
                 instagram
               </a>
             </div>
-            <div className="bottomRight">
-              <Link to="/contact">contact</Link>
-            </div>
           </div>
         </div>
-      </DisplayRed>
+      </DisplayMobile>
     );
   }
 }
-
-export default Home;
+export default HomeMobile;

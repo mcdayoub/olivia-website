@@ -10,7 +10,6 @@ const Display = styled.ul`
   .container {
     display: flex;
     justify-content: flex-start;
-    height: 100%;
   }
   .container-3 {
     display: flex;
@@ -19,7 +18,6 @@ const Display = styled.ul`
     margin-left: auto;
     margin-right: 40px;
     justify-content: center;
-    padding-top: 75px;
     padding-left: 50px;
   }
   .container-4 {
@@ -48,12 +46,13 @@ const Display = styled.ul`
 
 const Paragraph = styled.ul`
   font-size: 18px;
+  width: 300px;
 `;
 const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
 const notbold = { 'padding-right': '60px' };
 
 const About = () => (
-  <div>
+  <div style={{ height: '100%' }}>
     <NavBarOlivia
       Logo={Logo}
       work={notbold}
@@ -62,10 +61,9 @@ const About = () => (
       contact={notbold}
       color={'#04ad84'}
     />
-    <Display>
-      <div className="container" style={{ height: 'calc(100% - 75px)' }}>
+    <Display style={{ height: 'calc(100% - 75px)' }}>
+      <div className="container" style={{ height: 'calc(100%)' }}>
         <div className="container-3">
-          {' '}
           <img
             className="polaroid"
             src={require('../../polaroid.png')}

@@ -14,40 +14,42 @@ import Nuts1 from './components/Work/Nuts/Nuts1.png';
 import Nuts2 from './components/Work/Nuts/Nuts2.png';
 import Nuts3 from './components/Work/Nuts/Nuts3.png';
 
+//MOBILE IMPORTS
+import HomeMobile from './components/HomeMobile';
+
 import * as themes from './styles/themes';
 import ThemeContext from './styles/themes/context';
 
 const imgList = [Nuts1, Nuts2, Nuts3];
 
 class App extends Component {
-  state = {
-    theme: themes.light
-  };
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: window.innerWidth
+    };
+  }
   componentWillMount() {
-    let random = Math.floor(Math.random() * Math.floor(2));
-    let themeArray = [themes.light, themes.dark];
-    // this.setState({ theme: themeArray[random] });
-    let date = new Date();
-    let currentHour = date.getHours();
-    console.log(currentHour);
-    if (currentHour >= 20 || currentHour <= 8) {
-      //this.setState({ theme: themes.dark });
-      console.log('hey');
-    }
+    window.addEventListener('resize', this.handleWindowSizeChange);
   }
 
-  toggleTheme = () => {
-    this.setState({
-      theme: this.state.theme === themes.light ? themes.dark : themes.light
-    });
+  // make sure to remove the listener
+  // when the component is not mounted anymore
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  handleWindowSizeChange = () => {
+    this.setState({ width: window.innerWidth });
+    console.log(this.state.width);
   };
 
   render() {
-    return (
-      <div className="App" style={{ height: '100%' }}>
-        {/* <ThemeSwitcher toggleTheme={this.toggleTheme} /> */}
-        <div style={{ height: '100%' }}>
+    const { width } = this.state;
+    const isMobile = width <= 500;
+    if (!isMobile) {
+      return (
+        <div className="App" style={{ height: '100%' }}>
           <Route exact={true} path="/" component={Home} />
           <Route exact={true} path="/about" component={About} />
           <Route path="/work" component={Work} />
@@ -66,8 +68,14 @@ class App extends Component {
             )}
           />
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div className="App" style={{ height: '100%' }}>
+          <Route exact={true} path="/" component={HomeMobile} />
+        </div>
+      );
+    }
   }
 }
 
