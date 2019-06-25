@@ -160,12 +160,6 @@ class HomeMobile extends Component {
               <Link to="/work">work</Link>
             </div>
             <div className="nav-items">
-              <Link to="/about">about</Link>
-            </div>
-            <div className="nav-items">
-              <Link to="/contact">contact</Link>
-            </div>
-            <div className="nav-items">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -173,6 +167,12 @@ class HomeMobile extends Component {
               >
                 instagram
               </a>
+            </div>
+            <div className="nav-items">
+              <Link to="/about">about</Link>
+            </div>
+            <div className="nav-items">
+              <Link to="/contact">contact</Link>
             </div>
           </div>
         </div>
