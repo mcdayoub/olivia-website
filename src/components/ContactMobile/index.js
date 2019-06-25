@@ -34,7 +34,7 @@ const DisplayMobile = styled.ul`
   }
 
   input {
-    width: 50%;
+    width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
     background-color: transparent;
@@ -45,7 +45,7 @@ const DisplayMobile = styled.ul`
     font-family: 'Courier New';
   }
   textarea {
-    width: 50%;
+    width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
     background-color: transparent;
