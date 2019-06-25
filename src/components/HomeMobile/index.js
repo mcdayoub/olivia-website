@@ -175,9 +175,9 @@ class HomeMobile extends Component {
     let max = Math.floor(0);
     let random = Math.floor(Math.random() * (max - min)) + min;
     this.setState({
-      color: colorArray[random],
       logo: fullImgArray[random][0],
       logoSpin: fullImgArray[random][1],
+      color: colorArray[random],
       number: random
     });
   }
