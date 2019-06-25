@@ -14,15 +14,10 @@ const DisplayMobile = styled.ul`
   font-size: 16px;
   font-weight: bold;
 
-  .App {
-    height: 100vh;
-    width: 100%;
-  }
-
   .container {
     display: flex;
     justify-content: space-evenly;
-    height: 100vh;
+    height: 100%;
   }
   .container-2 {
     display: flex;
