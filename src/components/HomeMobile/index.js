@@ -9,17 +9,17 @@ import imgLogoGreenSpin from '../Home/LogoGreenSpin.png';
 import imgLogoBlueSpin from '../Home/LogoBlueSpin.png';
 
 const size = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px'
+  mobileS: '667px',
+  mobileM: '600px',
+  mobileL: '736px',
+  tablet: '834px'
 };
 
 const device = {
-  mobileS: `(min-width: ${size.mobileS})`,
-  mobileM: `(min-width: ${size.mobileM})`,
-  mobileL: `(min-width: ${size.mobileL})`,
-  tablet: `(min-width: ${size.tablet})`
+  mobileS: `(min-height: ${size.mobileS})`,
+  mobileM: `(min-height: ${size.mobileM})`,
+  mobileL: `(min-height: ${size.mobileL})`,
+  tablet: `(min-height: ${size.tablet})`
 };
 
 const DisplayMobile = styled.ul`
@@ -103,7 +103,7 @@ const DisplayLogo = styled.ul`
       margin-top: -150px;
     }
   }
-  @media ${device.mobileM} {
+  @media ${device.mobileS} {
     .logo {
       height: 280px;
       position: absolute;
