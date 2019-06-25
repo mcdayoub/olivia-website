@@ -3,6 +3,20 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
+const size = {
+  mobileS: '667px',
+  mobileM: '600px',
+  mobileL: '736px',
+  tablet: '834px'
+};
+
+const device = {
+  mobileS: `(min-height: ${size.mobileS})`,
+  mobileM: `(min-height: ${size.mobileM})`,
+  mobileL: `(min-height: ${size.mobileL})`,
+  tablet: `(min-height: ${size.tablet})`
+};
+
 const NavBarStyle = styled.ul`
   background: white;
   color: ${props => props.color};
@@ -33,47 +47,96 @@ const NavBarStyle = styled.ul`
   .column2 {
     flex-direction: column;
     float: right;
-    padding-top: 13px;
+    padding-right: 15px;
   }
   .links {
     padding-right: 60px;
   }
+  .hamburger {
+    height: 22px;
+    padding-top: 8.25px;
+  }
 `;
 
-export default class NavBarOlivia extends Component {
+const LinksStyle = styled.ul`
+  background: white;
+  color: ${props => props.color};
+  font-size: 16px;
+  top: 0;
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+  }
+  a:visited {
+    color: ${props => props.color};
+  }
+  @media ${device.tablet} {
+    .nav-items {
+      padding-bottom: 13%;
+    }
+  }
+  @media ${device.mobileL} {
+    .nav-items {
+      padding-bottom: 13%;
+    }
+  }
+  @media ${device.mobileM} {
+    .nav-items {
+      padding-bottom: 12%;
+    }
+  }
+  @media ${device.mobileS} {
+    .nav-items {
+      padding-bottom: 10%;
+    }
+  }
+
+  .container-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+  }
+`;
+
+class MobileNavBarOlivia extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showlinks: false
+    };
+  }
+
   render() {
+    const handleBurgerClick = () => {
+      this.setState({ showlinks: true });
+    };
     return (
-      <NavBarStyle color={this.props.color}>
-        <div className="container">
-          <div className="column1">
-            <Link to="/">
-              <img src={this.props.Logo} className="logo" alt="bye" />
-            </Link>
+      <div>
+        <NavBarStyle color={this.props.color}>
+          <div className="container">
+            <div className="column1">
+              <Link to="/">
+                <img src={this.props.Logo} className="logo" alt="bye" />
+              </Link>
+            </div>
+            <div className="column2">
+              <Link to="/navmobile" color={this.props.color}>
+                <img
+                  src={this.props.Hamburger}
+                  className="hamburger"
+                  alt="bye"
+                />
+              </Link>
+            </div>
           </div>
-          {/* <div className="column2">
-            <Link
-              to={{ pathname: '/work', state: 'desiredState' }}
-              style={this.props.work}
-            >
-              work
-            </Link>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/rgbqueen/"
-              style={this.props.instagram}
-            >
-              instagram
-            </a>
-            <Link to="/about" style={this.props.about}>
-              about
-            </Link>
-            <Link to="/contact" style={this.props.contact}>
-              contact
-            </Link>
-          </div> */}
-        </div>
-      </NavBarStyle>
+        </NavBarStyle>
+      </div>
     );
   }
 }
+export default MobileNavBarOlivia;

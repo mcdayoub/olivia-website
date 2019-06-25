@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from './LogoGreen.png';
+import Hamburger from './HamburgerGreen.png';
+
 const size = {
   mobileS: '320px',
   mobileM: '375px',
@@ -67,7 +69,9 @@ const AboutMobile = () => (
       about={bold}
       contact={notbold}
       color={'#04ad84'}
+      Hamburger={Hamburger}
     />
+
     <DisplayMobile>
       <div className="container-3">
         <img
