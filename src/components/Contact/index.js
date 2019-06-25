@@ -45,6 +45,7 @@ const Display = styled.ul`
     border-bottom: 1px solid black;
     font-size: 14px;
     font-family: 'Courier New';
+    border-radius: 0;
   }
   textarea {
     width: 50%;
@@ -58,6 +59,7 @@ const Display = styled.ul`
     resize: none;
     font-size: 14px;
     font-family: 'Courier New';
+    border-radius: 0;
   }
   button {
     background-color: #425bea;

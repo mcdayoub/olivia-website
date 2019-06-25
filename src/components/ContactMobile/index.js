@@ -38,7 +38,6 @@ const DisplayMobile = styled.ul`
     padding: 12px 20px;
     margin: 8px 0;
     background-color: transparent;
-    border-bottom: 10px;
     border: 0;
     outline: 0;
     border-bottom: 1px solid black;
@@ -78,6 +77,13 @@ const DisplayMobile = styled.ul`
     width: 100%;
     transform: translateY(-50%);
     padding-top: 75px;
+  }
+  textarea,
+  input[type='text'],
+  input[type='button'],
+  input[type='email'] {
+    -webkit-appearance: none;
+    border-radius: 0;
   }
 `;
 
