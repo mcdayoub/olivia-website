@@ -8,6 +8,20 @@ import imgLogoRedSpin from '../Home/LogoRedSpin.png';
 import imgLogoGreenSpin from '../Home/LogoGreenSpin.png';
 import imgLogoBlueSpin from '../Home/LogoBlueSpin.png';
 
+const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px'
+};
+
+const device = {
+  mobileS: `(min-width: ${size.mobileS})`,
+  mobileM: `(min-width: ${size.mobileM})`,
+  mobileL: `(min-width: ${size.mobileL})`,
+  tablet: `(min-width: ${size.tablet})`
+};
+
 const DisplayMobile = styled.ul`
   background: #f4f4f4;
   color: ${props => props.color};
@@ -19,27 +33,6 @@ const DisplayMobile = styled.ul`
     justify-content: space-evenly;
     height: 100%;
   }
-  .container-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    text-align: left;
-    padding-top: 19px;
-    padding-bottom: 19px;
-    padding-left: 25px;
-  }
-
-  .container-3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    text-align: right;
-    padding-top: 19px;
-    padding-bottom: 19px;
-    padding-right: 25px;
-  }
 
   .container-4 {
     display: flex;
@@ -49,13 +42,61 @@ const DisplayMobile = styled.ul`
     text-align: center;
   }
 
-  .logo {
-    height: 325px;
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    margin-left: -162.5px;
-    margin-top: -162.5px;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:visited {
+    color: ${props => props.color};
+  }
+  @media ${device.tablet} {
+    .nav-items {
+      padding-bottom: 13%;
+    }
+  }
+  @media ${device.mobileL} {
+    .nav-items {
+      padding-bottom: 13%;
+    }
+  }
+  @media ${device.mobileM} {
+    .nav-items {
+      padding-bottom: 19%;
+    }
+  }
+`;
+
+const DisplayLogo = styled.ul`
+  @media ${device.tablet} {
+    .logo {
+      height: 375px;
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      margin-left: -187.5px;
+      margin-top: -187.5px;
+    }
+  }
+  @media ${device.mobileL} {
+    .logo {
+      height: 375px;
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      margin-left: -187.5px;
+      margin-top: -187.5px;
+    }
+  }
+  @media ${device.mobileM} {
+    .logo {
+      height: 300px;
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      margin-left: -150px;
+      margin-top: -150px;
+    }
   }
 
   .spin {
@@ -78,17 +119,6 @@ const DisplayMobile = styled.ul`
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  a:visited {
-    color: ${props => props.color};
-  }
-  .nav-items {
-    padding-bottom: 10%;
   }
 `;
 
@@ -163,17 +193,19 @@ class HomeMobile extends Component {
         >
           <div className="container-4">
             <div>
-              <img
-                className="logo spin"
-                src={this.state.logoSpin}
-                alt="hello"
-              />
-              <img
-                className="logo center"
-                src={this.state.logo}
-                alt="hello"
-                onClick={this.handleChange}
-              />
+              <DisplayLogo>
+                <img
+                  className="logo spin"
+                  src={this.state.logoSpin}
+                  alt="hello"
+                />
+                <img
+                  className="logo center"
+                  src={this.state.logo}
+                  alt="hello"
+                  onClick={this.handleChange}
+                />
+              </DisplayLogo>
             </div>
             <div className="nav-items">
               <Link to="/work">work</Link>
