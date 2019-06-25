@@ -55,12 +55,12 @@ const DisplayMobile = styled.ul`
   }
 
   .logo {
-    height: 375px;
+    height: 325px;
     position: absolute;
     left: 50%;
     top: 30%;
-    margin-left: -187.5px;
-    margin-top: -187.5px;
+    margin-left: -162.5px;
+    margin-top: -162.5px;
   }
 
   .spin {
@@ -166,14 +166,20 @@ class HomeMobile extends Component {
           onClick={this.handleChange}
           style={{ height: this.state.height }}
         >
-          <img className="logo spin" src={this.state.logoSpin} alt="hello" />
-          <img
-            className="logo center"
-            src={this.state.logo}
-            alt="hello"
-            onClick={this.handleChange}
-          />
           <div className="container-4">
+            <div>
+              <img
+                className="logo spin"
+                src={this.state.logoSpin}
+                alt="hello"
+              />
+              <img
+                className="logo center"
+                src={this.state.logo}
+                alt="hello"
+                onClick={this.handleChange}
+              />
+            </div>
             <div className="nav-items">
               <Link to="/work">work</Link>
             </div>
