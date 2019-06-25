@@ -71,7 +71,7 @@ class App extends Component {
       );
     } else {
       return (
-        <div className="App" style={{ height: '100%' }}>
+        <div>
           <Route exact={true} path="/" component={HomeMobile} />
         </div>
       );
