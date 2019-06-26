@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from './LogoGreen.png';
 import Hamburger from './HamburgerGreen.png';
+import Resume from '../Resume/Olivia_Dirickson_Resume.pdf';
 
 const sizeHeight = {
   mobileSH: '550px',
@@ -78,6 +79,23 @@ const DisplayMobile = styled.ul`
   a:visited {
     color: black;
   }
+  button {
+    background-color: #04ad84;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Courier New';
+  }
+  .buttonDiv {
+    padding-top: 20px;
+  }
+  * :focus {
+    outline: 0 !important;
+  }
 `;
 
 const Paragraph = styled.ul`
@@ -114,6 +132,11 @@ const AboutMobile = () => (
           volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
           ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </Paragraph>
+      </div>
+      <div className="buttonDiv">
+        <a href={Resume} target="_blank" rel="noopener noreferrer">
+          <button>RESUMÉ</button>
+        </a>
       </div>
     </DisplayMobile>
   </div>
