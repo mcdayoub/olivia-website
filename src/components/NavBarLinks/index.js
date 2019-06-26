@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import RedX from './RedX.png';
 
 const size = {
-  mobileS: '667px',
+  mobileS: '550px',
   mobileM: '600px',
   mobileL: '736px',
   tablet: '834px'
@@ -31,14 +31,9 @@ const LinksStyle = styled.ul`
   a:visited {
     color: ${props => props.color};
   }
-  @media ${device.tablet} {
+  @media ${device.mobileS} {
     .nav-items {
-      padding-bottom: 13%;
-    }
-  }
-  @media ${device.mobileL} {
-    .nav-items {
-      padding-bottom: 13%;
+      padding-bottom: 7%;
     }
   }
   @media ${device.mobileM} {
@@ -46,11 +41,17 @@ const LinksStyle = styled.ul`
       padding-bottom: 12%;
     }
   }
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     .nav-items {
-      padding-bottom: 10%;
+      padding-bottom: 13%;
     }
   }
+  @media ${device.tablet} {
+    .nav-items {
+      padding-bottom: 13%;
+    }
+  }
+
   .nav-items {
     padding-top: 30px;
   }
@@ -90,8 +91,15 @@ class NavBarLinksMobile extends Component {
     this.state = {
       showlinks: false,
       height: window.innerHeight,
-      color: props.location.aboutProps.color
+      color: '#fc4242'
     };
+  }
+  componentDidMount(props) {
+    if (this.props.location.aboutProps) {
+      if (this.props.location.aboutProps.color !== '') {
+        this.setState({ color: this.props.location.aboutProps.color });
+      }
+    }
   }
   goBack() {
     this.props.history.goBack();
@@ -102,7 +110,7 @@ class NavBarLinksMobile extends Component {
 
   render() {
     const handleBurgerClick = () => {
-      this.setState({ showlinks: true });
+      this.setState({ color: this.props.location.aboutProps.color });
     };
     return (
       <div style={{ height: this.state.height }}>

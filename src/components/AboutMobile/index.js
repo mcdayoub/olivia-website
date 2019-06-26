@@ -5,6 +5,20 @@ import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from './LogoGreen.png';
 import Hamburger from './HamburgerGreen.png';
 
+const sizeHeight = {
+  mobileSH: '550px',
+  mobileMH: '625px',
+  mobileLH: '736px',
+  tabletH: '834px'
+};
+
+const deviceHeight = {
+  mobileSH: `(min-height: ${sizeHeight.mobileSH})`,
+  mobileMH: `(min-height: ${sizeHeight.mobileMH})`,
+  mobileLH: `(min-height: ${sizeHeight.mobileLH})`,
+  tabletH: `(min-height: ${sizeHeight.tabletH})`
+};
+
 const size = {
   mobileS: '320px',
   mobileM: '375px',
@@ -18,6 +32,7 @@ const device = {
   mobileL: `(min-width: ${size.mobileL})`,
   tablet: `(min-width: ${size.tablet})`
 };
+
 const DisplayMobile = styled.ul`
   background: white;
   color: black;
@@ -35,13 +50,25 @@ const DisplayMobile = styled.ul`
   .logo {
     height: 200px;
   }
-  .polaroid {
-    height: 500px;
+  @media ${deviceHeight.mobileSH} {
+    .polaroid {
+      height: 350px;
+    }
   }
 
-  @media ${device.mobileM} {
+  @media ${deviceHeight.mobileMH} {
     .polaroid {
       height: 400px;
+    }
+  }
+  @media ${deviceHeight.mobileLH} {
+    .polaroid {
+      height: 450px;
+    }
+  }
+  @media ${deviceHeight.tabletH} {
+    .polaroid {
+      height: 500px;
     }
   }
   a {
@@ -61,7 +88,7 @@ const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
 const notbold = { 'padding-right': '60px' };
 
 const AboutMobile = () => (
-  <div>
+  <div style={{ height: '100%' }}>
     <MobileNavBarOlivia
       Logo={Logo}
       work={notbold}
