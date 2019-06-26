@@ -33,7 +33,7 @@ const LinksStyle = styled.ul`
   }
   @media ${device.mobileS} {
     .nav-items {
-      padding-bottom: 7%;
+      padding-bottom: 6%;
     }
   }
   @media ${device.mobileM} {
@@ -67,7 +67,7 @@ const LinksStyle = styled.ul`
     width: 100%;
     text-align: center;
     justify-content: space-evenly;
-    padding-top: 200px;
+    padding-top: 50%;
   }
   .xbutton {
     height: 20px;
