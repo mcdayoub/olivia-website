@@ -25,7 +25,7 @@ const NavBarStyle = styled.ul`
 
   .container {
     overflow: hidden;
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 5px;
     position: flex;
   }
