@@ -446,14 +446,15 @@ class Work extends Component {
           <DisplayRed>
             <div className="containerForPreview">
               <div>{projects}</div>
-              <div>{centerImageDiv}</div>
               <div className="container-2-spin">
                 <img
                   className="centerImage-spin spin"
                   src={this.state.spinningLogo}
                   alt="hello"
+                  onClick={() => imageClickOne()}
                 />
               </div>
+              <div>{centerImageDiv}</div>
             </div>
           </DisplayRed>
         </div>
