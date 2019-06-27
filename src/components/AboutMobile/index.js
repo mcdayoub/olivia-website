@@ -91,7 +91,7 @@ const DisplayMobile = styled.ul`
     font-family: 'Courier New';
   }
   .buttonDiv {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
   * :focus {
     outline: 0 !important;
