@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import RedX from './RedX.png';
+import GreenX from './GreenX.png';
+import BlueX from './BlueX.png';
 
 const size = {
   mobileS: '550px',
@@ -91,13 +93,23 @@ class NavBarLinksMobile extends Component {
     this.state = {
       showlinks: false,
       height: window.innerHeight,
-      color: '#fc4242'
+      color: '#fc4242',
+      colorX: RedX
     };
   }
   componentDidMount(props) {
     if (this.props.location.aboutProps) {
       if (this.props.location.aboutProps.color !== '') {
         this.setState({ color: this.props.location.aboutProps.color });
+      }
+      console.log(this.state.color);
+      if (this.props.location.aboutProps.color === '#425bea') {
+        this.setState({ colorX: BlueX });
+      } else if (this.props.location.aboutProps.color === '#04ad84') {
+        this.setState({ colorX: GreenX });
+      }
+      if (this.props.location.aboutProps.color === '#fc4242') {
+        this.setState({ colorX: RedX });
       }
     }
   }
@@ -117,7 +129,7 @@ class NavBarLinksMobile extends Component {
         <LinksStyle color={this.state.color}>
           <div className="topRight">
             <img
-              src={RedX}
+              src={this.state.colorX}
               alt="hello"
               className="xbutton"
               onClick={this.goBack}
