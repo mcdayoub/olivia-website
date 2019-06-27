@@ -56,6 +56,7 @@ const Display = styled.ul`
   }
   .buttonDiv {
     padding-top: 20px;
+    text-align: center;
   }
   * :focus {
     outline: 0 !important;
