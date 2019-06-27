@@ -388,7 +388,7 @@ class Work extends Component {
             BLADEE
           </span>
         </div>
-        <div onMouseOver={this.handleMouseOverImage3}>
+        {/* <div onMouseOver={this.handleMouseOverImage3}>
           <span>
             <img
               className="previewImage"
@@ -398,7 +398,7 @@ class Work extends Component {
             />
             IT'S NOT NUTS
           </span>
-        </div>
+        </div> */}
       </div>
     );
     let centerImageDiv = <div />;
