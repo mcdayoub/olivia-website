@@ -104,12 +104,12 @@ const WorkMobile = () => (
   <div style={{ height: '100%' }}>
     <MobileNavBarOlivia Logo={Logo} color={'#fc4242'} Hamburger={Hamburger} />
     <DisplayMobile>
-      <div className="container">
-        <div className="title">WORK</div>
-      </div>
+      <div className="container" />
       <div className="work-column">
         <div className="work-preview-image">
-          <img src={Project1Preview} alt="hello" />
+          <Link to="/itsnotnuts">
+            <img className="previewImage" src={Project1Preview} alt="" />
+          </Link>
         </div>
         <div className="work-preview-image">
           <img src={Project2Preview} alt="hello" />

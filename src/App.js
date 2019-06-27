@@ -20,6 +20,7 @@ import AboutMobile from './components/AboutMobile';
 import ContactFormMobile from './components/ContactMobile';
 import NavBarLinksMobile from './components/NavBarLinks';
 import WorkMobile from './components/WorkMobile';
+import LinkGalleryMobile from './components/WorkLinkMobile';
 
 import * as themes from './styles/themes';
 import ThemeContext from './styles/themes/context';
@@ -60,7 +61,7 @@ class App extends Component {
           <Route exact={true} path="/instagram" component={Instagram} />
           <Route exact={true} path="/contact" component={Contact} />
           <Route
-            path="/itsnotnutstests"
+            path="/itsnotnuts"
             render={() => (
               <LinkGallery
                 photos={imgList}
@@ -81,6 +82,17 @@ class App extends Component {
           <Route exact={true} path="/contact" component={ContactFormMobile} />
           <Route exact={true} path="/navmobile" component={NavBarLinksMobile} />
           <Route exact={true} path="/work" component={WorkMobile} />
+          <Route
+            path="/itsnotnuts"
+            render={() => (
+              <LinkGalleryMobile
+                photos={imgList}
+                title="IT'S NOT NUTS"
+                subtitle="business concept & branding"
+                descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+              />
+            )}
+          />
         </div>
       );
     }

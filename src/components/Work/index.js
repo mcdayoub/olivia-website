@@ -138,6 +138,9 @@ const Display = styled.ul`
     width: 1000px;
     padding-bottom: 50px;
   }
+  span {
+    text-decoration: none;
+  }
 `;
 
 let imageListOne = [Nuts1, Nuts2, Nuts3, Photo1];
@@ -352,15 +355,17 @@ class Work extends Component {
       <div className="container-3">
         <div onMouseOver={this.handleMouseOverImage1}>
           <span>
-            <Link to="/itsnotnutstests">
-              {' '}
+            <Link
+              to="/itsnotnuts"
+              style={{ 'text-decoration': 'none', color: 'black' }}
+            >
               <img
                 className="previewImage"
                 src={require('./previews/one.png')}
                 alt=""
               />
+              IT'S NOT NUTS
             </Link>
-            IT'S NOT NUTS
           </span>
         </div>
         <div onMouseOver={this.handleMouseOverImage2}>
