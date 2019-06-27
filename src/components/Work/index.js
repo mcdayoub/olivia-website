@@ -330,7 +330,6 @@ class Work extends Component {
           'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie',
         selected: 'itsnotnuts'
       }));
-      this.props.history.push('/work/itsnotnuts');
     };
     const imageClickTwo = () => {
       this.setState(state => ({
@@ -405,13 +404,11 @@ class Work extends Component {
     if (this.state.centerImgBoolean) {
       centerImageDiv = (
         <div className="container-2">
-          <img
-            className="centerImage"
-            src={Project1Preview}
-            alt="hello"
-            onClick={() => imageClickOne()}
-            hidden={this.state.isHiddenImage1}
-          />
+          <div hidden={this.state.isHiddenImage1}>
+            <Link to="/itsnotnuts">
+              <img className="centerImage" src={Project1Preview} alt="hello" />
+            </Link>
+          </div>
           <img
             className="centerImage"
             src={Project2Preview}
@@ -451,7 +448,6 @@ class Work extends Component {
                   className="centerImage-spin spin"
                   src={this.state.spinningLogo}
                   alt="hello"
-                  onClick={() => imageClickOne()}
                 />
               </div>
               <div>{centerImageDiv}</div>
