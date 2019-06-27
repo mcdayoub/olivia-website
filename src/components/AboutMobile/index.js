@@ -42,10 +42,10 @@ const DisplayMobile = styled.ul`
     align-items: left;
   }
   .container-3 {
-    padding-top: 20px;
+    padding-top: 10px;
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   .logo {
@@ -91,7 +91,7 @@ const DisplayMobile = styled.ul`
     font-family: 'Courier New';
   }
   .buttonDiv {
-    padding-top: 20px;
+    padding-bottom: 20px;
   }
   * :focus {
     outline: 0 !important;
@@ -133,10 +133,12 @@ const AboutMobile = () => (
           ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </Paragraph>
       </div>
-      <div className="buttonDiv">
-        <a href={Resume} target="_blank" rel="noopener noreferrer">
-          <button>RESUMÉ</button>
-        </a>
+      <div className="container-3">
+        <div className="buttonDiv">
+          <a href={Resume} target="_blank" rel="noopener noreferrer">
+            <button>RESUMÉ</button>
+          </a>
+        </div>
       </div>
     </DisplayMobile>
   </div>
