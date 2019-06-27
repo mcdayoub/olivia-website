@@ -18,12 +18,18 @@ const DisplayRed = styled.ul`
     height: 100%;
   }
   .container-2 {
-    height: 375px;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -225px;
-    margin-top: -225px;
+    margin-left: -200px;
+    margin-top: -200px;
+  }
+  .container-2-spin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -237.5px;
+    margin-top: -237.5px;
   }
 
   .container-3 {
@@ -58,8 +64,34 @@ const DisplayRed = styled.ul`
     width: 30px;
   }
   .centerImage {
-    height: 450px;
-    width: 450px;
+    height: 400px;
+    width: 400px;
+  }
+  .centerImage-spin {
+    height: 475px;
+    width: 475px;
+  }
+
+  .spin {
+    -webkit-animation: spin 25s linear infinite;
+    -moz-animation: spin 25s linear infinite;
+    animation: spin 25s linear infinite;
+  }
+  @-moz-keyframes spin {
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
   }
 `;
 export default DisplayRed;

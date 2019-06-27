@@ -17,6 +17,11 @@ import Image2 from './Nuts/Nuts2.png';
 import Image3 from './Nuts/Nuts3.png';
 import Photo1 from './TDS/Photo1.png';
 import { Redirect } from 'react-router';
+import Project1Preview from './Project1Preview.png';
+import Project2Preview from './Project2Preview.png';
+import LogoRedSpin from './LogoRedSpin.png';
+import LogoGreenSpin from './LogoGreenSpin.png';
+import LogoBlueSpin from './LogoBlueSpin.png';
 
 const Display = styled.ul`
   background: white;
@@ -211,7 +216,8 @@ class Work extends Component {
       isHiddenImage1: true,
       isHiddenImage2: true,
       isHiddenImage3: true,
-      selected: ''
+      selected: '',
+      spinningLogo: LogoRedSpin
     };
     this.handleMouseOverImage1 = this.handleMouseOverImage1.bind(this);
     this.handleMouseOverImage2 = this.handleMouseOverImage2.bind(this);
@@ -280,8 +286,9 @@ class Work extends Component {
   }
   handleMouseOverImage1() {
     this.setState({
+      spinningLogo: LogoGreenSpin,
       centerImgBoolean: true,
-      centerImg: Image1,
+      centerImg: Project1Preview,
       isHiddenImage1: false,
       isHiddenImage2: true,
       isHiddenImage3: true
@@ -289,6 +296,7 @@ class Work extends Component {
   }
   handleMouseOverImage2() {
     this.setState({
+      spinningLogo: LogoRedSpin,
       centerImgBoolean: true,
       centerImg: Image2,
       isHiddenImage1: true,
@@ -298,6 +306,7 @@ class Work extends Component {
   }
   handleMouseOverImage3() {
     this.setState({
+      spinningLogo: LogoBlueSpin,
       centerImgBoolean: true,
       centerImg: Image3,
       isHiddenImage1: true,
@@ -398,14 +407,14 @@ class Work extends Component {
         <div className="container-2">
           <img
             className="centerImage"
-            src={Image1}
+            src={Project1Preview}
             alt="hello"
             onClick={() => imageClickOne()}
             hidden={this.state.isHiddenImage1}
           />
           <img
             className="centerImage"
-            src={Image2}
+            src={Project2Preview}
             alt="hello"
             onClick={() => imageClickTwo()}
             hidden={this.state.isHiddenImage2}
@@ -438,6 +447,13 @@ class Work extends Component {
             <div className="containerForPreview">
               <div>{projects}</div>
               <div>{centerImageDiv}</div>
+              <div className="container-2-spin">
+                <img
+                  className="centerImage-spin spin"
+                  src={this.state.spinningLogo}
+                  alt="hello"
+                />
+              </div>
             </div>
           </DisplayRed>
         </div>

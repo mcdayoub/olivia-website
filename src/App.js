@@ -51,7 +51,7 @@ class App extends Component {
 
   render() {
     const { width } = this.state;
-    const isMobile = width <= 768;
+    const isMobile = width <= 810;
     if (!isMobile) {
       return (
         <div className="App" style={{ height: '100%' }}>
