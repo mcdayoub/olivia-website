@@ -6,6 +6,8 @@ import Logo from './LogoRed.png';
 import Hamburger from './HamburgerRed.png';
 import Project1Preview from './Project1Preview.png';
 import Project2Preview from './Project2Preview.png';
+import Project1PreviewCopy from './Project1Previewcopy.png';
+import Project2PreviewCopy from './Project2Previewcopy.png';
 
 const size = {
   mobileS: '320px',
@@ -108,11 +110,11 @@ const WorkMobile = () => (
       <div className="work-column">
         <div className="work-preview-image">
           <Link to="/itsnotnuts">
-            <img className="previewImage" src={Project1Preview} alt="" />
+            <img className="previewImage" src={Project1PreviewCopy} alt="" />
           </Link>
         </div>
         <div className="work-preview-image">
-          <img src={Project2Preview} alt="hello" />
+          <img src={Project2PreviewCopy} alt="hello" />
         </div>
       </div>
     </DisplayMobile>
