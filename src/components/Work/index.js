@@ -461,6 +461,8 @@ class Work extends Component {
         <div id="preload" style={{ display: 'none' }}>
           <img src={Project1PreviewCopy2} alt="hello" />
           <img src={Project2PreviewCopy2} alt="hello" />
+          <img src={LogoGreenSpin} alt="hello" />
+          <img src={LogoBlueSpin} alt="hello" />
         </div>
         <NavBarOlivia
           Logo={Logo}
