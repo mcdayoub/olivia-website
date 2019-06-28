@@ -458,6 +458,10 @@ class Work extends Component {
     }
     return (
       <div style={{ height: this.state.heightOfContainer }}>
+        <div id="preload" style={{ display: 'none' }}>
+          <img src={Project1PreviewCopy2} alt="hello" />
+          <img src={Project2PreviewCopy2} alt="hello" />
+        </div>
         <NavBarOlivia
           Logo={Logo}
           work={bold}
