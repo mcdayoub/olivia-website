@@ -442,7 +442,7 @@ class Work extends Component {
             onClick={() => imageClickTwo()}
             hidden={this.state.isHiddenImage2}
             style={style2}
-            onLoad={this.onLoadImg1}
+            onLoad={this.onLoadImg2}
           />
           <img
             className="centerImage"
