@@ -143,6 +143,14 @@ class Home extends Component {
   render() {
     return (
       <DisplayRed color={this.state.color}>
+        <div id="preload" style={{ display: 'none' }}>
+          <img src={imgLogoRed} alt="hello" />
+          <img src={imgLogoGreen} alt="hello" />
+          <img src={imgLogoBlue} alt="hello" />
+          <img src={imgLogoRedSpin} alt="hello" />
+          <img src={imgLogoGreenSpin} alt="hello" />
+          <img src={imgLogoBlueSpin} alt="hello" />
+        </div>
         <div className="container" onClick={this.handleChange}>
           <div className="left container-2">
             <div className="topLeft">
