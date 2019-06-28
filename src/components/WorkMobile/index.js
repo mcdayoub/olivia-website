@@ -8,6 +8,7 @@ import Project1Preview from './Project1Preview.png';
 import Project2Preview from './Project2Preview.png';
 import Project1PreviewCopy from './Project1Previewcopy.png';
 import Project2PreviewCopy from './Project2Previewcopy.png';
+import LazyLoad from 'react-lazy-load';
 
 const size = {
   mobileS: '320px',
@@ -110,7 +111,9 @@ const WorkMobile = () => (
       <div className="work-column">
         <div className="work-preview-image">
           <Link to="/itsnotnuts">
-            <img className="previewImage" src={Project1PreviewCopy} alt="" />
+            <LazyLoad>
+              <img className="previewImage" src={Project1PreviewCopy} alt="" />
+            </LazyLoad>
           </Link>
         </div>
         <div className="work-preview-image">
