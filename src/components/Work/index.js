@@ -20,9 +20,11 @@ import { Redirect } from 'react-router';
 
 import Project1Preview from './Project1Preview.png';
 import Project1PreviewCopy from './Project1Previewcopy.png';
+import Project1PreviewCopy2 from './Project1Previewcopy2.png';
 
 import Project2Preview from './Project2Preview.png';
 import Project2PreviewCopy from './Project2Previewcopy.png';
+import Project2PreviewCopy2 from './Project2Previewcopy2.png';
 
 import LogoRedSpin from './LogoRedSpin.png';
 import LogoGreenSpin from './LogoGreenSpin.png';
@@ -428,7 +430,7 @@ class Work extends Component {
             <Link to="/itsnotnuts">
               <img
                 className="centerImage"
-                src={Project1PreviewCopy}
+                src={Project1PreviewCopy2}
                 alt="hello"
                 style={style1}
                 onLoad={this.onLoadImg1}
@@ -437,7 +439,7 @@ class Work extends Component {
           </div>
           <img
             className="centerImage"
-            src={Project2PreviewCopy}
+            src={Project2PreviewCopy2}
             alt="hello"
             onClick={() => imageClickTwo()}
             hidden={this.state.isHiddenImage2}
