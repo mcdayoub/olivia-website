@@ -423,7 +423,7 @@ class Work extends Component {
     let centerImageDiv = <div />;
     if (this.state.centerImgBoolean) {
       centerImageDiv = (
-        <div className="container-2">
+        <div className="container-2" style={{ overflow: 'hidden' }}>
           <div hidden={this.state.isHiddenImage1}>
             <Link to="/itsnotnuts">
               <img
