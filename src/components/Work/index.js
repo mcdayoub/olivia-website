@@ -217,7 +217,9 @@ class Work extends Component {
       isHiddenImage2: true,
       isHiddenImage3: true,
       selected: '',
-      spinningLogo: LogoRedSpin
+      spinningLogo: LogoRedSpin,
+      didLoadImg1: false,
+      didLoadImg2: false
     };
     this.handleMouseOverImage1 = this.handleMouseOverImage1.bind(this);
     this.handleMouseOverImage2 = this.handleMouseOverImage2.bind(this);
@@ -314,8 +316,21 @@ class Work extends Component {
       isHiddenImage3: false
     });
   }
+  onLoadImg1 = () => {
+    this.setState({
+      didLoadImg1: true
+    });
+  };
+  onLoadImg2 = () => {
+    this.setState({
+      didLoadImg2: true
+    });
+  };
 
   render() {
+    const style1 = this.state.didLoadImg1 ? {} : { visibility: 'hidden' };
+    const style2 = this.state.didLoadImg2 ? {} : { visibility: 'hidden' };
+
     const imageClickOne = () => {
       this.setState(state => ({
         isHidden: true,
@@ -406,7 +421,13 @@ class Work extends Component {
         <div className="container-2">
           <div hidden={this.state.isHiddenImage1}>
             <Link to="/itsnotnuts">
-              <img className="centerImage" src={Project1Preview} alt="hello" />
+              <img
+                className="centerImage"
+                src={Project1Preview}
+                alt="hello"
+                style={style1}
+                onLoad={this.onLoadImg1}
+              />
             </Link>
           </div>
           <img
@@ -415,6 +436,8 @@ class Work extends Component {
             alt="hello"
             onClick={() => imageClickTwo()}
             hidden={this.state.isHiddenImage2}
+            style={style1}
+            onLoad={this.onLoadImg1}
           />
           <img
             className="centerImage"

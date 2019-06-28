@@ -105,9 +105,9 @@ const DisplayMobile = styled.ul`
 class WorkMobile extends Component {
   constructor(props) {
     super(props);
-    this.state = { didLoadImg1: false };
-    this.state = { didLoadImg2: false };
+    this.state = { didLoadImg1: false, didLoadImg2: false };
   }
+
   onLoadImg1 = () => {
     this.setState({
       didLoadImg1: true
