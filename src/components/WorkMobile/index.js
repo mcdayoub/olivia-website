@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
@@ -8,7 +8,6 @@ import Project1Preview from './Project1Preview.png';
 import Project2Preview from './Project2Preview.png';
 import Project1PreviewCopy from './Project1Previewcopy.png';
 import Project2PreviewCopy from './Project2Previewcopy.png';
-import LazyLoad from 'react-lazy-load';
 
 const size = {
   mobileS: '320px',
@@ -103,25 +102,53 @@ const DisplayMobile = styled.ul`
     padding-top: 30px;
   }
 `;
-const WorkMobile = () => (
-  <div style={{ height: '100%' }}>
-    <MobileNavBarOlivia Logo={Logo} color={'#fc4242'} Hamburger={Hamburger} />
-    <DisplayMobile>
-      <div className="container" />
-      <div className="work-column">
-        <div className="work-preview-image">
-          <Link to="/itsnotnuts">
-            <LazyLoad>
-              <img className="previewImage" src={Project1PreviewCopy} alt="" />
-            </LazyLoad>
-          </Link>
-        </div>
-        <div className="work-preview-image">
-          <img src={Project2PreviewCopy} alt="hello" />
-        </div>
+class WorkMobile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { didLoad: false };
+  }
+  onLoad = () => {
+    this.setState({
+      didLoad: true
+    });
+  };
+
+  render() {
+    const style = this.state.didLoad ? {} : { visibility: 'hidden' };
+    return (
+      <div style={{ height: '100%' }}>
+        <MobileNavBarOlivia
+          Logo={Logo}
+          color={'#fc4242'}
+          Hamburger={Hamburger}
+        />
+        <DisplayMobile>
+          <div className="container" />
+          <div className="work-column">
+            <div className="work-preview-image">
+              <Link to="/itsnotnuts">
+                <img
+                  style={style}
+                  className="previewImage"
+                  src={Project1PreviewCopy}
+                  alt=""
+                  onLoad={this.onLoad}
+                />
+              </Link>
+            </div>
+            <div className="work-preview-image">
+              <img
+                style={style}
+                src={Project2PreviewCopy}
+                alt="hello"
+                onLoad={this.onLoad}
+              />
+            </div>
+          </div>
+        </DisplayMobile>
       </div>
-    </DisplayMobile>
-  </div>
-);
+    );
+  }
+}
 
 export default WorkMobile;
