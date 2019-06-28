@@ -105,16 +105,24 @@ const DisplayMobile = styled.ul`
 class WorkMobile extends Component {
   constructor(props) {
     super(props);
-    this.state = { didLoad: false };
+    this.state = { didLoadImg1: false };
+    this.state = { didLoadImg2: false };
   }
-  onLoad = () => {
+  onLoadImg1 = () => {
+    this.setState({
+      didLoad: true
+    });
+  };
+  onLoadImg2 = () => {
     this.setState({
       didLoad: true
     });
   };
 
   render() {
-    const style = this.state.didLoad ? {} : { visibility: 'hidden' };
+    const style1 = this.state.didLoadImg1 ? {} : { visibility: 'hidden' };
+    const style2 = this.state.didLoadImg2 ? {} : { visibility: 'hidden' };
+
     return (
       <div style={{ height: '100%' }}>
         <MobileNavBarOlivia
@@ -128,20 +136,20 @@ class WorkMobile extends Component {
             <div className="work-preview-image">
               <Link to="/itsnotnuts">
                 <img
-                  style={style}
+                  style={style1}
                   className="previewImage"
                   src={Project1PreviewCopy}
                   alt=""
-                  onLoad={this.onLoad}
+                  onLoad={this.onLoadImg1}
                 />
               </Link>
             </div>
             <div className="work-preview-image">
               <img
-                style={style}
+                style={style2}
                 src={Project2PreviewCopy}
                 alt="hello"
-                onLoad={this.onLoad}
+                onLoad={this.onLoadImg2}
               />
             </div>
           </div>
