@@ -423,10 +423,7 @@ class Work extends Component {
     let centerImageDiv = <div />;
     if (this.state.centerImgBoolean) {
       centerImageDiv = (
-        <div
-          className="container-2"
-          onLoad={(this.onLoadImg1, this.onLoadImg2)}
-        >
+        <div className="container-2">
           <div hidden={this.state.isHiddenImage1}>
             <Link to="/itsnotnuts">
               <img
@@ -434,6 +431,7 @@ class Work extends Component {
                 src={Project1PreviewCopy}
                 alt="hello"
                 style={style1}
+                onLoad={this.onLoadImg1}
               />
             </Link>
           </div>
@@ -444,6 +442,7 @@ class Work extends Component {
             onClick={() => imageClickTwo()}
             hidden={this.state.isHiddenImage2}
             style={style2}
+            onLoad={this.onLoadImg2}
           />
           <img
             className="centerImage"
