@@ -207,6 +207,14 @@ class HomeMobile extends Component {
   render() {
     return (
       <DisplayMobile color={this.state.color}>
+        <div id="preload" style={{ display: 'none' }}>
+          <img src={imgLogoRedCopy} alt="hello" />
+          <img src={imgLogoGreenCopy} alt="hello" />
+          <img src={imgLogoBlueCopy} alt="hello" />
+          <img src={imgLogoRedSpinCopy} alt="hello" />
+          <img src={imgLogoGreenSpinCopy} alt="hello" />
+          <img src={imgLogoBlueSpinCopy} alt="hello" />
+        </div>
         <div
           className="container"
           onClick={this.handleChange}
