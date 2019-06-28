@@ -441,7 +441,7 @@ class Work extends Component {
             alt="hello"
             onClick={() => imageClickTwo()}
             hidden={this.state.isHiddenImage2}
-            style={style1}
+            style={style2}
             onLoad={this.onLoadImg1}
           />
           <img
