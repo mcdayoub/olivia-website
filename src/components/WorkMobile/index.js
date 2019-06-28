@@ -110,12 +110,12 @@ class WorkMobile extends Component {
   }
   onLoadImg1 = () => {
     this.setState({
-      didLoad: true
+      didLoadImg1: true
     });
   };
   onLoadImg2 = () => {
     this.setState({
-      didLoad: true
+      didLoadImg2: true
     });
   };
 
