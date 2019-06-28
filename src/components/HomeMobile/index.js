@@ -7,6 +7,7 @@ import imgLogoBlue from '../Home/LogoBlue.png';
 import imgLogoRedSpin from '../Home/LogoRedSpin.png';
 import imgLogoGreenSpin from '../Home/LogoGreenSpin.png';
 import imgLogoBlueSpin from '../Home/LogoBlueSpin.png';
+import imgLogoRedCopy from '../Home/LogoRedcopy.png';
 
 const size = {
   mobileS: '550px',
@@ -138,7 +139,7 @@ const DisplayLogo = styled.ul`
 `;
 
 const colorArray = ['#EF514D', '#04ad84', '#425bea'];
-const redImgArray = [imgLogoRed, imgLogoRedSpin];
+const redImgArray = [imgLogoRedCopy, imgLogoRedSpin];
 const greenImgArray = [imgLogoGreen, imgLogoGreenSpin];
 const blueImgArray = [imgLogoBlue, imgLogoBlueSpin];
 const fullImgArray = [redImgArray, greenImgArray, blueImgArray];
