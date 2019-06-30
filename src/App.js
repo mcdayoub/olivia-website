@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Switch, BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import logo from './weblogoolivia-01.png';
 import './App.css';
-import Home from './components/Home';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import { ThemeProvider } from 'styled-components';
+
+//TRANSITION IMPORTS
+import posed, { PoseGroup } from 'react-pose';
+
+//WEB IMPORTS
+import Home from './components/Home';
 import About from './components/About';
 import Work from './components/Work';
 import Instagram from './components/Instagram';
@@ -26,6 +31,10 @@ import * as themes from './styles/themes';
 import ThemeContext from './styles/themes/context';
 
 const imgList = [Nuts1, Nuts2, Nuts3];
+const RouteContainer = posed.div({
+  enter: { opacity: 1, delay: 300, beforeChildren: true },
+  exit: { opacity: 0 }
+});
 
 class App extends Component {
   constructor(props) {
@@ -55,23 +64,59 @@ class App extends Component {
     if (!isMobile) {
       return (
         <div className="App" style={{ height: '100%' }}>
-          <Route exact={true} path="/" component={Home} />
-          <Route exact={true} path="/about" component={About} />
-          <Route path="/work" component={Work} />
-          <Route exact={true} path="/instagram" component={Instagram} />
-          <Route exact={true} path="/contact" component={Contact} />
-          <Route
-            path="/itsnotnuts"
-            render={() => (
-              <LinkGallery
-                photos={imgList}
-                title="fuck"
-                subtitle="you"
-                descriptionOne="hello"
-                descriptionTwo="there"
-              />
-            )}
-          />
+          <Router>
+            <Route
+              style={{ height: '100%' }}
+              render={({ location }) => (
+                <PoseGroup>
+                  <RouteContainer
+                    key={location.pathname}
+                    style={{ height: '100%' }}
+                  >
+                    <Switch location={location}>
+                      <Route
+                        exact={true}
+                        path="/"
+                        component={Home}
+                        key="home"
+                      />
+                      <Route
+                        exact={true}
+                        path="/about"
+                        component={About}
+                        key="about"
+                      />
+                      <Route path="/work" component={Work} key="work" />
+                      <Route
+                        exact={true}
+                        path="/instagram"
+                        component={Instagram}
+                        key="instagram"
+                      />
+                      <Route
+                        exact={true}
+                        path="/contact"
+                        component={Contact}
+                        key="contact"
+                      />
+                      <Route
+                        path="/itsnotnuts"
+                        key="itsnotnuts"
+                        render={() => (
+                          <LinkGallery
+                            photos={imgList}
+                            title="IT'S NOT NUTS"
+                            subtitle="business concept & branding"
+                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                          />
+                        )}
+                      />
+                    </Switch>
+                  </RouteContainer>
+                </PoseGroup>
+              )}
+            />
+          </Router>
         </div>
       );
     } else {
