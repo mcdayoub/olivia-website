@@ -32,7 +32,18 @@ import LinkGalleryMobile from './components/WorkLinkMobile';
 import * as themes from './styles/themes';
 import ThemeContext from './styles/themes/context';
 
+//PROJECT IMPORTS
+//TDS IMPORTS
+import TDS1 from './components/TDS/Images/TAQUERIADELSOL_1.png';
+import TDS2 from './components/TDS/Images/TAQUERIADELSOL_2.png';
+import TDS3 from './components/TDS/Images/TAQUERIADELSOL_3.png';
+import TDS4 from './components/TDS/Images/TAQUERIADELSOL_4.png';
+import TDS5 from './components/TDS/Images/TAQUERIADELSOL_5.png';
+import TDS6 from './components/TDS/Images/TAQUERIADELSOL_6.png';
+
+//PROJECT IMAGE LISTS
 const imgList = [Project1Preview, Project2Preview, Nuts1, Nuts2, Nuts3];
+const TDSImgList = [TDS1, TDS2, TDS3, TDS4, TDS5, TDS6];
 
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 300, beforeChildren: true },
@@ -114,6 +125,18 @@ class App extends Component {
                           />
                         )}
                       />
+                      <Route
+                        path="/tds"
+                        key="tds"
+                        render={() => (
+                          <LinkGallery
+                            photos={TDSImgList}
+                            title="TAQUERÍA DEL SOL"
+                            subtitle="business concept & branding"
+                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                          />
+                        )}
+                      />
                     </Switch>
                   </RouteContainer>
                 </PoseGroup>
@@ -158,6 +181,17 @@ class App extends Component {
                           <LinkGalleryMobile
                             photos={imgList}
                             title="IT'S NOT NUTS"
+                            subtitle="business concept & branding"
+                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                          />
+                        )}
+                      />
+                      <Route
+                        path="/tds"
+                        render={() => (
+                          <LinkGalleryMobile
+                            photos={TDSImgList}
+                            title="TAQUERÍA DEL SOL"
                             subtitle="business concept & branding"
                             descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
                           />

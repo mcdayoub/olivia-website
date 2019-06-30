@@ -400,13 +400,17 @@ class Work extends Component {
         </div>
         <div onMouseOver={this.handleMouseOverImage2}>
           <span>
-            <img
-              className="previewImage"
-              src={require('./previews/bladee.png')}
-              alt=""
-              onClick={() => imageClickTwo()}
-            />
-            BLADEE
+            <Link
+              to="/tds"
+              style={{ 'text-decoration': 'none', color: 'black' }}
+            >
+              <img
+                className="previewImage"
+                src={require('./previews/bladee.png')}
+                alt=""
+              />
+              TDS
+            </Link>
           </span>
         </div>
         {/* <div onMouseOver={this.handleMouseOverImage3}>

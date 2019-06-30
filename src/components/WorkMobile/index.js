@@ -145,12 +145,14 @@ class WorkMobile extends Component {
               </Link>
             </div>
             <div className="work-preview-image">
-              <img
-                style={style2}
-                src={Project2PreviewCopy}
-                alt="hello"
-                onLoad={this.onLoadImg2}
-              />
+              <Link to="/tds">
+                <img
+                  style={style2}
+                  src={Project2PreviewCopy}
+                  alt="hello"
+                  onLoad={this.onLoadImg2}
+                />
+              </Link>
             </div>
           </div>
         </DisplayMobile>
