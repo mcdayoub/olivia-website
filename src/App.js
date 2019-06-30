@@ -122,22 +122,50 @@ class App extends Component {
     } else {
       return (
         <div>
-          <Route exact={true} path="/" component={HomeMobile} />
-          <Route exact={true} path="/about" component={AboutMobile} />
-          <Route exact={true} path="/contact" component={ContactFormMobile} />
-          <Route exact={true} path="/navmobile" component={NavBarLinksMobile} />
-          <Route exact={true} path="/work" component={WorkMobile} />
-          <Route
-            path="/itsnotnuts"
-            render={() => (
-              <LinkGalleryMobile
-                photos={imgList}
-                title="IT'S NOT NUTS"
-                subtitle="business concept & branding"
-                descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
-              />
-            )}
-          />
+          <Router>
+            <Route
+              style={{ height: '100%' }}
+              render={({ location }) => (
+                <PoseGroup>
+                  <RouteContainer
+                    key={location.pathname}
+                    style={{ height: '100%' }}
+                  >
+                    <Switch location={location}>
+                      <Route exact={true} path="/" component={HomeMobile} />
+                      <Route
+                        exact={true}
+                        path="/about"
+                        component={AboutMobile}
+                      />
+                      <Route
+                        exact={true}
+                        path="/contact"
+                        component={ContactFormMobile}
+                      />
+                      <Route
+                        exact={true}
+                        path="/navmobile"
+                        component={NavBarLinksMobile}
+                      />
+                      <Route exact={true} path="/work" component={WorkMobile} />
+                      <Route
+                        path="/itsnotnuts"
+                        render={() => (
+                          <LinkGalleryMobile
+                            photos={imgList}
+                            title="IT'S NOT NUTS"
+                            subtitle="business concept & branding"
+                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                          />
+                        )}
+                      />
+                    </Switch>
+                  </RouteContainer>
+                </PoseGroup>
+              )}
+            />
+          </Router>
         </div>
       );
     }
