@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from './LogoGreen.png';
 import Hamburger from './HamburgerGreen.png';
-import Resume from '../Resume/Olivia_Dirickson_Resume.pdf';
+import Resume from '../Resume/OliviaDirickson_Resume.pdf';
 
 const sizeHeight = {
   mobileSH: '550px',

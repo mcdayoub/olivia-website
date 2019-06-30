@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoGreen.png';
-import Resume from '../Resume/Olivia_Dirickson_Resume.pdf';
+import Resume from '../Resume/OliviaDirickson_Resume.pdf';
 
 const Display = styled.ul`
   background: white;
