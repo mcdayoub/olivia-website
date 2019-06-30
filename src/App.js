@@ -18,6 +18,8 @@ import LinkGallery from './components/WorkLink';
 import Nuts1 from './components/Work/Nuts/Nuts1.png';
 import Nuts2 from './components/Work/Nuts/Nuts2.png';
 import Nuts3 from './components/Work/Nuts/Nuts3.png';
+import Project1Preview from './components/Work/Project1Preview.png';
+import Project2Preview from './components/Work/Project2Preview.png';
 
 //MOBILE IMPORTS
 import HomeMobile from './components/HomeMobile';
@@ -30,7 +32,8 @@ import LinkGalleryMobile from './components/WorkLinkMobile';
 import * as themes from './styles/themes';
 import ThemeContext from './styles/themes/context';
 
-const imgList = [Nuts1, Nuts2, Nuts3];
+const imgList = [Project1Preview, Project2Preview, Nuts1, Nuts2, Nuts3];
+
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 300, beforeChildren: true },
   exit: { opacity: 0 }

@@ -16,6 +16,8 @@ import Image2 from './Nuts/Nuts2.png';
 import Image3 from './Nuts/Nuts3.png';
 import Photo1 from './TDS/Photo1.png';
 import { Redirect } from 'react-router';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Display = styled.ul`
   background: white;
@@ -139,7 +141,13 @@ const Display = styled.ul`
 `;
 function Gallery(props) {
   const images = props.imgList.map(image => {
-    return <img className="galleryImage" key={image} src={image} alt="" />;
+    return (
+      <LazyLoadImage
+        alt=""
+        src={image}
+        effect="blur" // use normal <img> attributes as props
+      /> //<img className="galleryImage" key={image} src={image} alt="" />;
+    );
   });
   return (
     <div>

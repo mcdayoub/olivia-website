@@ -126,7 +126,11 @@ const Display = styled.ul`
 `;
 function Gallery(props) {
   const images = props.imgList.map(image => {
-    return <img className="galleryImage" key={image} src={image} alt="" />;
+    return (
+      <div>
+        <img className="galleryImage" key={image} src={image} alt="" />
+      </div>
+    );
   });
   return (
     <div>
