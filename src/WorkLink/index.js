@@ -142,11 +142,15 @@ const Display = styled.ul`
 function Gallery(props) {
   const images = props.imgList.map(image => {
     return (
-      <LazyLoadImage
-        alt={image.alt}
-        src={image.src}
-        effect="blur" // use normal <img> attributes as props
-      /> //<img className="galleryImage" key={image} src={image} alt="" />;
+      <div>
+
+        <LazyLoadImage
+          alt={image.alt}
+          src={image.src}
+          effect="blur" // use normal <img> attributes as props
+        />
+        {/* <img className="galleryImage" key={image} src={image} alt="" />; */}
+      </div>
     );
   });
   return (

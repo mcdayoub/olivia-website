@@ -4,6 +4,17 @@ import styled from 'styled-components';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from './LogoRed.png';
 import Hamburger from './HamburgerRed.png';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import Uparrow from './Uparrow.png';
+import {
+  Link,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller
+} from 'react-scroll';
 
 const Display = styled.ul`
   background: white;
@@ -103,6 +114,18 @@ const Display = styled.ul`
     width: 300px;
     padding-bottom: 50px;
   }
+  .uparrow {
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 12px;
+  }
+  .uparrow img {
+    padding-bottom: 10px;
+  }
+  .uparrow h3 {
+    font-weight: normal;
+  }
 `;
 function Gallery(props) {
   const images = props.imgList.map(image => {
@@ -137,6 +160,10 @@ class LinkGallery extends Component {
       description: '',
       descriptionOne: ''
     };
+    this.scrollToTop = this.scrollToTop.bind(this);
+  }
+  scrollToTop() {
+    scroll.scrollToTop();
   }
   render() {
     return (
@@ -160,6 +187,10 @@ class LinkGallery extends Component {
                 subtitle={this.props.subtitle}
                 descriptionOne={this.props.descriptionOne}
               />
+              <div className="uparrow">
+                <img src={Uparrow} alt="hello" onClick={this.scrollToTop} />
+                <h3>up please</h3>
+              </div>
             </div>
           </div>
         </Display>

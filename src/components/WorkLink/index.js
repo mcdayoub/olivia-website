@@ -3,6 +3,18 @@ import styled from 'styled-components';
 
 import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoRed.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import Uparrow from './Uparrow.png';
+import {
+  Link,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller
+} from 'react-scroll';
 
 const Display = styled.ul`
   background: white;
@@ -123,6 +135,18 @@ const Display = styled.ul`
     width: 1000px;
     padding-bottom: 50px;
   }
+  .uparrow {
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 12px;
+  }
+  .uparrow img {
+    padding-bottom: 10px;
+  }
+  .uparrow h3 {
+    font-weight: normal;
+  }
 `;
 function Gallery(props) {
   const images = props.imgList.map(image => {
@@ -154,6 +178,7 @@ function Gallery(props) {
 }
 const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
 const notbold = { 'padding-right': '60px' };
+
 class LinkGallery extends Component {
   constructor(props) {
     super(props);
@@ -165,6 +190,10 @@ class LinkGallery extends Component {
       descriptionOne: '',
       descriptionTwo: ''
     };
+    this.scrollToTop = this.scrollToTop.bind(this);
+  }
+  scrollToTop() {
+    scroll.scrollToTop();
   }
   render() {
     return (
@@ -188,6 +217,10 @@ class LinkGallery extends Component {
                 descriptionOne={this.props.descriptionOne}
                 descriptionTwo={this.props.descriptionTwo}
               />
+              <div className="uparrow">
+                <img src={Uparrow} alt="hello" onClick={this.scrollToTop} />
+                <h3>up please</h3>
+              </div>
             </div>
           </div>
         </Display>
