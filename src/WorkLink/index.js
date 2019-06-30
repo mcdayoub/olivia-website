@@ -144,7 +144,7 @@ function Gallery(props) {
     return (
       <LazyLoadImage
         alt=""
-        src={image}
+        src={image.src}
         effect="blur" // use normal <img> attributes as props
       /> //<img className="galleryImage" key={image} src={image} alt="" />;
     );
