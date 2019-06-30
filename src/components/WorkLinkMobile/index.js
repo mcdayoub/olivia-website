@@ -187,8 +187,8 @@ class LinkGallery extends Component {
                 subtitle={this.props.subtitle}
                 descriptionOne={this.props.descriptionOne}
               />
-              <div className="uparrow">
-                <img src={Uparrow} alt="hello" onClick={this.scrollToTop} />
+              <div className="uparrow" onClick={this.scrollToTop}>
+                <img src={Uparrow} alt="hello" />
                 <h3>up please</h3>
               </div>
             </div>
