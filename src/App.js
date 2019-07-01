@@ -94,8 +94,8 @@ class App extends Component {
             <img src={imgLogoBlueSpin} alt="hello" />
             <img src={imgLogoGreenSpin} alt="hello" />
 
-            <img src={TDS1} alt="hello" />
-            <img src={TDS2} alt="hello" />
+            {/* <img src={TDS1} alt="hello" />
+            <img src={TDS2} alt="hello" /> */}
           </div>
           <Router>
             <Route
