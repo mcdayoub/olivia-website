@@ -160,6 +160,7 @@ function Gallery(props) {
             src={image}
             onLoad={onload}
             className="galleryImage"
+            offset={0}
           />
         )}
       />
