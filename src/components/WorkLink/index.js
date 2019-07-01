@@ -151,7 +151,7 @@ const Display = styled.ul`
 function Gallery(props) {
   const images = props.imgList.map(image => {
     return (
-      <LazyLoad>
+      <LazyLoad throttle={200}>
         <img className="galleryImage" key={image} src={image} alt="" />
       </LazyLoad>
     );
