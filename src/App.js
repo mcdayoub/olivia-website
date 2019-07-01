@@ -86,17 +86,6 @@ class App extends Component {
     if (!isMobile) {
       return (
         <div className="App" style={{ height: '100%' }}>
-          <div id="preload" style={{ display: 'none' }}>
-            <img src={imgLogoRed} alt="hello" />
-            <img src={imgLogoBlue} alt="hello" />
-            <img src={imgLogoGreen} alt="hello" />
-            <img src={imgLogoRedSpin} alt="hello" />
-            <img src={imgLogoBlueSpin} alt="hello" />
-            <img src={imgLogoGreenSpin} alt="hello" />
-
-            {/* <img src={TDS1} alt="hello" />
-            <img src={TDS2} alt="hello" /> */}
-          </div>
           <Router>
             <Route
               style={{ height: '100%' }}
