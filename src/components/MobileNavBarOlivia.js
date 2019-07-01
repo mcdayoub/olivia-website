@@ -30,7 +30,7 @@ const NavBarStyle = styled.ul`
     position: flex;
   }
   .logo {
-    height: 40px;
+    height: 60px;
   }
   a {
     text-decoration: none;
@@ -53,7 +53,7 @@ const NavBarStyle = styled.ul`
     padding-right: 60px;
   }
   .hamburger {
-    height: 22px;
+    height: 40px;
     padding-top: 8.25px;
   }
 `;
