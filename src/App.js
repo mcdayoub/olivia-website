@@ -80,8 +80,6 @@ class App extends Component {
         <div className="App" style={{ height: '100%' }}>
           <div id="preload" style={{ display: 'none' }}>
             <img src={TDS1} alt="hello" />
-            <img src={TDS2} alt="hello" />
-            <img src={TDS3} alt="hello" />
           </div>
           <Router>
             <Route
