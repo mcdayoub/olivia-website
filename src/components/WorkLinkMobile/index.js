@@ -111,7 +111,7 @@ const Display = styled.ul`
     text-align: center;
   }
   .imageContainer img {
-    width: 300px;
+    width: 100%;
     padding-bottom: 50px;
   }
   .uparrow {
