@@ -19,6 +19,7 @@
     "react-instafeed": "^1.0.0",
     "react-lazy-load": "^3.0.13",
     "react-lazy-load-image-component": "^1.3.2",
+    "react-lazyload": "^2.6.2",
     "react-photo-gallery": "^7.0.2",
     "react-pose": "^4.0.8",
     "react-router-dom": "^4.3.1",

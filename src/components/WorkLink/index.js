@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoRed.png';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import Uparrow from './Uparrow.png';
+import LazyLoad from 'react-lazyload';
+
 import {
   Link,
   DirectLink,
@@ -152,7 +152,9 @@ function Gallery(props) {
   const images = props.imgList.map(image => {
     return (
       <div>
-        <img className="galleryImage" key={image} src={image} alt="" />
+        <LazyLoad>
+          <img className="galleryImage" key={image} src={image} alt="" />
+        </LazyLoad>
       </div>
     );
   });
