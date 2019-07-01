@@ -151,11 +151,9 @@ const Display = styled.ul`
 function Gallery(props) {
   const images = props.imgList.map(image => {
     return (
-      <div>
-        <LazyLoad>
-          <img className="galleryImage" key={image} src={image} alt="" />
-        </LazyLoad>
-      </div>
+      <LazyLoad>
+        <img className="galleryImage" key={image} src={image} alt="" />
+      </LazyLoad>
     );
   });
   return (
@@ -211,14 +209,16 @@ class LinkGallery extends Component {
         <Display>
           <div className="container">
             <div className="container-3">
-              <Gallery
-                className="gallery"
-                imgList={this.props.photos}
-                title={this.props.title}
-                subtitle={this.props.subtitle}
-                descriptionOne={this.props.descriptionOne}
-                descriptionTwo={this.props.descriptionTwo}
-              />
+              <LazyLoad>
+                <Gallery
+                  className="gallery"
+                  imgList={this.props.photos}
+                  title={this.props.title}
+                  subtitle={this.props.subtitle}
+                  descriptionOne={this.props.descriptionOne}
+                  descriptionTwo={this.props.descriptionTwo}
+                />
+              </LazyLoad>
               <div className="uparrow" onClick={this.scrollToTop}>
                 <img src={Uparrow} alt="hello" />
                 <h3>up please</h3>
