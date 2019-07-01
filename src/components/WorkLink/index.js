@@ -35,7 +35,7 @@ const Display = styled.ul`
     background-color: white;
   }
   .container {
-    display: flex;
+    display: block;
     justify-content: flex-start;
     height: 100%;
   }
@@ -47,7 +47,7 @@ const Display = styled.ul`
   }
 
   .container-3 {
-    display: flex;
+    display: block;
     flex-direction: row;
     padding-left: 0px;
     flex-wrap: wrap;
