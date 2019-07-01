@@ -5,6 +5,7 @@ import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoRed.png';
 import Uparrow from './Uparrow.png';
 import LazyLoad from 'react-lazyload';
+import FadeIn from 'react-lazyload-fadein';
 
 import {
   Link,
@@ -151,15 +152,17 @@ const Display = styled.ul`
 function Gallery(props) {
   const images = props.imgList.map(image => {
     return (
-      <LazyLoad height={200}>
-        <img
-          className="galleryImage"
-          key={image}
-          src={image}
-          alt=""
-          placeholder="hello"
-        />
-      </LazyLoad>
+      <FadeIn
+        height={600}
+        render={onload => (
+          <img
+            alt="hello"
+            src={image}
+            onLoad={onload}
+            className="galleryImage"
+          />
+        )}
+      />
     );
   });
   return (
