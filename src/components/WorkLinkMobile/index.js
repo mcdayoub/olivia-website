@@ -130,7 +130,20 @@ const Display = styled.ul`
 `;
 function Gallery(props) {
   const images = props.imgList.map(image => {
-    return <img className="galleryImage" key={image} src={image} alt="" />;
+    return (
+      <FadeIn
+        height={600}
+        render={onload => (
+          <img
+            alt="hello"
+            src={image}
+            onLoad={onload}
+            className="galleryImage"
+            offset={1000}
+          />
+        )}
+      />
+    );
   });
   return (
     <div>
