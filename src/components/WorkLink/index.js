@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoRed.png';
 import Uparrow from './Uparrow.png';
-import LazyLoad from 'react-lazyload';
+import LazyLoad from 'react-lazy-load';
 
 import {
   Link,
