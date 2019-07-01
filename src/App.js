@@ -5,6 +5,14 @@ import './App.css';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import { ThemeProvider } from 'styled-components';
 
+//PRELOAD LOGO
+import imgLogoRed from './LogoRed.png';
+import imgLogoGreen from './LogoGreen.png';
+import imgLogoBlue from './LogoBlue.png';
+import imgLogoRedSpin from './LogoRedSpin.png';
+import imgLogoGreenSpin from './LogoGreenSpin.png';
+import imgLogoBlueSpin from './LogoBlueSpin.png';
+
 //TRANSITION IMPORTS
 import posed, { PoseGroup } from 'react-pose';
 
@@ -79,6 +87,13 @@ class App extends Component {
       return (
         <div className="App" style={{ height: '100%' }}>
           <div id="preload" style={{ display: 'none' }}>
+            <img src={imgLogoRed} alt="hello" />
+            <img src={imgLogoBlue} alt="hello" />
+            <img src={imgLogoGreen} alt="hello" />
+            <img src={imgLogoRedSpin} alt="hello" />
+            <img src={imgLogoBlueSpin} alt="hello" />
+            <img src={imgLogoGreenSpin} alt="hello" />
+
             <img src={TDS1} alt="hello" />
             <img src={TDS2} alt="hello" />
           </div>
