@@ -6,12 +6,6 @@ import ThemeSwitcher from './components/ThemeSwitcher';
 import { ThemeProvider } from 'styled-components';
 
 //PRELOAD LOGO
-import imgLogoRed from './LogoRed.png';
-import imgLogoGreen from './LogoGreen.png';
-import imgLogoBlue from './LogoBlue.png';
-import imgLogoRedSpin from './LogoRedSpin.png';
-import imgLogoGreenSpin from './LogoGreenSpin.png';
-import imgLogoBlueSpin from './LogoBlueSpin.png';
 
 //TRANSITION IMPORTS
 import posed, { PoseGroup } from 'react-pose';
@@ -42,12 +36,12 @@ import ThemeContext from './styles/themes/context';
 
 //PROJECT IMPORTS
 //TDS IMPORTS
-import TDS1 from './components/TDS/Images/TAQUERIADELSOL_1.png';
-import TDS2 from './components/TDS/Images/TAQUERIADELSOL_2.png';
-import TDS3 from './components/TDS/Images/TAQUERIADELSOL_3.png';
-import TDS4 from './components/TDS/Images/TAQUERIADELSOL_4.png';
-import TDS5 from './components/TDS/Images/TAQUERIADELSOL_5.png';
-import TDS6 from './components/TDS/Images/TAQUERIADELSOL_6.png';
+import TDS1 from './components/TDS/Images/TAQUERIADELSOL_1.webp';
+import TDS2 from './components/TDS/Images/TAQUERIADELSOL_2.webp';
+import TDS3 from './components/TDS/Images/TAQUERIADELSOL_3.webp';
+import TDS4 from './components/TDS/Images/TAQUERIADELSOL_4.webp';
+import TDS5 from './components/TDS/Images/TAQUERIADELSOL_5.webp';
+import TDS6 from './components/TDS/Images/TAQUERIADELSOL_6.webp';
 
 //PROJECT IMAGE LISTS
 const imgList = [Project1Preview, Project2Preview, Nuts1, Nuts2, Nuts3];
