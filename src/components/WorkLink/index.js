@@ -4,18 +4,9 @@ import styled from 'styled-components';
 import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoRed.png';
 import Uparrow from './Uparrow.png';
-import LazyLoad from 'react-lazyload';
 import FadeIn from 'react-lazyload-fadein';
 
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 
 const Display = styled.ul`
   background: white;
@@ -160,7 +151,7 @@ function Gallery(props) {
             src={image}
             onLoad={onload}
             className="galleryImage"
-            offset={1000}
+            offset={150}
           />
         )}
       />

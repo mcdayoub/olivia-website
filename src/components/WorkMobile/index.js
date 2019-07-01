@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from './LogoRed.png';
 import Hamburger from './HamburgerRed.png';
-import Project1Preview from './Project1Preview.png';
-import Project2Preview from './Project2Preview.png';
 import Project1PreviewCopy from './Project1Previewcopy.png';
 import Project2PreviewCopy from './Project2Previewcopy.png';
 

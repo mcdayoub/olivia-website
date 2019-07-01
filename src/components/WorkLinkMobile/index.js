@@ -7,15 +7,7 @@ import Hamburger from './HamburgerRed.png';
 import Uparrow from './Uparrow.png';
 import FadeIn from 'react-lazyload-fadein';
 
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 
 const Display = styled.ul`
   background: white;
