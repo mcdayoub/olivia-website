@@ -209,16 +209,14 @@ class LinkGallery extends Component {
         <Display>
           <div className="container">
             <div className="container-3">
-              <LazyLoad>
-                <Gallery
-                  className="gallery"
-                  imgList={this.props.photos}
-                  title={this.props.title}
-                  subtitle={this.props.subtitle}
-                  descriptionOne={this.props.descriptionOne}
-                  descriptionTwo={this.props.descriptionTwo}
-                />
-              </LazyLoad>
+              <Gallery
+                className="gallery"
+                imgList={this.props.photos}
+                title={this.props.title}
+                subtitle={this.props.subtitle}
+                descriptionOne={this.props.descriptionOne}
+                descriptionTwo={this.props.descriptionTwo}
+              />
               <div className="uparrow" onClick={this.scrollToTop}>
                 <img src={Uparrow} alt="hello" />
                 <h3>up please</h3>
