@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from './LogoRed.png';
 import Hamburger from './HamburgerRed.png';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import Uparrow from './Uparrow.png';
+import FadeIn from 'react-lazyload-fadein';
+
 import {
   Link,
   DirectLink,
