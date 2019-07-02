@@ -133,5 +133,65 @@ const DisplayRed = styled.ul`
       transform: translate(0, 2.5px);
     }
   }
+  .floating-3 {
+    animation-name: floating-3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+
+  @keyframes floating-3 {
+    from {
+      transform: translate(0, 2.5px);
+    }
+    65% {
+      transform: translate(0, -5px);
+    }
+    to {
+      transform: translate(0, 2.5px);
+    }
+  }
+  .floating-4 {
+    animation-name: floating-4;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+
+  @keyframes floating-4 {
+    from {
+      transform: translate(0, 2.5px);
+    }
+    65% {
+      transform: translate(0, 15px);
+    }
+    to {
+      transform: translate(0, 2.5px);
+    }
+  }
+  .floating-5 {
+    animation-name: floating-5;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+
+  @keyframes floating-5 {
+    from {
+      transform: translate(0, 2.5px);
+    }
+    65% {
+      transform: translate(0, 15px);
+    }
+    to {
+      transform: translate(0, 2.5px);
+    }
+  }
 `;
 export default DisplayRed;

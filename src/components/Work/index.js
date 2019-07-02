@@ -391,18 +391,56 @@ class Work extends Component {
             </Box>
           </DragDropContainer>
         </div>
-        <DragDropContainer targetKey="bar">
-          <Box>
-            <div
-              className="floating-2"
-              onMouseOver={this.handleMouseOverImage2}
-            >
-              <span>
-                <img className="previewImage" src={DotRed} alt="" />
-              </span>
-            </div>
-          </Box>
-        </DragDropContainer>
+        <div>
+          <DragDropContainer targetKey="bar">
+            <Box>
+              <div
+                className="floating-2"
+                onMouseOver={this.handleMouseOverImage2}
+              >
+                <span>
+                  <img className="previewImage" src={DotRed} alt="" />
+                </span>
+              </div>
+            </Box>
+          </DragDropContainer>
+        </div>
+        <div>
+          <DragDropContainer targetKey="foo">
+            <Box onMouseOver={this.handleMouseOverImage1}>
+              <div className="floating-3">
+                <span>
+                  <img className="previewImage" src={DotGreen} alt="" />
+                </span>
+              </div>
+            </Box>
+          </DragDropContainer>
+        </div>
+        <div>
+          <DragDropContainer targetKey="bar">
+            <Box>
+              <div
+                className="floating-4"
+                onMouseOver={this.handleMouseOverImage2}
+              >
+                <span>
+                  <img className="previewImage" src={DotRed} alt="" />
+                </span>
+              </div>
+            </Box>
+          </DragDropContainer>
+        </div>
+        <div>
+          <DragDropContainer targetKey="foo">
+            <Box onMouseOver={this.handleMouseOverImage1}>
+              <div className="floating-5">
+                <span>
+                  <img className="previewImage" src={DotGreen} alt="" />
+                </span>
+              </div>
+            </Box>
+          </DragDropContainer>
+        </div>
       </div>
     );
     let centerImageDiv = <div />;

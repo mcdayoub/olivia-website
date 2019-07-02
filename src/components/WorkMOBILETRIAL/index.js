@@ -231,6 +231,18 @@ class WorkMOBILETRIAL extends Component {
             </div>
           </Box>
         </DragDropContainer>
+        <DragDropContainer
+          targetKey="foo"
+          onDragStart={this.handleMouseOverImage1}
+        >
+          <Box onMouseOver={this.handleMouseOverImage1}>
+            <div className="floating">
+              <span>
+                <img className="previewImage" src={DotGreen} alt="" />
+              </span>
+            </div>
+          </Box>
+        </DragDropContainer>
       </div>
     );
     let centerImageDiv = <div />;
