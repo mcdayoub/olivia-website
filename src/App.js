@@ -36,12 +36,12 @@ import ThemeContext from './styles/themes/context';
 
 //PROJECT IMPORTS
 //TDS IMPORTS
-import TDS1 from './components/TDS/Images/TAQUERIADELSOL_1.webp';
-import TDS2 from './components/TDS/Images/TAQUERIADELSOL_2.webp';
-import TDS3 from './components/TDS/Images/TAQUERIADELSOL_3.webp';
-import TDS4 from './components/TDS/Images/TAQUERIADELSOL_4.webp';
-import TDS5 from './components/TDS/Images/TAQUERIADELSOL_5.webp';
-import TDS6 from './components/TDS/Images/TAQUERIADELSOL_6.webp';
+import TDS1 from './components/TDS/Images/TAQUERIADELSOL_1.jpg';
+import TDS2 from './components/TDS/Images/TAQUERIADELSOL_2.jpg';
+import TDS3 from './components/TDS/Images/TAQUERIADELSOL_3.jpg';
+import TDS4 from './components/TDS/Images/TAQUERIADELSOL_4.jpg';
+import TDS5 from './components/TDS/Images/TAQUERIADELSOL_5.jpg';
+import TDS6 from './components/TDS/Images/TAQUERIADELSOL_6.jpg';
 
 //PROJECT IMAGE LISTS
 const imgList = [Project1Preview, Project2Preview, Nuts1, Nuts2, Nuts3];
