@@ -28,8 +28,8 @@ const DisplayRed = styled.ul`
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -237.5px;
-    margin-top: -137.5px;
+    margin-left: -100px;
+    margin-top: -100px;
   }
 
   .container-3 {
