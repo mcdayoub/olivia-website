@@ -385,7 +385,7 @@ class Work extends Component {
             <Box onMouseOver={this.handleMouseOverImage1}>
               <div className="floating">
                 <span>
-                  <img className="previewImage" src={DotRed} alt="" />
+                  <img className="previewImage" src={DotGreen} alt="" />
                 </span>
               </div>
             </Box>
@@ -398,7 +398,7 @@ class Work extends Component {
               onMouseOver={this.handleMouseOverImage2}
             >
               <span>
-                <img className="previewImage" src={DotGreen} alt="" />
+                <img className="previewImage" src={DotRed} alt="" />
               </span>
             </div>
           </Box>

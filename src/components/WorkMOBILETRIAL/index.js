@@ -31,30 +31,10 @@ import LogoRedSpin from './LogoRedSpin.png';
 import LogoGreenSpin from './LogoGreenSpin.png';
 import LogoBlueSpin from './LogoBlueSpin.png';
 
-let imageListOne = [Nuts1, Nuts2, Nuts3, Photo1];
-
-let imageListTwo = [
-  './previews/bladee.png',
-  './previews/bladee1.jpeg',
-  './previews/bladee2.jpg'
-];
-
-let previewImages = ['./previews/one.png', './previews/bladee.png'];
-const centerImages = [Image1, Image2, Image3];
-
-// let previewList = {
-//   projectOne: {
-//     src: './previews/one.png',
-//     gallery: imageListOne
-//   },
-//   projectTwo: {
-//     src: './previews/bladee.png',
-//     gallery: imageListTwo
-//   }
-// };
-
-const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
-const notbold = { 'padding-right': '60px' };
+//DOTS
+import DotRed from './DotRed.png';
+import DotGreen from './DotGreen.png';
+import DotBlue from './DotBlue.png';
 
 const Box = posed.div({
   hoverable: true,
