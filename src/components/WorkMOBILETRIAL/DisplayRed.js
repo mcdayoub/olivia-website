@@ -39,6 +39,7 @@ const DisplayRed = styled.ul`
     text-align: left;
     padding-left: 40px;
     padding-bottom: 40px;
+    padding-top: 50px;
   }
   .container-4 {
     display: flex;
@@ -59,8 +60,8 @@ const DisplayRed = styled.ul`
   }
 
   .previewImage {
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
   }
   .centerImage {
     height: 250px;

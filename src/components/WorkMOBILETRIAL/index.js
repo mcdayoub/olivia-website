@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import request from 'superagent';
 import Preview from './Preview';
-import NavBarOlivia from '../NavBarOlivia';
-import Logo from './LogoRed.png';
 import Nuts1 from './Nuts/Nuts1.png';
 import Nuts2 from './Nuts/Nuts2.png';
 import Nuts3 from './Nuts/Nuts3.png';
@@ -19,6 +17,10 @@ import Photo1 from './TDS/Photo1.png';
 import { Redirect } from 'react-router';
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 import posed from 'react-pose';
+
+import MobileNavBarOlivia from '../MobileNavBarOlivia';
+import Logo from './LogoRed.png';
+import Hamburger from './HamburgerRed.png';
 
 import Project1Preview from './Project1Preview.png';
 import Project1PreviewCopy from './Project1Previewcopy.png';
@@ -482,25 +484,19 @@ class WorkMOBILETRIAL extends Component {
     }
 
     return (
-      <div style={{ height: this.state.heightOfContainer }}>
+      <div>
         <div id="preload" style={{ display: 'none' }}>
           <img src={Project1PreviewCopy2} alt="hello" />
           <img src={Project2PreviewCopy2} alt="hello" />
           <img src={LogoGreenSpin} alt="hello" />
           <img src={LogoBlueSpin} alt="hello" />
         </div>
-        <NavBarOlivia
+        <MobileNavBarOlivia
           Logo={Logo}
-          work={bold}
-          instagram={notbold}
-          about={notbold}
-          contact={notbold}
           color={'#fc4242'}
+          Hamburger={Hamburger}
         />
-        <div
-          hidden={this.state.isHidden}
-          style={{ height: 'calc(100% - 75px)' }}
-        >
+        <div hidden={this.state.isHidden}>
           <DisplayRed>
             <div className="containerForPreview">
               <div>{projects}</div>
@@ -526,22 +522,6 @@ class WorkMOBILETRIAL extends Component {
               </DropTarget>
             </div>
           </DisplayRed>
-        </div>
-        <div hidden={this.state.galleryIsHidden}>
-          <Display>
-            <div className="container">
-              <div className="container-3">
-                <Gallery
-                  className="gallery"
-                  imgList={this.state.photos}
-                  title={this.state.title}
-                  subtitle={this.state.subtitle}
-                  descriptionOne={this.state.descriptionOne}
-                  descriptionTwo={this.state.descriptionTwo}
-                />
-              </div>
-            </div>
-          </Display>
         </div>
       </div>
     );

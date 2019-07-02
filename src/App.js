@@ -232,6 +232,7 @@ class App extends Component {
                       />
                       <Route exact={true} path="/work" component={WorkMobile} />
                       <Route
+                        style={{ height: '100%' }}
                         exact={true}
                         path="/workMOBILETRIAL"
                         component={WorkMOBILETRIAL}
