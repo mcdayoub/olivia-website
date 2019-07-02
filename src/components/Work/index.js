@@ -32,6 +32,11 @@ import LogoRedSpin from './LogoRedSpin.png';
 import LogoGreenSpin from './LogoGreenSpin.png';
 import LogoBlueSpin from './LogoBlueSpin.png';
 
+//DOTS
+import DotRed from './DotRed.png';
+import DotGreen from './DotGreen.png';
+import DotBlue from './DotBlue.png';
+
 const Display = styled.ul`
   background: white;
   color: black;
@@ -373,49 +378,6 @@ class Work extends Component {
     const style1 = this.state.didLoadImg1 ? {} : { visibility: 'hidden' };
     const style2 = this.state.didLoadImg2 ? {} : { visibility: 'hidden' };
 
-    const imageClickOne = () => {
-      this.setState(state => ({
-        isHidden: true,
-        galleryIsHidden: false,
-        heightOfContainer: '',
-        photos: imageListOne,
-        title: "IT'S NOT FUCKING NUTS",
-        subtitle: 'business concept & branding',
-        descriptionOne:
-          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie',
-        descriptionTwo:
-          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie',
-        selected: 'itsnotnuts'
-      }));
-    };
-    const imageClickTwo = () => {
-      this.setState(state => ({
-        isHidden: true,
-        galleryIsHidden: false,
-        heightOfContainer: '',
-        photos: imageListOne,
-        title: 'TAQ DEL SOL',
-        subtitle: 'business concept & branding',
-        descriptionOne:
-          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie',
-        descriptionTwo:
-          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie'
-      }));
-    };
-    const imageClickThree = () => {
-      this.setState(state => ({
-        isHidden: true,
-        galleryIsHidden: false,
-        heightOfContainer: '',
-        photos: imageListOne,
-        title: 'BLADEE',
-        subtitle: 'business concept & branding',
-        descriptionOne:
-          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie',
-        descriptionTwo:
-          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie'
-      }));
-    };
     let projects = (
       <div className="container-3">
         <div>
@@ -423,11 +385,7 @@ class Work extends Component {
             <Box onMouseOver={this.handleMouseOverImage1}>
               <div className="floating">
                 <span>
-                  <img
-                    className="previewImage"
-                    src={require('./previews/one.png')}
-                    alt=""
-                  />
+                  <img className="previewImage" src={DotRed} alt="" />
                 </span>
               </div>
             </Box>
@@ -440,11 +398,7 @@ class Work extends Component {
               onMouseOver={this.handleMouseOverImage2}
             >
               <span>
-                <img
-                  className="previewImage"
-                  src={require('./previews/bladee.png')}
-                  alt=""
-                />
+                <img className="previewImage" src={DotGreen} alt="" />
               </span>
             </div>
           </Box>
@@ -477,7 +431,6 @@ class Work extends Component {
             className="centerImage"
             src={Image3}
             alt="hello"
-            onClick={() => imageClickThree()}
             hidden={this.state.isHiddenImage3}
           />
         </div>
