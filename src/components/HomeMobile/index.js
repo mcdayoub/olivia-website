@@ -7,12 +7,6 @@ import imgLogoBlue from '../Home/LogoBlue.png';
 import imgLogoRedSpin from '../Home/LogoRedSpin.png';
 import imgLogoGreenSpin from '../Home/LogoGreenSpin.png';
 import imgLogoBlueSpin from '../Home/LogoBlueSpin.png';
-import imgLogoRedCopy from '../Home/LogoRedcopy.png';
-import imgLogoGreenCopy from '../Home/LogoGreencopy.png';
-import imgLogoBlueCopy from '../Home/LogoBluecopy.png';
-import imgLogoRedSpinCopy from '../Home/LogoRedSpincopy.png';
-import imgLogoGreenSpinCopy from '../Home/LogoGreenSpincopy.png';
-import imgLogoBlueSpinCopy from '../Home/LogoBlueSpincopy.png';
 
 const size = {
   mobileS: '550px',
@@ -144,9 +138,9 @@ const DisplayLogo = styled.ul`
 `;
 
 const colorArray = ['#EF514D', '#04ad84', '#425bea'];
-const redImgArray = [imgLogoRedCopy, imgLogoRedSpinCopy];
-const greenImgArray = [imgLogoGreenCopy, imgLogoGreenSpinCopy];
-const blueImgArray = [imgLogoBlueCopy, imgLogoBlueSpinCopy];
+const redImgArray = [imgLogoRed, imgLogoRedSpin];
+const greenImgArray = [imgLogoGreen, imgLogoGreenSpin];
+const blueImgArray = [imgLogoBlue, imgLogoBlueSpin];
 const fullImgArray = [redImgArray, greenImgArray, blueImgArray];
 
 class HomeMobile extends Component {
@@ -208,12 +202,12 @@ class HomeMobile extends Component {
     return (
       <DisplayMobile color={this.state.color}>
         <div id="preload" style={{ display: 'none' }}>
-          <img src={imgLogoRedCopy} alt="hello" />
-          <img src={imgLogoGreenCopy} alt="hello" />
-          <img src={imgLogoBlueCopy} alt="hello" />
-          <img src={imgLogoRedSpinCopy} alt="hello" />
-          <img src={imgLogoGreenSpinCopy} alt="hello" />
-          <img src={imgLogoBlueSpinCopy} alt="hello" />
+          <img src={imgLogoRed} alt="hello" />
+          <img src={imgLogoGreen} alt="hello" />
+          <img src={imgLogoBlue} alt="hello" />
+          <img src={imgLogoRedSpin} alt="hello" />
+          <img src={imgLogoGreenSpin} alt="hello" />
+          <img src={imgLogoBlueSpin} alt="hello" />
         </div>
         <div className="container" style={{ height: this.state.height }}>
           <div className="container-4">

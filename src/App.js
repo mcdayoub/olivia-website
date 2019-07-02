@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import logo from './weblogoolivia-01.png';
 import './App.css';
-import ThemeSwitcher from './components/ThemeSwitcher';
-import { ThemeProvider } from 'styled-components';
 
 //PRELOAD LOGO
 
@@ -30,9 +27,6 @@ import ContactFormMobile from './components/ContactMobile';
 import NavBarLinksMobile from './components/NavBarLinks';
 import WorkMobile from './components/WorkMobile';
 import LinkGalleryMobile from './components/WorkLinkMobile';
-
-import * as themes from './styles/themes';
-import ThemeContext from './styles/themes/context';
 
 //PROJECT IMPORTS
 //TDS IMPORTS - BOTH WEB AND MOBILE
