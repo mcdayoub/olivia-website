@@ -73,11 +73,9 @@ const DisplayMobile = styled.ul`
     padding-top: 20px;
   }
   .container {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
     padding-top: 75px;
+    justify-content: center;
+    width: 100%;
   }
   textarea,
   input[type='text'],
@@ -131,7 +129,7 @@ class ContactFormMobile extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <div classname="hey" style={{ height: '100%' }}>
+      <div classname="hey">
         <MobileNavBarOlivia
           Logo={Logo}
           work={notbold}
