@@ -39,7 +39,7 @@ const Display = styled.ul`
   }
 
   .container-3 {
-    display: block;
+    display: flex;
     flex-direction: row;
     padding-left: 0px;
     flex-wrap: wrap;
@@ -121,7 +121,9 @@ const Display = styled.ul`
     padding-left: 10px;
   }
   .imageContainer {
+      display: flex
     text-align: center;
+    flex-direction: column;
   }
   .imageContainer img {
     width: 1000px;
@@ -158,7 +160,7 @@ function Gallery(props) {
     );
   });
   return (
-    <div>
+    <div className="galleryDiv">
       <div className="titleContainer">
         <span className="title">{props.title}</span>
       </div>
