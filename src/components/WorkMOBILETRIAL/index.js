@@ -211,11 +211,7 @@ class WorkMOBILETRIAL extends Component {
           <Box onMouseOver={this.handleMouseOverImage1}>
             <div className="floating">
               <span>
-                <img
-                  className="previewImage"
-                  src={require('./previews/one.png')}
-                  alt=""
-                />
+                <img className="previewImage" src={DotGreen} alt="" />
               </span>
             </div>
           </Box>
@@ -230,11 +226,7 @@ class WorkMOBILETRIAL extends Component {
               onMouseOver={this.handleMouseOverImage2}
             >
               <span>
-                <img
-                  className="previewImage"
-                  src={require('./previews/bladee.png')}
-                  alt=""
-                />
+                <img className="previewImage" src={DotRed} alt="" />
               </span>
             </div>
           </Box>
