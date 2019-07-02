@@ -13,6 +13,7 @@
     "react": "^16.7.0",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.7.0",
+    "react-drag-drop-container": "^6.1.1",
     "react-grid-gallery": "^0.5.3",
     "react-image-gallery": "^0.8.12",
     "react-images": "^0.5.19",

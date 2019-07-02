@@ -215,11 +215,7 @@ class HomeMobile extends Component {
           <img src={imgLogoGreenSpinCopy} alt="hello" />
           <img src={imgLogoBlueSpinCopy} alt="hello" />
         </div>
-        <div
-          className="container"
-          onClick={this.handleChange}
-          style={{ height: this.state.height }}
-        >
+        <div className="container" style={{ height: this.state.height }}>
           <div className="container-4">
             <div>
               <DisplayLogo>

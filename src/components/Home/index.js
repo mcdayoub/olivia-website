@@ -151,7 +151,7 @@ class Home extends Component {
           <img src={imgLogoGreenSpin} alt="hello" />
           <img src={imgLogoBlueSpin} alt="hello" />
         </div>
-        <div className="container" onClick={this.handleChange}>
+        <div className="container">
           <div className="left container-2">
             <div className="topLeft">
               <Link to="/work">work</Link>
