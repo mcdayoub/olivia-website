@@ -411,22 +411,26 @@ class WorkMOBILETRIAL extends Component {
     };
     let projects = (
       <div className="container-3">
-        <div>
-          <DragDropContainer targetKey="foo">
-            <Box onMouseOver={this.handleMouseOverImage1}>
-              <div className="floating">
-                <span>
-                  <img
-                    className="previewImage"
-                    src={require('./previews/one.png')}
-                    alt=""
-                  />
-                </span>
-              </div>
-            </Box>
-          </DragDropContainer>
-        </div>
-        <DragDropContainer targetKey="bar">
+        <DragDropContainer
+          targetKey="foo"
+          onDragStart={this.handleMouseOverImage1}
+        >
+          <Box onMouseOver={this.handleMouseOverImage1}>
+            <div className="floating">
+              <span>
+                <img
+                  className="previewImage"
+                  src={require('./previews/one.png')}
+                  alt=""
+                />
+              </span>
+            </div>
+          </Box>
+        </DragDropContainer>
+        <DragDropContainer
+          targetKey="bar"
+          onDragStart={this.handleMouseOverImage2}
+        >
           <Box>
             <div
               className="floating-2"

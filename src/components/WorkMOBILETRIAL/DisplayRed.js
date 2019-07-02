@@ -20,16 +20,16 @@ const DisplayRed = styled.ul`
   .container-2 {
     position: absolute;
     left: 50%;
-    top: 50%;
-    margin-left: -200px;
-    margin-top: -200px;
+    top: 60%;
+    margin-left: -125px;
+    margin-top: -125px;
   }
   .container-2-spin {
     position: absolute;
     left: 50%;
-    top: 50%;
-    margin-left: -100px;
-    margin-top: -100px;
+    top: 60%;
+    margin-left: -150px;
+    margin-top: -150px;
   }
 
   .container-3 {
@@ -51,11 +51,11 @@ const DisplayRed = styled.ul`
   .spinner {
   }
   .logo {
-    height: 200px;
     position: absolute;
     left: 50%;
-    margin-left: -187.5px;
-    margin-top: -200px;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
   }
 
   .previewImage {
@@ -63,12 +63,12 @@ const DisplayRed = styled.ul`
     width: 30px;
   }
   .centerImage {
-    height: 400px;
-    width: 400px;
+    height: 250px;
+    width: 250px;
   }
   .centerImage-spin {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
   }
 
   .spin {
