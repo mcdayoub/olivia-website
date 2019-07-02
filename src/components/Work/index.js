@@ -17,6 +17,7 @@ import Image2 from './Nuts/Nuts2.png';
 import Image3 from './Nuts/Nuts3.png';
 import Photo1 from './TDS/Photo1.png';
 import { Redirect } from 'react-router';
+import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 
 import Project1Preview from './Project1Preview.png';
 import Project1PreviewCopy from './Project1Previewcopy.png';
@@ -333,6 +334,10 @@ class Work extends Component {
       didLoadImg2: true
     });
   };
+  dropped(e) {
+    e.containerElem.style.visibility = 'hidden';
+    this.handleMouseOverImage1();
+  }
 
   render() {
     const style1 = this.state.didLoadImg1 ? {} : { visibility: 'hidden' };
@@ -383,21 +388,23 @@ class Work extends Component {
     };
     let projects = (
       <div className="container-3">
-        <div onMouseOver={this.handleMouseOverImage1}>
-          <span>
-            <Link
-              to="/itsnotnuts"
-              style={{ 'text-decoration': 'none', color: 'black' }}
-            >
-              <img
-                className="previewImage"
-                src={require('./previews/one.png')}
-                alt=""
-              />
-              IT'S NOT NUTS
-            </Link>
-          </span>
-        </div>
+        <DragDropContainer targetKey="foo">
+          <div>
+            <span>
+              <Link
+                to="/itsnotnuts"
+                style={{ 'text-decoration': 'none', color: 'black' }}
+              >
+                <img
+                  className="previewImage"
+                  src={require('./previews/one.png')}
+                  alt=""
+                />
+                IT'S NOT NUTS
+              </Link>
+            </span>
+          </div>
+        </DragDropContainer>
         <div onMouseOver={this.handleMouseOverImage2}>
           <span>
             <Link
@@ -460,6 +467,7 @@ class Work extends Component {
         </div>
       );
     }
+
     return (
       <div style={{ height: this.state.heightOfContainer }}>
         <div id="preload" style={{ display: 'none' }}>
@@ -483,13 +491,15 @@ class Work extends Component {
           <DisplayRed>
             <div className="containerForPreview">
               <div>{projects}</div>
-              <div className="container-2-spin">
-                <img
-                  className="centerImage-spin spin"
-                  src={this.state.spinningLogo}
-                  alt="hello"
-                />
-              </div>
+              <DropTarget targetKey="foo" onHit={this.dropped.bind(this)}>
+                <div className="container-2-spin">
+                  <img
+                    className="centerImage-spin spin"
+                    src={this.state.spinningLogo}
+                    alt="hello"
+                  />
+                </div>
+              </DropTarget>
               <div>{centerImageDiv}</div>
             </div>
           </DisplayRed>
