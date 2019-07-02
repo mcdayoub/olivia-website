@@ -137,6 +137,7 @@ const Display = styled.ul`
   }
   .uparrow img {
     padding-bottom: 10px;
+    height: 25px;
   }
   .uparrow h3 {
     font-weight: normal;
