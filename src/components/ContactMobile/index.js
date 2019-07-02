@@ -129,7 +129,7 @@ class ContactFormMobile extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <div classname="hey">
+      <div classname="hey" style={{ height: '100%' }}>
         <MobileNavBarOlivia
           Logo={Logo}
           work={notbold}

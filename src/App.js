@@ -117,7 +117,6 @@ class App extends Component {
 
   handleWindowSizeChange = () => {
     this.setState({ width: window.innerWidth });
-    console.log(this.state.width);
   };
 
   render() {
