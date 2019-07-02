@@ -121,7 +121,7 @@ const Display = styled.ul`
     padding-left: 10px;
   }
   .imageContainer {
-      display: flex
+    display: flex;
     text-align: center;
     flex-direction: column;
   }

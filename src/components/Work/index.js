@@ -18,6 +18,7 @@ import Image3 from './Nuts/Nuts3.png';
 import Photo1 from './TDS/Photo1.png';
 import { Redirect } from 'react-router';
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import posed from 'react-pose';
 
 import Project1Preview from './Project1Preview.png';
 import Project1PreviewCopy from './Project1Previewcopy.png';
@@ -205,6 +206,20 @@ function Gallery(props) {
 
 const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
 const notbold = { 'padding-right': '60px' };
+
+const Box = posed.div({
+  hoverable: true,
+  pressable: true,
+  init: {
+    scale: 1
+  },
+  hover: {
+    scale: 1.2
+  },
+  press: {
+    scale: 1.1
+  }
+});
 
 class Work extends Component {
   constructor(props) {
@@ -401,26 +416,33 @@ class Work extends Component {
     let projects = (
       <div className="container-3">
         <DragDropContainer targetKey="foo">
-          <div className="floating" onMouseOver={this.handleMouseOverImage1}>
-            <span>
-              <img
-                className="previewImage"
-                src={require('./previews/one.png')}
-                alt=""
-              />
-            </span>
-          </div>
+          <Box>
+            <div className="floating" onMouseOver={this.handleMouseOverImage1}>
+              <span>
+                <img
+                  className="previewImage"
+                  src={require('./previews/one.png')}
+                  alt=""
+                />
+              </span>
+            </div>
+          </Box>
         </DragDropContainer>
         <DragDropContainer targetKey="bar">
-          <div className="floating-2" onMouseOver={this.handleMouseOverImage2}>
-            <span>
-              <img
-                className="previewImage"
-                src={require('./previews/bladee.png')}
-                alt=""
-              />
-            </span>
-          </div>
+          <Box>
+            <div
+              className="floating-2"
+              onMouseOver={this.handleMouseOverImage2}
+            >
+              <span>
+                <img
+                  className="previewImage"
+                  src={require('./previews/bladee.png')}
+                  alt=""
+                />
+              </span>
+            </div>
+          </Box>
         </DragDropContainer>
         {/* <div onMouseOver={this.handleMouseOverImage3}>
           <span>
