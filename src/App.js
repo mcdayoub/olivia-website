@@ -35,7 +35,7 @@ import * as themes from './styles/themes';
 import ThemeContext from './styles/themes/context';
 
 //PROJECT IMPORTS
-//TDS IMPORTS
+//TDS IMPORTS - BOTH WEB AND MOBILE
 import TDS1 from './components/TDS/Images/TAQUERIADELSOL_1.jpg';
 import TDS2 from './components/TDS/Images/TAQUERIADELSOL_2.jpg';
 import TDS3 from './components/TDS/Images/TAQUERIADELSOL_3.jpg';
@@ -43,9 +43,23 @@ import TDS4 from './components/TDS/Images/TAQUERIADELSOL_4.jpg';
 import TDS5 from './components/TDS/Images/TAQUERIADELSOL_5.jpg';
 import TDS6 from './components/TDS/Images/TAQUERIADELSOL_6.jpg';
 
+//CLARKSTON IMPORTS - WEB
+import C1 from './components/Clarkston/ImagesWeb/Clarkston_Website-01.jpg';
+import C2 from './components/Clarkston/ImagesWeb/Clarkston_Website-02.jpg';
+import C3 from './components/Clarkston/ImagesWeb/Clarkston_Website-03.jpg';
+import C4 from './components/Clarkston/ImagesWeb/Clarkston_Website-04.jpg';
+import C5 from './components/Clarkston/ImagesWeb/Clarkston_Website-05.jpg';
+import C6 from './components/Clarkston/ImagesWeb/Clarkston_Website-06.jpg';
+import C7 from './components/Clarkston/ImagesWeb/Clarkston_Website-07.jpg';
+import C8 from './components/Clarkston/ImagesWeb/Clarkston_Website-08.jpg';
+import C9 from './components/Clarkston/ImagesWeb/Clarkston_Website-09.jpg';
+import C10 from './components/Clarkston/ImagesWeb/Clarkston_Website-10.jpg';
+
 //PROJECT IMAGE LISTS
 const imgList = [Project1Preview, Project2Preview, Nuts1, Nuts2, Nuts3];
+
 const TDSImgList = [TDS1, TDS2, TDS3, TDS4, TDS5, TDS6];
+const ClarkstonImageListWeb = [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10];
 
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 300, beforeChildren: true },
@@ -134,6 +148,19 @@ class App extends Component {
                           <LinkGallery
                             photos={TDSImgList}
                             title="TAQUERÍA DEL SOL"
+                            subtitle="business concept & branding"
+                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                            descriptionTwo="fuck you"
+                          />
+                        )}
+                      />
+                      <Route
+                        path="/clarkston"
+                        key="clarkston"
+                        render={() => (
+                          <LinkGallery
+                            photos={ClarkstonImageListWeb}
+                            title="CLARKSTON"
                             subtitle="business concept & branding"
                             descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
                             descriptionTwo="fuck you"
