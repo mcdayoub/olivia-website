@@ -27,6 +27,7 @@ import ContactFormMobile from './components/ContactMobile';
 import NavBarLinksMobile from './components/NavBarLinks';
 import WorkMobile from './components/WorkMobile';
 import LinkGalleryMobile from './components/WorkLinkMobile';
+import WorkMOBILETRIAL from './components/WorkMOBILETRIAL';
 
 //PROJECT IMPORTS
 //TDS IMPORTS - BOTH WEB AND MOBILE
@@ -230,6 +231,12 @@ class App extends Component {
                         component={NavBarLinksMobile}
                       />
                       <Route exact={true} path="/work" component={WorkMobile} />
+                      <Route
+                        exact={true}
+                        path="/workMOBILETRIAL"
+                        component={WorkMOBILETRIAL}
+                      />
+
                       <Route
                         path="/itsnotnuts"
                         render={() => (

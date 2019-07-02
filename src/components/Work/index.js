@@ -247,7 +247,9 @@ class Work extends Component {
       redirectToProject2: false
     };
     this.handleMouseOverImage1 = this.handleMouseOverImage1.bind(this);
+
     this.handleMouseOverImage2 = this.handleMouseOverImage2.bind(this);
+
     this.handleMouseOverImage3 = this.handleMouseOverImage3.bind(this);
   }
   //   componentDidMount(nextProps) {
@@ -321,6 +323,7 @@ class Work extends Component {
       isHiddenImage3: true
     });
   }
+
   handleMouseOverImage2() {
     this.setState({
       spinningLogo: LogoRedSpin,
@@ -415,19 +418,21 @@ class Work extends Component {
     };
     let projects = (
       <div className="container-3">
-        <DragDropContainer targetKey="foo">
-          <Box>
-            <div className="floating" onMouseOver={this.handleMouseOverImage1}>
-              <span>
-                <img
-                  className="previewImage"
-                  src={require('./previews/one.png')}
-                  alt=""
-                />
-              </span>
-            </div>
-          </Box>
-        </DragDropContainer>
+        <div>
+          <DragDropContainer targetKey="foo">
+            <Box onMouseOver={this.handleMouseOverImage1}>
+              <div className="floating">
+                <span>
+                  <img
+                    className="previewImage"
+                    src={require('./previews/one.png')}
+                    alt=""
+                  />
+                </span>
+              </div>
+            </Box>
+          </DragDropContainer>
+        </div>
         <DragDropContainer targetKey="bar">
           <Box>
             <div
@@ -444,17 +449,6 @@ class Work extends Component {
             </div>
           </Box>
         </DragDropContainer>
-        {/* <div onMouseOver={this.handleMouseOverImage3}>
-          <span>
-            <img
-              className="previewImage"
-              src={require('./previews/one.png')}
-              alt=""
-              onClick={() => imageClickThree()}
-            />
-            IT'S NOT NUTS
-          </span>
-        </div> */}
       </div>
     );
     let centerImageDiv = <div />;
