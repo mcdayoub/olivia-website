@@ -412,19 +412,13 @@ class Work extends Component {
           </div>
         </DragDropContainer>
         <DragDropContainer targetKey="bar">
-          <div className="floating" onMouseOver={this.handleMouseOverImage2}>
+          <div className="floating-2" onMouseOver={this.handleMouseOverImage2}>
             <span>
-              <Link
-                to="/tds"
-                style={{ 'text-decoration': 'none', color: 'black' }}
-              >
-                <img
-                  className="previewImage"
-                  src={require('./previews/bladee.png')}
-                  alt=""
-                />
-                TDS
-              </Link>
+              <img
+                className="previewImage"
+                src={require('./previews/bladee.png')}
+                alt=""
+              />
             </span>
           </div>
         </DragDropContainer>
