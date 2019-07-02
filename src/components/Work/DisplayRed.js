@@ -93,5 +93,25 @@ const DisplayRed = styled.ul`
       transform: rotate(360deg);
     }
   }
+  .floating {
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+
+  @keyframes floating {
+    from {
+      transform: translate(0, 0px);
+    }
+    65% {
+      transform: translate(0, 7.5px);
+    }
+    to {
+      transform: translate(0, -0px);
+    }
+  }
 `;
 export default DisplayRed;

@@ -227,7 +227,9 @@ class Work extends Component {
       selected: '',
       spinningLogo: LogoRedSpin,
       didLoadImg1: false,
-      didLoadImg2: false
+      didLoadImg2: false,
+      redirectToProject1: false,
+      redirectToProject2: false
     };
     this.handleMouseOverImage1 = this.handleMouseOverImage1.bind(this);
     this.handleMouseOverImage2 = this.handleMouseOverImage2.bind(this);
@@ -308,7 +310,7 @@ class Work extends Component {
     this.setState({
       spinningLogo: LogoRedSpin,
       centerImgBoolean: true,
-      centerImg: Image2,
+      centerImg: Project2PreviewCopy2,
       isHiddenImage1: true,
       isHiddenImage2: false,
       isHiddenImage3: true
@@ -334,12 +336,22 @@ class Work extends Component {
       didLoadImg2: true
     });
   };
-  dropped(e) {
+  droppedImageOne(e) {
     e.containerElem.style.visibility = 'hidden';
-    this.handleMouseOverImage1();
+    this.setState({ redirectToProject1: true });
+  }
+  droppedImageTwo(e) {
+    e.containerElem.style.visibility = 'hidden';
+    this.setState({ redirectToProject2: true });
   }
 
   render() {
+    if (this.state.redirectToProject1) {
+      return <Redirect push to="/itsnotnuts" />;
+    }
+    if (this.state.redirectToProject2) {
+      return <Redirect push to="/tds" />;
+    }
     const style1 = this.state.didLoadImg1 ? {} : { visibility: 'hidden' };
     const style2 = this.state.didLoadImg2 ? {} : { visibility: 'hidden' };
 
@@ -389,37 +401,33 @@ class Work extends Component {
     let projects = (
       <div className="container-3">
         <DragDropContainer targetKey="foo">
-          <div>
+          <div className="floating" onMouseOver={this.handleMouseOverImage1}>
+            <span>
+              <img
+                className="previewImage"
+                src={require('./previews/one.png')}
+                alt=""
+              />
+            </span>
+          </div>
+        </DragDropContainer>
+        <DragDropContainer targetKey="bar">
+          <div className="floating" onMouseOver={this.handleMouseOverImage2}>
             <span>
               <Link
-                to="/itsnotnuts"
+                to="/tds"
                 style={{ 'text-decoration': 'none', color: 'black' }}
               >
                 <img
                   className="previewImage"
-                  src={require('./previews/one.png')}
+                  src={require('./previews/bladee.png')}
                   alt=""
                 />
-                IT'S NOT NUTS
+                TDS
               </Link>
             </span>
           </div>
         </DragDropContainer>
-        <div onMouseOver={this.handleMouseOverImage2}>
-          <span>
-            <Link
-              to="/tds"
-              style={{ 'text-decoration': 'none', color: 'black' }}
-            >
-              <img
-                className="previewImage"
-                src={require('./previews/bladee.png')}
-                alt=""
-              />
-              TDS
-            </Link>
-          </span>
-        </div>
         {/* <div onMouseOver={this.handleMouseOverImage3}>
           <span>
             <img
@@ -438,25 +446,23 @@ class Work extends Component {
       centerImageDiv = (
         <div className="container-2">
           <div hidden={this.state.isHiddenImage1}>
-            <Link to="/itsnotnuts">
-              <img
-                className="centerImage"
-                src={Project1PreviewCopy2}
-                alt="hello"
-                style={style1}
-                onLoad={this.onLoadImg1}
-              />
-            </Link>
+            <img
+              className="centerImage"
+              src={Project1PreviewCopy2}
+              alt="hello"
+              style={style1}
+              onLoad={this.onLoadImg1}
+            />
           </div>
-          <img
-            className="centerImage"
-            src={Project2PreviewCopy2}
-            alt="hello"
-            onClick={() => imageClickTwo()}
-            hidden={this.state.isHiddenImage2}
-            style={style2}
-            onLoad={this.onLoadImg2}
-          />
+          <div hidden={this.state.isHiddenImage2}>
+            <img
+              className="centerImage"
+              src={Project2PreviewCopy2}
+              alt="hello"
+              style={style2}
+              onLoad={this.onLoadImg2}
+            />
+          </div>
           <img
             className="centerImage"
             src={Image3}
@@ -491,16 +497,26 @@ class Work extends Component {
           <DisplayRed>
             <div className="containerForPreview">
               <div>{projects}</div>
-              <DropTarget targetKey="foo" onHit={this.dropped.bind(this)}>
-                <div className="container-2-spin">
-                  <img
-                    className="centerImage-spin spin"
-                    src={this.state.spinningLogo}
-                    alt="hello"
-                  />
-                </div>
+              <DropTarget
+                targetKey="foo"
+                onHit={this.droppedImageOne.bind(this)}
+              >
+                <DropTarget
+                  targetKey="bar"
+                  onHit={this.droppedImageTwo.bind(this)}
+                >
+                  <div>
+                    <div className="container-2-spin">
+                      <img
+                        className="centerImage-spin spin"
+                        src={this.state.spinningLogo}
+                        alt="hello"
+                      />
+                    </div>
+                    <div>{centerImageDiv}</div>
+                  </div>
+                </DropTarget>
               </DropTarget>
-              <div>{centerImageDiv}</div>
             </div>
           </DisplayRed>
         </div>
