@@ -408,6 +408,7 @@ class WorkForMobile extends Component {
     return (
       <div style={{ height: this.state.height }}>
         <div id="preload" style={{ display: 'none' }}>
+          <img src={LogoRedSpin} alt="hello" />
           <img src={LogoGreenSpin} alt="hello" />
           <img src={LogoBlueSpin} alt="hello" />
           <img src={TDSThumbnail} alt="hello" />
