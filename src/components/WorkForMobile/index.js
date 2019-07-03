@@ -210,7 +210,10 @@ class WorkForMobile extends Component {
             </div>
           </Box>
         </DragDropContainer>
-        <DragDropContainer targetKey="bar">
+        <DragDropContainer
+          targetKey="bar"
+          onDragStart={this.handleMouseOverImage2}
+        >
           <Box>
             <div
               className="floating-2"
@@ -222,7 +225,10 @@ class WorkForMobile extends Component {
             </div>
           </Box>
         </DragDropContainer>
-        <DragDropContainer targetKey="foo">
+        <DragDropContainer
+          targetKey="foo"
+          onDragStart={this.handleMouseOverImage1}
+        >
           <Box onMouseOver={this.handleMouseOverImage1}>
             <div className="floating-3">
               <span>
@@ -231,7 +237,10 @@ class WorkForMobile extends Component {
             </div>
           </Box>
         </DragDropContainer>
-        <DragDropContainer targetKey="bar">
+        <DragDropContainer
+          targetKey="bar"
+          onDragStart={this.handleMouseOverImage2}
+        >
           <Box>
             <div
               className="floating-4"
@@ -243,7 +252,10 @@ class WorkForMobile extends Component {
             </div>
           </Box>
         </DragDropContainer>
-        <DragDropContainer targetKey="foo">
+        <DragDropContainer
+          targetKey="foo"
+          onDragStart={this.handleMouseOverImage1}
+        >
           <Box onMouseOver={this.handleMouseOverImage1}>
             <div className="floating-5">
               <span>
