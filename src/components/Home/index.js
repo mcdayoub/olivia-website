@@ -7,6 +7,7 @@ import imgLogoBlue from './LogoBlue.png';
 import imgLogoRedSpin from './LogoRedSpin.png';
 import imgLogoGreenSpin from './LogoGreenSpin.png';
 import imgLogoBlueSpin from './LogoBlueSpin.png';
+import Polaroid from '../About/Olivia_Polaroid_Final.jpg';
 
 const DisplayRed = styled.ul`
   background: #f4f4f4;
@@ -150,6 +151,7 @@ class Home extends Component {
           <img src={imgLogoRedSpin} alt="hello" />
           <img src={imgLogoGreenSpin} alt="hello" />
           <img src={imgLogoBlueSpin} alt="hello" />
+          <img src={Polaroid} alt="hello" />
         </div>
         <div className="container">
           <div className="left container-2">

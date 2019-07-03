@@ -7,6 +7,7 @@ import imgLogoBlue from '../Home/LogoBlue.png';
 import imgLogoRedSpin from '../Home/LogoRedSpin.png';
 import imgLogoGreenSpin from '../Home/LogoGreenSpin.png';
 import imgLogoBlueSpin from '../Home/LogoBlueSpin.png';
+import Polaroid from '../About/Olivia_Polaroid_Final.jpg';
 
 const size = {
   mobileS: '550px',
@@ -208,6 +209,7 @@ class HomeMobile extends Component {
           <img src={imgLogoRedSpin} alt="hello" />
           <img src={imgLogoGreenSpin} alt="hello" />
           <img src={imgLogoBlueSpin} alt="hello" />
+          <img src={Polaroid} alt="hello" />
         </div>
         <div className="container" style={{ height: this.state.height }}>
           <div className="container-4">
