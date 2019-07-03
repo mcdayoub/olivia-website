@@ -11,9 +11,7 @@ const DisplayMobile = styled.ul`
   html,
   body {
     margin: 0;
-    height: 100%;
   }
-  height: 100%;
 
   input:focus,
   select:focus,
@@ -22,22 +20,24 @@ const DisplayMobile = styled.ul`
     outline: none;
   }
   form {
-    text-align: center;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
     align-items: center;
+    text-align: center;
   }
   h3 {
     font-weight: normal;
-    text-decoration: underline;
   }
   .note {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
   }
 
   input {
     width: 70%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 12px 12px;
     background-color: transparent;
     border: 0;
     outline: 0;
@@ -45,10 +45,12 @@ const DisplayMobile = styled.ul`
     font-size: 14px;
     font-family: 'Courier New';
   }
+  #name {
+    border-top: 1px solid black;
+  }
   textarea {
     width: 70%;
     padding: 12px 20px;
-    margin: 8px 0;
     background-color: transparent;
     height: 100px;
     border: 0;
@@ -102,9 +104,28 @@ class ContactFormMobile extends React.Component {
       email: '',
       message: '',
       buttonText: 'send it!',
-      title: 'leave me a note'
+      title: 'leave me a note',
+      height: window.innerHeight
     };
   }
+  componentWillMount() {
+    let newHeight = window.innerHeight - 75;
+    console.log(newHeight);
+    this.setState({ height: window.newHeight });
+    window.addEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  // make sure to remove the listener
+  // when the component is not mounted anymore
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  handleWindowSizeChange = () => {
+    let newHeight = window.innerHeight - 75;
+    console.log(newHeight);
+    this.setState({ height: window.newHeight });
+  };
 
   /* Here’s the juicy bit for posting the form submission */
 
@@ -129,7 +150,7 @@ class ContactFormMobile extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <div classname="hey" style={{ height: '100%' }}>
+      <div>
         <MobileNavBarOlivia
           Logo={Logo}
           work={notbold}
@@ -139,54 +160,60 @@ class ContactFormMobile extends React.Component {
           color={'#425bea'}
           Hamburger={Hamburger}
         />
-        <div style={{ height: 'calc(100% - 75px)' }}>
+        <div
+          style={{
+            height: this.state.height,
+            width: '100%',
+            display: 'table-cell',
+            verticalAlign: 'middle'
+          }}
+        >
           <DisplayMobile>
-            <div className="container">
-              <form
-                onSubmit={this.handleSubmit}
-                name="contact-mobile"
-                method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-              >
-                <div className="note">
-                  <h3>{this.state.title}</h3>
-                </div>
-                <input type="hidden" name="form-name" value="contact-mobile" />
-                <p>
-                  <input
-                    type="text"
-                    name="name"
-                    value={name}
-                    onChange={this.handleChange}
-                    placeholder="your name"
-                    required
-                  />
-                </p>
-                <p>
-                  <input
-                    type="email"
-                    name="email"
-                    value={email}
-                    onChange={this.handleChange}
-                    placeholder="your email"
-                    required
-                  />
-                </p>
-                <p>
-                  <textarea
-                    name="message"
-                    value={message}
-                    onChange={this.handleChange}
-                    placeholder="your message to me"
-                    required
-                  />
-                </p>
-                <div className="buttonDiv">
-                  <button type="submit">{this.state.buttonText}</button>
-                </div>
-              </form>
-            </div>
+            <form
+              onSubmit={this.handleSubmit}
+              name="contact-mobile"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              <div className="note">
+                <h3>{this.state.title}</h3>
+              </div>
+              <input type="hidden" name="form-name" value="contact-mobile" />
+              <p>
+                <input
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={this.handleChange}
+                  placeholder="your name"
+                  required
+                  id="name"
+                />
+              </p>
+              <p>
+                <input
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={this.handleChange}
+                  placeholder="your email"
+                  required
+                />
+              </p>
+              <p>
+                <textarea
+                  name="message"
+                  value={message}
+                  onChange={this.handleChange}
+                  placeholder="your message to me"
+                  required
+                />
+              </p>
+              <div className="buttonDiv">
+                <button type="submit">{this.state.buttonText}</button>
+              </div>
+            </form>
           </DisplayMobile>
         </div>
       </div>
