@@ -5,6 +5,8 @@ import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from './LogoGreen.png';
 import Hamburger from './HamburgerGreen.png';
 import Resume from '../Resume/OliviaDirickson_Resume.pdf';
+import Polaroid from './Olivia_Polaroid_Final.jpg';
+import LinkedIn from './LinkedIn.png';
 
 const sizeHeight = {
   mobileSH: '550px',
@@ -42,7 +44,7 @@ const DisplayMobile = styled.ul`
     align-items: left;
   }
   .container-3 {
-    padding-top: 10px;
+    padding-top: 30px;
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
@@ -89,9 +91,21 @@ const DisplayMobile = styled.ul`
     cursor: pointer;
     font-size: 14px;
     font-family: 'Courier New';
+    height: 50px;
+    font-weight: bold;
   }
   .buttonDiv {
-    padding-bottom: 30px;
+    display: flex;
+    padding-top: 20px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .buttonDiv img {
+    height: 50px;
+    padding-left: 20px;
+    margin: 4px 2px;
   }
   * :focus {
     outline: 0 !important;
@@ -119,11 +133,7 @@ const AboutMobile = () => (
 
     <DisplayMobile>
       <div className="container-3">
-        <img
-          className="polaroid"
-          src={require('../../polaroid.png')}
-          alt="hello"
-        />
+        <img className="polaroid" src={Polaroid} alt="hello" />
       </div>
       <div className="container-3">
         <Paragraph>
@@ -137,6 +147,13 @@ const AboutMobile = () => (
         <div className="buttonDiv">
           <a href={Resume} target="_blank" rel="noopener noreferrer">
             <button>RESUMÉ</button>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/olivia-dirickson-179b88148/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={LinkedIn} alt="hello" />
           </a>
         </div>
       </div>
