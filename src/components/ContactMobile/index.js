@@ -21,12 +21,10 @@ const DisplayMobile = styled.ul`
   }
   form {
     position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
     width: 100%;
     align-items: center;
     text-align: center;
+    padding-top: 25%;
   }
   h3 {
     font-weight: normal;
