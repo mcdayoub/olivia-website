@@ -21,15 +21,15 @@ const DisplayRed = styled.ul`
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -200px;
-    margin-top: -200px;
+    margin-left: -162.5px;
+    margin-top: -162.5px;
   }
   .container-2-spin {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -237.5px;
-    margin-top: -237.5px;
+    margin-left: -200px;
+    margin-top: -200px;
   }
 
   .container-3 {
@@ -64,12 +64,12 @@ const DisplayRed = styled.ul`
     padding-left: 25px;
   }
   .centerImage {
-    height: 400px;
-    width: 400px;
+    height: 325px;
+    width: 325px;
   }
   .centerImage-spin {
-    height: 475px;
-    width: 475px;
+    height: 400px;
+    width: 400px;
   }
 
   .spin {
