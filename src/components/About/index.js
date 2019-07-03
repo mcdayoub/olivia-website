@@ -77,7 +77,6 @@ const Display = styled.ul`
 
 const Paragraph = styled.ul`
   font-size: 18px;
-  width: 300px;
 `;
 const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
 const notbold = { 'padding-right': '60px' };
