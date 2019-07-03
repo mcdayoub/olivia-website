@@ -198,7 +198,10 @@ class WorkForMobile extends Component {
 
     let projects = (
       <div className="container-3">
-        <DragDropContainer targetKey="foo">
+        <DragDropContainer
+          targetKey="foo"
+          onDragStart={this.handleMouseOverImage1}
+        >
           <Box onMouseOver={this.handleMouseOverImage1}>
             <div className="floating">
               <span>
