@@ -7,8 +7,6 @@ const DisplayRed = styled.ul`
     margin: 0;
   }
 
-  height: 50vh;
-
   .containerForPreview {
     display: flex;
     width: 100%;

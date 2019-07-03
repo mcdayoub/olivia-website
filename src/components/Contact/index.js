@@ -28,16 +28,14 @@ const Display = styled.ul`
   }
   h3 {
     font-weight: normal;
-    text-decoration: underline;
   }
   .note {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
   }
 
   input {
     width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 12px 12px;
     background-color: transparent;
     border-bottom: 10px;
     border: 0;
@@ -46,6 +44,9 @@ const Display = styled.ul`
     font-size: 14px;
     font-family: 'Courier New';
     border-radius: 0;
+  }
+  #name {
+    border-top: 1px solid black;
   }
   textarea {
     width: 50%;
@@ -158,6 +159,7 @@ class ContactForm extends React.Component {
                     onChange={this.handleChange}
                     placeholder="your name"
                     required
+                    id="name"
                   />
                 </p>
                 <p>
@@ -168,6 +170,7 @@ class ContactForm extends React.Component {
                     onChange={this.handleChange}
                     placeholder="your email"
                     required
+                    id="email"
                   />
                 </p>
                 <p>
