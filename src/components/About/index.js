@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoGreen.png';
 import Resume from '../Resume/OliviaDirickson_Resume.pdf';
+import Polaroid from './Olivia_Polaroid_Final.jpg';
+import LinkedIn from './LinkedIn.png';
 
 const Display = styled.ul`
   background: white;
@@ -53,10 +55,20 @@ const Display = styled.ul`
     cursor: pointer;
     font-size: 14px;
     font-family: 'Courier New';
+    height: 50px;
+    font-weight: bold;
   }
   .buttonDiv {
+    display: flex;
     padding-top: 20px;
     text-align: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .buttonDiv img {
+    height: 50px;
+    padding-left: 20px;
+    margin: 4px 2px;
   }
   * :focus {
     outline: 0 !important;
@@ -83,11 +95,7 @@ const About = () => (
     <Display style={{ height: 'calc(100% - 75px)' }}>
       <div className="container" style={{ height: 'calc(100%)' }}>
         <div className="container-3">
-          <img
-            className="polaroid"
-            src={require('../../polaroid.png')}
-            alt="hello"
-          />
+          <img className="polaroid" src={Polaroid} alt="hello" />
         </div>
         <div className="container-4">
           <Paragraph>
@@ -100,6 +108,13 @@ const About = () => (
           <div className="buttonDiv">
             <a href={Resume} target="_blank" rel="noopener noreferrer">
               <button>RESUMÉ</button>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/olivia-dirickson-179b88148/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={LinkedIn} alt="hello" />
             </a>
           </div>
         </div>
