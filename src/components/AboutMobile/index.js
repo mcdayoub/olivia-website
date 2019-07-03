@@ -44,7 +44,7 @@ const DisplayMobile = styled.ul`
     align-items: left;
   }
   .container-3 {
-    padding-top: 30px;
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
@@ -96,7 +96,6 @@ const DisplayMobile = styled.ul`
   }
   .buttonDiv {
     display: flex;
-    padding-top: 20px;
     text-align: center;
     align-content: center;
     justify-content: center;

@@ -40,12 +40,12 @@ const Display = styled.ul`
 
   .container-3 {
     display: flex;
-    flex-direction: row;
     padding-left: 0px;
     flex-wrap: wrap;
     padding-top: 100px;
     overflow-y: auto;
     justify-content: center;
+    flex-direction: column;
   }
   .container-3::-webkit-scrollbar {
     display: none;
@@ -111,14 +111,14 @@ const Display = styled.ul`
   .descriptionColumnOne {
     flex-direction: column;
     float: left;
-    width: 28%;
-    padding-right: 10px;
+    width: 380px;
+    padding-right: 40px;
   }
   .descriptionColumnTwo {
     flex-direction: column;
     float: right;
-    width: 28%;
-    padding-left: 10px;
+    width: 380px;
+    padding-left: 40px;
   }
   .imageContainer {
     display: flex;
