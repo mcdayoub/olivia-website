@@ -31,14 +31,14 @@ const DisplayRed = styled.ul`
   .container-2 {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     margin-left: -125px;
     margin-top: -125px;
   }
   .container-2-spin {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     margin-left: -150px;
     margin-top: -150px;
   }
@@ -48,7 +48,7 @@ const DisplayRed = styled.ul`
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    padding-bottom: 15%;
+    padding-bottom: 25%;
   }
   .container-4 {
     display: flex;
