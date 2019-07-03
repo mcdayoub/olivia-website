@@ -36,6 +36,12 @@ import LogoBlueSpin from './LogoBlueSpin.png';
 import DotRed from './DotRed.png';
 import DotGreen from './DotGreen.png';
 import DotBlue from './DotBlue.png';
+//THUMBNAILS
+import TDSThumbnail from '../WorkThumbnails/THUMBNAIL_1.jpg';
+import INNThumbnail from '../WorkThumbnails/THUMBNAIL_2.jpg';
+import MHCThumbnail from '../WorkThumbnails/THUMBNAIL_3.jpg';
+import RECThumbnail from '../WorkThumbnails/THUMBNAIL_4.jpg';
+import COCThumbnail from '../WorkThumbnails/THUMBNAIL_5.jpg';
 
 import Hamburger from './HamburgerRed.png';
 
@@ -71,10 +77,15 @@ class WorkForMobile extends Component {
       isHiddenImage1: true,
       isHiddenImage2: true,
       isHiddenImage3: true,
+      isHiddenImage4: true,
+      isHiddenImage5: true,
       selected: '',
       spinningLogo: LogoRedSpin,
       didLoadImg1: false,
       didLoadImg2: false,
+      didLoadImg3: false,
+      didLoadImg4: false,
+      didLoadImg5: false,
       redirectToProject1: false,
       redirectToProject2: false,
       height: window.innerHeight
