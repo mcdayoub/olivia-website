@@ -117,10 +117,10 @@ const DisplayRed = styled.ul`
       transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 7.5px);
+      transform: translate(0, 12.5px);
     }
     to {
-      transform: translate(0, -0px);
+      transform: translate(0, 0px);
     }
   }
   .floating-2 {
@@ -132,13 +132,13 @@ const DisplayRed = styled.ul`
 
   @keyframes floating-2 {
     from {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 15px);
+      transform: translate(0, -15px);
     }
     to {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
   }
   .floating-3 {
@@ -150,13 +150,13 @@ const DisplayRed = styled.ul`
 
   @keyframes floating-3 {
     from {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, -5px);
+      transform: translate(0, -7.5px);
     }
     to {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
   }
   .floating-4 {
@@ -168,13 +168,13 @@ const DisplayRed = styled.ul`
 
   @keyframes floating-4 {
     from {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 15px);
+      transform: translate(0, -15px);
     }
     to {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
   }
   .floating-5 {
@@ -186,13 +186,13 @@ const DisplayRed = styled.ul`
 
   @keyframes floating-5 {
     from {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 15px);
+      transform: translate(0, 12.5px);
     }
     to {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
   }
   @media ${device.mobileS} {
