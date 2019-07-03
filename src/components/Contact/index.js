@@ -51,7 +51,7 @@ const Display = styled.ul`
   textarea {
     width: 50%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 0px 0;
     background-color: transparent;
     height: 200px;
     border: 0;
