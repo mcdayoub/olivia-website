@@ -76,7 +76,8 @@ class WorkForMobile extends Component {
       didLoadImg1: false,
       didLoadImg2: false,
       redirectToProject1: false,
-      redirectToProject2: false
+      redirectToProject2: false,
+      height: window.innerHeight
     };
     this.handleMouseOverImage1 = this.handleMouseOverImage1.bind(this);
 
@@ -86,6 +87,7 @@ class WorkForMobile extends Component {
   }
 
   componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange);
     this.setState({
       isHidden: false,
       galleryIsHidden: true,
@@ -104,6 +106,14 @@ class WorkForMobile extends Component {
       selected: ''
     });
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  handleWindowSizeChange = () => {
+    this.setState({ height: window.innerHeight });
+  };
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.location.state === 'desiredState') {
@@ -274,7 +284,7 @@ class WorkForMobile extends Component {
     }
 
     return (
-      <div style={{ height: this.state.heightOfContainer }}>
+      <div style={{ height: this.state.height }}>
         <div id="preload" style={{ display: 'none' }}>
           <img src={Project1PreviewCopy2} alt="hello" />
           <img src={Project2PreviewCopy2} alt="hello" />

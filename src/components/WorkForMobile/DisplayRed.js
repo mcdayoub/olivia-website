@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+const size = {
+  mobileS: '550px',
+  mobileM: '600px',
+  mobileL: '736px',
+  tablet: '834px'
+};
+
+const device = {
+  mobileS: `(min-height: ${size.mobileS})`,
+  mobileM: `(min-height: ${size.mobileM})`,
+  mobileL: `(min-height: ${size.mobileL})`,
+  tablet: `(min-height: ${size.tablet})`
+};
 const DisplayRed = styled.ul`
   background: white;
   html,
   body {
     margin: 0;
   }
-
+  height: calc(100% - 75px);
   .containerForPreview {
     display: flex;
     width: 100%;
@@ -33,8 +46,9 @@ const DisplayRed = styled.ul`
   .container-3 {
     position: flex;
     flex-direction: column;
+    justify-content: flex-end;
     width: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
   }
   .container-4 {
     display: flex;
@@ -179,6 +193,26 @@ const DisplayRed = styled.ul`
     }
     to {
       transform: translate(0, 2.5px);
+    }
+  }
+  @media ${device.mobileS} {
+    .nav-items {
+      padding-bottom: 10%;
+    }
+  }
+  @media ${device.mobileM} {
+    .nav-items {
+      padding-bottom: 12%;
+    }
+  }
+  @media ${device.mobileL} {
+    .nav-items {
+      padding-bottom: 13%;
+    }
+  }
+  @media ${device.tablet} {
+    .nav-items {
+      padding-bottom: 13%;
     }
   }
 `;
