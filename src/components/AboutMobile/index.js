@@ -39,6 +39,8 @@ const device = {
 const DisplayMobile = styled.ul`
   background: white;
   color: black;
+  padding-top: 20px;
+
   .container {
     display: flex;
     align-items: left;
