@@ -13,7 +13,7 @@ const DisplayRed = styled.ul`
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-end;
     height: 100%;
   }
@@ -36,8 +36,6 @@ const DisplayRed = styled.ul`
     position: flex;
     flex-direction: column;
     width: 100%;
-    text-align: left;
-    padding-left: 40px;
     padding-bottom: 40px;
   }
   .container-4 {
@@ -62,6 +60,8 @@ const DisplayRed = styled.ul`
   .previewImage {
     height: 30px;
     width: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   .centerImage {
     height: 400px;
@@ -98,8 +98,6 @@ const DisplayRed = styled.ul`
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
   }
 
   @keyframes floating {
@@ -118,8 +116,6 @@ const DisplayRed = styled.ul`
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
   }
 
   @keyframes floating-2 {
@@ -138,8 +134,6 @@ const DisplayRed = styled.ul`
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
   }
 
   @keyframes floating-3 {
@@ -158,8 +152,6 @@ const DisplayRed = styled.ul`
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
   }
 
   @keyframes floating-4 {
@@ -178,8 +170,6 @@ const DisplayRed = styled.ul`
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
   }
 
   @keyframes floating-5 {

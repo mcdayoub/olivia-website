@@ -380,67 +380,57 @@ class Work extends Component {
 
     let projects = (
       <div className="container-3">
-        <div>
-          <DragDropContainer targetKey="foo">
-            <Box onMouseOver={this.handleMouseOverImage1}>
-              <div className="floating">
-                <span>
-                  <img className="previewImage" src={DotGreen} alt="" />
-                </span>
-              </div>
-            </Box>
-          </DragDropContainer>
-        </div>
-        <div>
-          <DragDropContainer targetKey="bar">
-            <Box>
-              <div
-                className="floating-2"
-                onMouseOver={this.handleMouseOverImage2}
-              >
-                <span>
-                  <img className="previewImage" src={DotRed} alt="" />
-                </span>
-              </div>
-            </Box>
-          </DragDropContainer>
-        </div>
-        <div>
-          <DragDropContainer targetKey="foo">
-            <Box onMouseOver={this.handleMouseOverImage1}>
-              <div className="floating-3">
-                <span>
-                  <img className="previewImage" src={DotGreen} alt="" />
-                </span>
-              </div>
-            </Box>
-          </DragDropContainer>
-        </div>
-        <div>
-          <DragDropContainer targetKey="bar">
-            <Box>
-              <div
-                className="floating-4"
-                onMouseOver={this.handleMouseOverImage2}
-              >
-                <span>
-                  <img className="previewImage" src={DotRed} alt="" />
-                </span>
-              </div>
-            </Box>
-          </DragDropContainer>
-        </div>
-        <div>
-          <DragDropContainer targetKey="foo">
-            <Box onMouseOver={this.handleMouseOverImage1}>
-              <div className="floating-5">
-                <span>
-                  <img className="previewImage" src={DotGreen} alt="" />
-                </span>
-              </div>
-            </Box>
-          </DragDropContainer>
-        </div>
+        <DragDropContainer targetKey="foo">
+          <Box onMouseOver={this.handleMouseOverImage1}>
+            <div className="floating">
+              <span>
+                <img className="previewImage" src={DotGreen} alt="" />
+              </span>
+            </div>
+          </Box>
+        </DragDropContainer>
+        <DragDropContainer targetKey="bar">
+          <Box>
+            <div
+              className="floating-2"
+              onMouseOver={this.handleMouseOverImage2}
+            >
+              <span>
+                <img className="previewImage" src={DotRed} alt="" />
+              </span>
+            </div>
+          </Box>
+        </DragDropContainer>
+        <DragDropContainer targetKey="foo">
+          <Box onMouseOver={this.handleMouseOverImage1}>
+            <div className="floating-3">
+              <span>
+                <img className="previewImage" src={DotGreen} alt="" />
+              </span>
+            </div>
+          </Box>
+        </DragDropContainer>
+        <DragDropContainer targetKey="bar">
+          <Box>
+            <div
+              className="floating-4"
+              onMouseOver={this.handleMouseOverImage2}
+            >
+              <span>
+                <img className="previewImage" src={DotRed} alt="" />
+              </span>
+            </div>
+          </Box>
+        </DragDropContainer>
+        <DragDropContainer targetKey="foo">
+          <Box onMouseOver={this.handleMouseOverImage1}>
+            <div className="floating-5">
+              <span>
+                <img className="previewImage" src={DotGreen} alt="" />
+              </span>
+            </div>
+          </Box>
+        </DragDropContainer>
       </div>
     );
     let centerImageDiv = <div />;
