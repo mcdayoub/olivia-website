@@ -205,7 +205,6 @@ class App extends Component {
           <div id="preload" style={{ display: 'none' }}>
             <img src={Polaroid} alt="hello" />
           </div>
-          ;
           <Router>
             <Route
               style={{ height: '100%' }}
