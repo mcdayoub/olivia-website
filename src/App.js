@@ -4,6 +4,8 @@ import './App.css';
 
 //PRELOAD LOGO
 
+//PRELOAD POLAROID
+import Polaroid from './components/About/Olivia_Polaroid_Final.jpg';
 //TRANSITION IMPORTS
 import posed, { PoseGroup } from 'react-pose';
 
@@ -200,6 +202,10 @@ class App extends Component {
     if (!isMobile) {
       return (
         <div className="App" style={{ height: '100%' }}>
+          <div id="preload" style={{ display: 'none' }}>
+            <img src={Polaroid} alt="hello" />
+          </div>
+          ;
           <Router>
             <Route
               style={{ height: '100%' }}
@@ -310,6 +316,9 @@ class App extends Component {
     } else {
       return (
         <div>
+          <div id="preload" style={{ display: 'none' }}>
+            <img src={Polaroid} alt="hello" />
+          </div>
           <Router>
             <Route
               style={{ height: '100%' }}
