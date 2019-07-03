@@ -76,6 +76,18 @@ import R4 from './components/Recovered/ImagesWeb/Recovered_Website-04.jpg';
 import R5 from './components/Recovered/ImagesWeb/Recovered_Website-05.jpg';
 import R6 from './components/Recovered/ImagesWeb/Recovered_Website-06.jpg';
 import R7 from './components/Recovered/ImagesWeb/Recovered_Website-07.jpg';
+//MOBILE
+import R1Mobile from './components/Recovered/ImagesMobile/Recovered_Website-01.jpg';
+import R2Mobile from './components/Recovered/ImagesMobile/Recovered_Website-02.jpg';
+import R3Mobile from './components/Recovered/ImagesMobile/Recovered_Website-03.jpg';
+import R4Mobile from './components/Recovered/ImagesMobile/Recovered_Website-04.jpg';
+import R5Mobile from './components/Recovered/ImagesMobile/Recovered_Website-05.jpg';
+import R6Mobile from './components/Recovered/ImagesMobile/Recovered_Website-06.jpg';
+import R7Mobile from './components/Recovered/ImagesMobile/Recovered_Website-07.jpg';
+import R8Mobile from './components/Recovered/ImagesMobile/Recovered_Website-08.jpg';
+import R9Mobile from './components/Recovered/ImagesMobile/Recovered_Website-09.jpg';
+import R10Mobile from './components/Recovered/ImagesMobile/Recovered_Website-10.jpg';
+import R11Mobile from './components/Recovered/ImagesMobile/Recovered_Website-11.jpg';
 
 //PROJECT IMAGE LISTS
 const imgList = [Project1Preview, Project2Preview, Nuts1, Nuts2, Nuts3];
@@ -99,6 +111,19 @@ const ClarkstonImageListMobile = [
   CMobile14
 ];
 const RecoveredImageListWeb = [R1, R2, R3, R4, R5, R6, R7];
+const RecoveredImageListMobile = [
+  R1Mobile,
+  R2Mobile,
+  R3Mobile,
+  R4Mobile,
+  R5Mobile,
+  R6Mobile,
+  R7Mobile,
+  R8Mobile,
+  R9Mobile,
+  R10Mobile,
+  R11Mobile
+];
 
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 300, beforeChildren: true },
@@ -295,6 +320,17 @@ class App extends Component {
                           <LinkGalleryMobile
                             photos={ClarkstonImageListMobile}
                             title="CLARKSTON"
+                            subtitle="business concept & branding"
+                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                          />
+                        )}
+                      />
+                      <Route
+                        path="/recovered"
+                        render={() => (
+                          <LinkGalleryMobile
+                            photos={RecoveredImageListMobile}
+                            title="RECOVERED"
                             subtitle="business concept & branding"
                             descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
                           />
