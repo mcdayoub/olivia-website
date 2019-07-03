@@ -34,7 +34,8 @@ const Display = styled.ul`
   }
 
   input {
-    width: 50%;
+    width: 700px;
+
     padding: 12px 12px;
     background-color: transparent;
     border-bottom: 10px;
@@ -49,7 +50,7 @@ const Display = styled.ul`
     border-top: 1px solid black;
   }
   textarea {
-    width: 50%;
+    width: 700px;
     padding: 12px 20px;
     margin: 0px 0;
     background-color: transparent;
