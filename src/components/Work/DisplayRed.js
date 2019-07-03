@@ -60,8 +60,8 @@ const DisplayRed = styled.ul`
   .previewImage {
     height: 30px;
     width: 30px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
   }
   .centerImage {
     height: 400px;
