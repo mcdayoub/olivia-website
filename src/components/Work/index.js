@@ -24,8 +24,7 @@ import RECThumbnail from '../WorkThumbnails/THUMBNAIL_4.png';
 import COCThumbnail from '../WorkThumbnails/THUMBNAIL_5.png';
 import ThumbnailText from '../WorkThumbnails/THUMBNAIL_TEXT.png';
 
-const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
-const notbold = { 'padding-right': '60px' };
+const bold = { 'font-weight': 'bold' };
 
 const Box = posed.div({
   hoverable: true,
@@ -393,14 +392,7 @@ class Work extends Component {
           <img src={RECThumbnail} alt="hello" />
           <img src={COCThumbnail} alt="hello" />
         </div>
-        <NavBarOlivia
-          Logo={Logo}
-          work={bold}
-          instagram={notbold}
-          about={notbold}
-          contact={notbold}
-          color={'#fc4242'}
-        />
+        <NavBarOlivia Logo={Logo} work={bold} color={'#fc4242'} />
         <div
           hidden={this.state.isHidden}
           style={{ height: 'calc(100% - 75px)' }}

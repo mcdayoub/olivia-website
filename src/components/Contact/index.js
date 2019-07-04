@@ -100,8 +100,7 @@ const encode = data => {
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 };
-const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
-const notbold = { 'padding-right': '60px' };
+const bold = { 'font-weight': 'bold' };
 
 class ContactForm extends React.Component {
   constructor(props) {
@@ -139,14 +138,7 @@ class ContactForm extends React.Component {
     const { name, email, message } = this.state;
     return (
       <div classname="hey" style={{ height: '100%' }}>
-        <NavBarOlivia
-          Logo={Logo}
-          work={notbold}
-          instagram={notbold}
-          about={notbold}
-          contact={bold}
-          color={'#425bea'}
-        />
+        <NavBarOlivia Logo={Logo} contact={bold} color={'#425bea'} />
         <div style={{ height: 'calc(100% - 75px)' }}>
           <Display>
             <div className="container">

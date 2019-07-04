@@ -92,19 +92,11 @@ const Display = styled.ul`
 const Paragraph = styled.ul`
   font-size: 18px;
 `;
-const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
-const notbold = { 'padding-right': '60px' };
+const bold = { 'font-weight': 'bold' };
 
 const About = () => (
   <div style={{ height: '100%' }}>
-    <NavBarOlivia
-      Logo={Logo}
-      work={notbold}
-      instagram={notbold}
-      about={bold}
-      contact={notbold}
-      color={'#04ad84'}
-    />
+    <NavBarOlivia Logo={Logo} about={bold} color={'#04ad84'} />
     <Display style={{ height: 'calc(100% - 75px)' }}>
       <div className="container" style={{ height: 'calc(100%)' }}>
         <div className="container-3">

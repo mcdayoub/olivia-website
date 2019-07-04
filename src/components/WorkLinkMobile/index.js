@@ -155,8 +155,7 @@ function Gallery(props) {
     </div>
   );
 }
-const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
-const notbold = { 'padding-right': '60px' };
+const bold = { 'font-weight': 'bold' };
 class LinkGallery extends Component {
   constructor(props) {
     super(props);
@@ -178,9 +177,6 @@ class LinkGallery extends Component {
         <MobileNavBarOlivia
           Logo={Logo}
           work={bold}
-          instagram={notbold}
-          about={notbold}
-          contact={notbold}
           color={'#fc4242'}
           Hamburger={Hamburger}
         />
