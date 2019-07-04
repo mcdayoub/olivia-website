@@ -1,11 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoGreen.png';
 import Resume from '../Resume/OliviaDirickson_Resume.pdf';
 import Polaroid from './Olivia_Polaroid_Final.jpg';
 import LinkedIn from './LinkedIn.png';
+import posed from 'react-pose';
+const Box = posed.div({
+  hoverable: true,
+  pressable: true,
+  init: {
+    scale: 1
+  },
+  hover: {
+    scale: 1.05
+  },
+  press: {
+    scale: 1.1
+  }
+});
 
 const Display = styled.ul`
   background: white;
@@ -105,16 +118,20 @@ const About = () => (
             consequat.
           </Paragraph>
           <div className="buttonDiv">
-            <a href={Resume} target="_blank" rel="noopener noreferrer">
-              <button>RESUMÉ</button>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/olivia-dirickson-179b88148/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={LinkedIn} alt="hello" />
-            </a>
+            <Box>
+              <a href={Resume} target="_blank" rel="noopener noreferrer">
+                <button>RESUMÉ</button>
+              </a>
+            </Box>
+            <Box>
+              <a
+                href="https://www.linkedin.com/in/olivia-dirickson-179b88148/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={LinkedIn} alt="hello" />
+              </a>
+            </Box>
           </div>
         </div>
       </div>

@@ -4,6 +4,16 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import NavBarOlivia from '../NavBarOlivia';
 import Logo from './LogoBlue.png';
 import './index.css';
+import posed from 'react-pose';
+const Box = posed.div({
+  hoverable: true,
+  init: {
+    scale: 1
+  },
+  hover: {
+    scale: 1.05
+  }
+});
 
 const Display = styled.ul`
   background: white;
@@ -35,7 +45,6 @@ const Display = styled.ul`
 
   input {
     width: 700px;
-
     padding: 12px 12px;
     background-color: transparent;
     border-bottom: 10px;
@@ -184,7 +193,9 @@ class ContactForm extends React.Component {
                   />
                 </p>
                 <div className="buttonDiv">
-                  <button type="submit">{this.state.buttonText}</button>
+                  <Box>
+                    <button type="submit">{this.state.buttonText}</button>
+                  </Box>
                 </div>
               </form>
             </div>
