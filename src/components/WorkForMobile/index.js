@@ -42,6 +42,7 @@ import INNThumbnail from '../WorkThumbnails/THUMBNAIL_2.png';
 import MHCThumbnail from '../WorkThumbnails/THUMBNAIL_3.png';
 import RECThumbnail from '../WorkThumbnails/THUMBNAIL_4.png';
 import COCThumbnail from '../WorkThumbnails/THUMBNAIL_5.png';
+import ThumbnailText from '../WorkThumbnails/THUMBNAIL_TEXT.png';
 
 import Hamburger from './HamburgerRed.png';
 
@@ -66,7 +67,7 @@ class WorkForMobile extends Component {
       isHidden: false,
       galleryIsHidden: true,
       centerImg: CenterImg,
-      centerImgBoolean: false,
+      centerImgBoolean: true,
       photos: [],
       title: '',
       subtitle: '',
@@ -74,6 +75,7 @@ class WorkForMobile extends Component {
       descriptionOne: '',
       descriptionTwo: '',
       heightOfContainer: '100%',
+      isHiddenOriginal: false,
       isHiddenImage1: true,
       isHiddenImage2: true,
       isHiddenImage3: true,
@@ -106,7 +108,7 @@ class WorkForMobile extends Component {
       isHidden: false,
       galleryIsHidden: true,
       centerImg: CenterImg,
-      centerImgBoolean: false,
+      centerImgBoolean: true,
       photos: [],
       title: '',
       subtitle: '',
@@ -114,6 +116,7 @@ class WorkForMobile extends Component {
       descriptionOne: '',
       descriptionTwo: '',
       heightOfContainer: '100%',
+      isHiddenOriginal: false,
       isHiddenImage1: true,
       isHiddenImage2: true,
       isHiddenImage3: true,
@@ -137,7 +140,7 @@ class WorkForMobile extends Component {
         isHidden: false,
         galleryIsHidden: true,
         centerImg: CenterImg,
-        centerImgBoolean: false,
+        centerImgBoolean: true,
         photos: [],
         title: '',
         subtitle: '',
@@ -145,6 +148,7 @@ class WorkForMobile extends Component {
         descriptionOne: '',
         descriptionTwo: '',
         heightOfContainer: '100%',
+        isHiddenOriginal: false,
         isHiddenImage1: true,
         isHiddenImage2: true,
         isHiddenImage3: true,
@@ -159,6 +163,7 @@ class WorkForMobile extends Component {
       spinningLogo: LogoRedSpin,
       centerImgBoolean: true,
       centerImg: TDSThumbnail,
+      isHiddenOriginal: true,
       isHiddenImage1: false,
       isHiddenImage2: true,
       isHiddenImage3: true,
@@ -172,6 +177,8 @@ class WorkForMobile extends Component {
       spinningLogo: LogoGreenSpin,
       centerImgBoolean: true,
       centerImg: INNThumbnail,
+      isHiddenOriginal: true,
+
       isHiddenImage1: true,
       isHiddenImage2: false,
       isHiddenImage3: true,
@@ -184,6 +191,8 @@ class WorkForMobile extends Component {
       spinningLogo: LogoBlueSpin,
       centerImgBoolean: true,
       centerImg: MHCThumbnail,
+      isHiddenOriginal: true,
+
       isHiddenImage1: true,
       isHiddenImage2: true,
       isHiddenImage3: false,
@@ -196,6 +205,8 @@ class WorkForMobile extends Component {
       spinningLogo: LogoRedSpin,
       centerImgBoolean: true,
       centerImg: RECThumbnail,
+      isHiddenOriginal: true,
+
       isHiddenImage1: true,
       isHiddenImage2: true,
       isHiddenImage3: true,
@@ -208,6 +219,7 @@ class WorkForMobile extends Component {
       spinningLogo: LogoGreenSpin,
       centerImgBoolean: true,
       centerImg: COCThumbnail,
+      isHiddenOriginal: true,
       isHiddenImage1: true,
       isHiddenImage2: true,
       isHiddenImage3: true,
@@ -215,6 +227,7 @@ class WorkForMobile extends Component {
       isHiddenImage5: false
     });
   }
+
   onLoadImg1 = () => {
     this.setState({
       didLoadImg1: true
@@ -235,6 +248,7 @@ class WorkForMobile extends Component {
       didLoadImg4: true
     });
   };
+
   onLoadImg5 = () => {
     this.setState({
       didLoadImg5: true
@@ -277,6 +291,7 @@ class WorkForMobile extends Component {
     if (this.state.redirectToProject5) {
       return <Redirect push to="/clarkston" />;
     }
+
     const style1 = this.state.didLoadImg1 ? {} : { visibility: 'hidden' };
     const style2 = this.state.didLoadImg2 ? {} : { visibility: 'hidden' };
     const style3 = this.state.didLoadImg3 ? {} : { visibility: 'hidden' };
@@ -353,57 +368,63 @@ class WorkForMobile extends Component {
       </div>
     );
     let centerImageDiv = <div />;
-    if (this.state.centerImgBoolean) {
-      centerImageDiv = (
-        <div className="container-2">
-          <div hidden={this.state.isHiddenImage1}>
-            <img
-              className="centerImage"
-              src={TDSThumbnail}
-              alt="hello"
-              style={style1}
-              onLoad={this.onLoadImg1}
-            />
-          </div>
-          <div hidden={this.state.isHiddenImage2}>
-            <img
-              className="centerImage"
-              src={INNThumbnail}
-              alt="hello"
-              style={style2}
-              onLoad={this.onLoadImg2}
-            />
-          </div>
-          <div hidden={this.state.isHiddenImage3}>
-            <img
-              className="centerImage"
-              src={MHCThumbnail}
-              alt="hello"
-              style={style3}
-              onLoad={this.onLoadImg3}
-            />
-          </div>
-          <div hidden={this.state.isHiddenImage4}>
-            <img
-              className="centerImage"
-              src={RECThumbnail}
-              alt="hello"
-              style={style4}
-              onLoad={this.onLoadImg4}
-            />
-          </div>
-          <div hidden={this.state.isHiddenImage5}>
-            <img
-              className="centerImage"
-              src={COCThumbnail}
-              alt="hello"
-              style={style5}
-              onLoad={this.onLoadImg5}
-            />
-          </div>
+    centerImageDiv = (
+      <div className="container-2">
+        <div hidden={this.state.isHiddenOriginal}>
+          <img
+            className="centerImage"
+            src={ThumbnailText}
+            alt="hello"
+            onLoad={this.onLoadImgOriginal}
+          />
         </div>
-      );
-    }
+        <div hidden={this.state.isHiddenImage1}>
+          <img
+            className="centerImage"
+            src={TDSThumbnail}
+            alt="hello"
+            style={style1}
+            onLoad={this.onLoadImg1}
+          />
+        </div>
+        <div hidden={this.state.isHiddenImage2}>
+          <img
+            className="centerImage"
+            src={INNThumbnail}
+            alt="hello"
+            style={style2}
+            onLoad={this.onLoadImg2}
+          />
+        </div>
+        <div hidden={this.state.isHiddenImage3}>
+          <img
+            className="centerImage"
+            src={MHCThumbnail}
+            alt="hello"
+            style={style3}
+            onLoad={this.onLoadImg3}
+          />
+        </div>
+        <div hidden={this.state.isHiddenImage4}>
+          <img
+            className="centerImage"
+            src={RECThumbnail}
+            alt="hello"
+            style={style4}
+            onLoad={this.onLoadImg4}
+          />
+        </div>
+        <div hidden={this.state.isHiddenImage5}>
+          <img
+            className="centerImage"
+            src={COCThumbnail}
+            alt="hello"
+            style={style5}
+            onLoad={this.onLoadImg5}
+          />
+        </div>
+      </div>
+    );
 
     return (
       <div style={{ height: this.state.height }}>
