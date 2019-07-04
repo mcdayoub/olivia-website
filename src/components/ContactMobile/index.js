@@ -50,6 +50,7 @@ const DisplayMobile = styled.ul`
     width: 70%;
     padding: 12px 20px;
     background-color: transparent;
+    margin: 0px 0px;
     height: 100px;
     border: 0;
     outline: 0;
