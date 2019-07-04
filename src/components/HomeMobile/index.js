@@ -12,8 +12,8 @@ import Polaroid from '../About/Olivia_Polaroid_Final.jpg';
 const size = {
   mobileS: '550px',
   mobileM: '600px',
-  mobileL: '736px',
-  tablet: '834px'
+  mobileL: '720px',
+  tablet: '720px'
 };
 
 const device = {
@@ -63,12 +63,12 @@ const DisplayMobile = styled.ul`
   }
   @media ${device.mobileL} {
     .nav-items {
-      padding-bottom: 13%;
+      padding-bottom: 10%;
     }
   }
   @media ${device.tablet} {
     .nav-items {
-      padding-bottom: 13%;
+      padding-bottom: 10%;
     }
   }
 `;
@@ -106,12 +106,12 @@ const DisplayLogo = styled.ul`
   }
   @media ${device.tablet} {
     .logo {
-      height: 375px;
+      height: 300px;
       position: absolute;
       left: 50%;
       top: 30%;
-      margin-left: -187.5px;
-      margin-top: -187.5px;
+      margin-left: -150px;
+      margin-top: -150px;
     }
   }
 
