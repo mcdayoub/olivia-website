@@ -79,9 +79,10 @@ const Display = styled.ul`
     justify-content: center;
   }
   .buttonDiv img {
-    height: 50px;
-    padding-left: 20px;
+    height: 30px;
+    padding-left: 10px;
     margin: 4px 2px;
+    padding-top: 20px;
   }
   * :focus {
     outline: 0 !important;

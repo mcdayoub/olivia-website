@@ -104,9 +104,10 @@ const DisplayMobile = styled.ul`
     padding-bottom: 20px;
   }
   .buttonDiv img {
-    height: 50px;
-    padding-left: 20px;
+    height: 30px;
+    padding-left: 10px;
     margin: 4px 2px;
+    padding-top: 20px;
   }
   * :focus {
     outline: 0 !important;
