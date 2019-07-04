@@ -37,11 +37,11 @@ import DotRed from './DotRed.png';
 import DotGreen from './DotGreen.png';
 import DotBlue from './DotBlue.png';
 //THUMBNAILS
-import TDSThumbnail from '../WorkThumbnails/THUMBNAIL_1.jpg';
-import INNThumbnail from '../WorkThumbnails/THUMBNAIL_2.jpg';
-import MHCThumbnail from '../WorkThumbnails/THUMBNAIL_3.jpg';
-import RECThumbnail from '../WorkThumbnails/THUMBNAIL_4.jpg';
-import COCThumbnail from '../WorkThumbnails/THUMBNAIL_5.jpg';
+import TDSThumbnail from '../WorkThumbnails/THUMBNAIL_1.png';
+import INNThumbnail from '../WorkThumbnails/THUMBNAIL_2.png';
+import MHCThumbnail from '../WorkThumbnails/THUMBNAIL_3.png';
+import RECThumbnail from '../WorkThumbnails/THUMBNAIL_4.png';
+import COCThumbnail from '../WorkThumbnails/THUMBNAIL_5.png';
 
 import Hamburger from './HamburgerRed.png';
 
