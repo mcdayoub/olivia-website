@@ -237,7 +237,7 @@ class HomeMobile extends Component {
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/rgbqueen/"
               >
-                instagram
+                latest
               </a>
             </div>
             <div className="nav-items">
