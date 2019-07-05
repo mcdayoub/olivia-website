@@ -143,6 +143,127 @@ const Display = styled.ul`
     font-weight: normal;
   }
 `;
+const Display2 = styled.ul`
+  background: white;
+  color: black;
+
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+  }
+  .container-2 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 35px;
+  }
+
+  .container-3 {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    overflow-y: auto;
+    justify-content: center;
+  }
+  .container-3::-webkit-scrollbar {
+    display: none;
+  }
+  .photoDiv {
+    padding: 5px;
+  }
+
+  .logo {
+    height: 200px;
+  }
+  .polaroid {
+    height: 500px;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: black;
+  }
+  .linkItem {
+    padding-left: 25px;
+    padding-bottom: 10px;
+  }
+  .resize {
+    height: 300px;
+    width: 300px;
+  }
+  .previewImage {
+    height: 200px;
+    width: 200px;
+  }
+
+  .title {
+    font-size: 25px;
+    font-weight: normal;
+    border-bottom: 2px solid currentColor;
+  }
+  .subtitle {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .description {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .titleContainer {
+    text-align: center;
+  }
+  .subtitleContainer {
+    padding-top: 15px;
+    text-align: center;
+  }
+  .descriptionContainer {
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    text-align: left;
+    padding-bottom: 30px;
+  }
+  .descriptionColumnOne {
+    width: 40%;
+    padding-left: 100px;
+    padding-right: 30px;
+    align-content: center;
+    align-items: center;
+  }
+  .descriptionColumnTwo {
+    width: 40%;
+    padding-right: 100px;
+    padding-left: 30px;
+    align-content: center;
+    align-items: center;
+  }
+  .imageContainer {
+    text-align: center;
+  }
+  .imageContainer img {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .uparrow {
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 12px;
+  }
+  .uparrow img {
+    padding-bottom: 10px;
+    height: 25px;
+  }
+  .uparrow h3 {
+    font-weight: normal;
+  }
+`;
+
 function Gallery(props) {
   const images = props.imgList.map(image => {
     return (
@@ -180,8 +301,7 @@ function Gallery(props) {
     </div>
   );
 }
-const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
-const notbold = { 'padding-right': '60px' };
+const bold = { 'font-weight': 'bold' };
 
 class LinkGallery extends Component {
   constructor(props) {
@@ -192,42 +312,83 @@ class LinkGallery extends Component {
       subtitle: '',
       description: '',
       descriptionOne: '',
-      descriptionTwo: ''
+      descriptionTwo: '',
+      width: window.innerWidth,
+      widescreen: false,
+      thinscreen: true
     };
     this.scrollToTop = this.scrollToTop.bind(this);
   }
+
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange);
+    this.handleWindowSizeChange();
+  }
+
+  // make sure to remove the listener
+  // when the component is not mounted anymore
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  handleWindowSizeChange = () => {
+    this.setState({ width: window.innerWidth });
+    if (this.state.width < 1000) {
+      this.setState({ widescreen: true, thinscreen: false });
+    } else {
+      this.setState({ widescreen: false, thinscreen: true });
+    }
+  };
+
   scrollToTop() {
     scroll.scrollToTop();
   }
   render() {
-    return (
-      <div>
-        <NavBarOlivia
-          Logo={Logo}
-          work={bold}
-          instagram={notbold}
-          about={notbold}
-          contact={notbold}
-          color={'#fc4242'}
-        />
-        <Display>
-          <div className="container">
-            <div className="container-3">
-              <Gallery
-                className="gallery"
-                imgList={this.props.photos}
-                title={this.props.title}
-                subtitle={this.props.subtitle}
-                descriptionOne={this.props.descriptionOne}
-                descriptionTwo={this.props.descriptionTwo}
-              />
-              <div className="uparrow" onClick={this.scrollToTop}>
-                <img src={Uparrow} alt="hello" />
-                <h3>up please</h3>
-              </div>
+    const WideScreen = (
+      <Display>
+        <div className="container">
+          <div className="container-3">
+            <Gallery
+              className="gallery"
+              imgList={this.props.photos}
+              title={this.props.title}
+              subtitle={this.props.subtitle}
+              descriptionOne={this.props.descriptionOne}
+              descriptionTwo={this.props.descriptionTwo}
+            />
+            <div className="uparrow" onClick={this.scrollToTop}>
+              <img src={Uparrow} alt="hello" />
+              <h3>up please</h3>
             </div>
           </div>
-        </Display>
+        </div>
+      </Display>
+    );
+    const ThinScreen = (
+      <Display2>
+        <div className="container">
+          <div className="container-3">
+            <Gallery
+              className="gallery"
+              imgList={this.props.photos}
+              title={this.props.title}
+              subtitle={this.props.subtitle}
+              descriptionOne={this.props.descriptionOne}
+              descriptionTwo={this.props.descriptionTwo}
+            />
+            <div className="uparrow" onClick={this.scrollToTop}>
+              <img src={Uparrow} alt="hello" />
+              <h3>up please</h3>
+            </div>
+          </div>
+        </div>
+      </Display2>
+    );
+    return (
+      <div>
+        <NavBarOlivia Logo={Logo} work={bold} color={'#fc4242'} />
+        <div hidden={this.state.widescreen}>{WideScreen}</div>
+        <div hidden={this.state.thinscreen}>{ThinScreen}</div>
       </div>
     );
   }
