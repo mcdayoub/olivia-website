@@ -37,8 +37,8 @@ const DisplayRed = styled.ul`
       position: absolute;
       left: 50%;
       top: 50%;
-      margin-left: -250px;
-      margin-top: -250px;
+      margin-left: -212.5px;
+      margin-top: -212.5px;
     }
   }
   .container-2-spin {
@@ -53,8 +53,8 @@ const DisplayRed = styled.ul`
       position: absolute;
       left: 50%;
       top: 50%;
-      margin-left: -300px;
-      margin-top: -300px;
+      margin-left: -250px;
+      margin-top: -250px;
     }
   }
   .container-3 {
@@ -114,8 +114,8 @@ const DisplayRed = styled.ul`
   }
   @media ${device.bigmonitor} {
     .centerImage {
-      height: 500px;
-      width: 500px;
+      height: 425px;
+      width: 425px;
     }
   }
   .centerImage-spin {
@@ -124,8 +124,8 @@ const DisplayRed = styled.ul`
   }
   @media ${device.bigmonitor} {
     .centerImage-spin {
-      height: 600px;
-      width: 600px;
+      height: 500px;
+      width: 500px;
     }
   }
   .spin {
