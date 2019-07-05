@@ -58,6 +58,9 @@ const NavBarStyle = styled.ul`
     padding-right: 30px;
     padding-left: 30px;
   }
+  .links-work {
+    padding-right: 30px;
+  }
   .contact {
     padding-right: 40px;
     padding-left: 20px;
@@ -89,7 +92,7 @@ export default class NavBarOlivia extends Component {
                 <Link
                   to={{ pathname: '/work', state: 'desiredState' }}
                   style={this.props.work}
-                  className="links hoverlink"
+                  className="links-work hoverlink"
                 >
                   <span>work</span>
                 </Link>
