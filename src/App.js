@@ -121,7 +121,9 @@ import INN2 from './components/INN/ImagesWeb/INN_2.jpg';
 import INN3 from './components/INN/ImagesWeb/INN_3.jpg';
 import INN4 from './components/INN/ImagesWeb/INN_4.jpg';
 import INN5 from './components/INN/ImagesWeb/INN_5.jpg';
+import INN6 from './components/INN/ImagesWeb/INN_6.jpg';
 import INN7 from './components/INN/ImagesWeb/INN_7.jpg';
+import INN8 from './components/INN/ImagesWeb/INN_8.jpg';
 
 //PROJECT IMAGE LISTS
 const imgList = [Project1Preview, Project2Preview, Nuts1, Nuts2, Nuts3];
@@ -176,7 +178,7 @@ const MHCImageListMobile = [
   M13Mobile,
   M14Mobile
 ];
-const INNImageListWeb = [INN1, INN2, INN3, INN4, INN5, INN7];
+const INNImageListWeb = [INN1, INN2, INN3, INN4, INN5, INN6, INN7, INN8];
 
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 300, beforeChildren: true },
