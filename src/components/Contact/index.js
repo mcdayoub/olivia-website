@@ -124,8 +124,11 @@ class ContactForm extends React.Component {
     })
       .then(
         this.setState({
-          buttonText: 'sent!',
-          title: 'thanks for your message!'
+          buttonText: 'cool, ttyl!',
+
+          name: '',
+          email: '',
+          message: ''
         })
       )
       .catch(error => alert(error));

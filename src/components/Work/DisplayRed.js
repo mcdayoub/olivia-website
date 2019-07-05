@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+
+const size = {
+  tablet: '1000px',
+  bigmonitor: '1300px'
+};
+
+const device = {
+  tablet: `(min-height: ${size.tablet})`,
+  bigmonitor: `(min-height: ${size.bigmonitor})`
+};
 const DisplayRed = styled.ul`
   background: white;
   html,
@@ -24,6 +34,15 @@ const DisplayRed = styled.ul`
     margin-left: -162.5px;
     margin-top: -162.5px;
   }
+  @media ${device.bigmonitor} {
+    .container-2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -250px;
+      margin-top: -250px;
+    }
+  }
   .container-2-spin {
     position: absolute;
     left: 50%;
@@ -31,12 +50,38 @@ const DisplayRed = styled.ul`
     margin-left: -200px;
     margin-top: -200px;
   }
+  @media ${device.bigmonitor} {
+    .container-2-spin {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -300px;
+      margin-top: -300px;
+    }
+  }
 
   .container-3 {
     position: flex;
     flex-direction: column;
     width: 100%;
     padding-bottom: 40px;
+  }
+
+  @media ${device.tablet} {
+    .container-3 {
+      position: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-bottom: 40%;
+    }
+  }
+  @media ${device.bigmonitor} {
+    .container-3 {
+      position: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-bottom: 60%;
+    }
   }
   .container-4 {
     display: flex;
@@ -56,6 +101,12 @@ const DisplayRed = styled.ul`
     margin-left: -187.5px;
     margin-top: -187.5px;
   }
+  @media ${device.bigmonitor} {
+    .centerImage {
+      height: 500px;
+      width: 500px;
+    }
+  }
 
   .previewImage {
     height: 30px;
@@ -67,9 +118,22 @@ const DisplayRed = styled.ul`
     height: 325px;
     width: 325px;
   }
+  @media ${device.bigmonitor} {
+    .centerImage {
+      height: 500px;
+      width: 500px;
+    }
+  }
+
   .centerImage-spin {
     height: 400px;
     width: 400px;
+  }
+  @media ${device.bigmonitor} {
+    .centerImage-spin {
+      height: 600px;
+      width: 600px;
+    }
   }
 
   .spin {
