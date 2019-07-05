@@ -7,30 +7,24 @@ import Uparrow from './Uparrow.png';
 import FadeIn from 'react-lazyload-fadein';
 
 import { animateScroll as scroll } from 'react-scroll';
+const size = {
+  resize: '1000px'
+};
+
+const device = {
+  resize: `(max-width: ${size.resize})`
+};
 
 const Display = styled.ul`
   background: white;
   color: black;
-  /* .whiteBar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 30px;
-    z-index: 100;
-    background-color: white;
-  } */
-  .whiteBar2 {
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    z-index: 100;
-    background-color: white;
-  }
+
   .container {
     display: block;
     justify-content: flex-start;
     height: 100%;
   }
+
   .container-2 {
     display: flex;
     flex-direction: column;
@@ -43,10 +37,10 @@ const Display = styled.ul`
     padding-left: 0px;
     flex-wrap: wrap;
     padding-top: 100px;
-    overflow-y: auto;
     justify-content: center;
     flex-direction: column;
   }
+
   .container-3::-webkit-scrollbar {
     display: none;
   }
@@ -120,15 +114,18 @@ const Display = styled.ul`
     width: 380px;
     padding-left: 40px;
   }
+
   .imageContainer {
     display: flex;
     text-align: center;
     flex-direction: column;
   }
+
   .imageContainer img {
     width: 1000px;
     padding-bottom: 50px;
   }
+
   .uparrow {
     padding-bottom: 50px;
     text-align: center;
@@ -141,6 +138,123 @@ const Display = styled.ul`
   }
   .uparrow h3 {
     font-weight: normal;
+  }
+  @media ${device.resize} {
+    .container {
+      display: flex;
+      justify-content: flex-start;
+      height: 100%;
+    }
+    .container-2 {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      padding-left: 35px;
+    }
+
+    .container-3 {
+      display: flex;
+      flex-direction: row;
+      padding-left: 0px;
+      flex-wrap: wrap;
+      padding-top: 50px;
+      overflow-y: auto;
+      justify-content: center;
+    }
+    .container-3::-webkit-scrollbar {
+      display: none;
+    }
+    .photoDiv {
+      padding: 5px;
+    }
+
+    .logo {
+      height: 200px;
+    }
+    .polaroid {
+      height: 500px;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: black;
+    }
+    .linkItem {
+      padding-left: 25px;
+      padding-bottom: 10px;
+    }
+    .resize {
+      height: 300px;
+      width: 300px;
+    }
+    .previewImage {
+      height: 200px;
+      width: 200px;
+    }
+
+    .title {
+      font-size: 25px;
+      font-weight: normal;
+      border-bottom: 2px solid currentColor;
+    }
+    .subtitle {
+      font-size: 16px;
+      font-weight: normal;
+    }
+    .description {
+      font-size: 12px;
+      font-weight: normal;
+    }
+    .titleContainer {
+      text-align: center;
+    }
+    .subtitleContainer {
+      padding-top: 15px;
+      text-align: center;
+    }
+    .descriptionContainer {
+      display: flex;
+      padding-top: 30px;
+      justify-content: center;
+      text-align: left;
+      padding-bottom: 30px;
+    }
+    .descriptionColumnOne {
+      width: 40%;
+      padding-left: 100px;
+      padding-right: 30px;
+      align-content: center;
+      align-items: center;
+    }
+    .descriptionColumnTwo {
+      width: 40%;
+      padding-right: 100px;
+      padding-left: 30px;
+      align-content: center;
+      align-items: center;
+    }
+    .imageContainer {
+      text-align: center;
+    }
+    .imageContainer img {
+      width: 100%;
+      padding-bottom: 50px;
+    }
+    .uparrow {
+      padding-bottom: 50px;
+      text-align: center;
+      font-weight: normal;
+      font-size: 12px;
+    }
+    .uparrow img {
+      padding-bottom: 10px;
+      height: 25px;
+    }
+    .uparrow h3 {
+      font-weight: normal;
+    }
   }
 `;
 const Display2 = styled.ul`
@@ -387,8 +501,24 @@ class LinkGallery extends Component {
     return (
       <div>
         <NavBarOlivia Logo={Logo} work={bold} color={'#fc4242'} />
-        <div hidden={this.state.widescreen}>{WideScreen}</div>
-        <div hidden={this.state.thinscreen}>{ThinScreen}</div>
+        <Display>
+          <div className="container">
+            <div className="container-3">
+              <Gallery
+                className="gallery"
+                imgList={this.props.photos}
+                title={this.props.title}
+                subtitle={this.props.subtitle}
+                descriptionOne={this.props.descriptionOne}
+                descriptionTwo={this.props.descriptionTwo}
+              />
+              <div className="uparrow" onClick={this.scrollToTop}>
+                <img src={Uparrow} alt="hello" />
+                <h3>up please</h3>
+              </div>
+            </div>
+          </div>
+        </Display>
       </div>
     );
   }
