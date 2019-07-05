@@ -190,7 +190,11 @@ class LinkGallery extends Component {
                 subtitle={this.props.subtitle}
                 descriptionOne={this.props.descriptionOne}
               />
-              <div className="uparrow" onClick={this.scrollToTop}>
+              <div
+                className="uparrow"
+                onClick={this.scrollToTop}
+                style={{ 'padding-top': '50px' }}
+              >
                 <img src={Uparrow} alt="hello" />
                 <h3>up please</h3>
               </div>

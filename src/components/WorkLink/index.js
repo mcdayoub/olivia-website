@@ -261,7 +261,6 @@ const Display = styled.ul`
     .uparrow img {
       padding-bottom: 10px;
       height: 25px;
-      padding-top: 1000px;
     }
     .uparrow h3 {
       font-weight: normal;
@@ -369,7 +368,6 @@ const Display2 = styled.ul`
   }
   .imageContainer {
     text-align: center;
-    padding-bottom: 500px;
   }
   .imageContainer img {
     width: 100%;
