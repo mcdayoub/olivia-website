@@ -267,7 +267,10 @@ class Work extends Component {
 
     let projects = (
       <div className="container-3">
-        <DragDropContainer targetKey="1">
+        <DragDropContainer
+          targetKey="1"
+          onDragStart={this.handleMouseOverImage1}
+        >
           <Box onMouseOver={this.handleMouseOverImage1}>
             <div className="floating">
               <span>
@@ -276,7 +279,10 @@ class Work extends Component {
             </div>
           </Box>
         </DragDropContainer>
-        <DragDropContainer targetKey="2">
+        <DragDropContainer
+          targetKey="2"
+          onDragStart={this.handleMouseOverImage2}
+        >
           <Box>
             <div
               className="floating-2"
@@ -288,7 +294,10 @@ class Work extends Component {
             </div>
           </Box>
         </DragDropContainer>
-        <DragDropContainer targetKey="3">
+        <DragDropContainer
+          targetKey="3"
+          onDragStart={this.handleMouseOverImage3}
+        >
           <Box onMouseOver={this.handleMouseOverImage3}>
             <div className="floating-3">
               <span>
@@ -297,7 +306,10 @@ class Work extends Component {
             </div>
           </Box>
         </DragDropContainer>
-        <DragDropContainer targetKey="4">
+        <DragDropContainer
+          targetKey="4"
+          onDragStart={this.handleMouseOverImage4}
+        >
           <Box>
             <div
               className="floating-4"
@@ -309,7 +321,10 @@ class Work extends Component {
             </div>
           </Box>
         </DragDropContainer>
-        <DragDropContainer targetKey="5">
+        <DragDropContainer
+          targetKey="5"
+          onDragStart={this.handleMouseOverImage5}
+        >
           <Box onMouseOver={this.handleMouseOverImage5}>
             <div className="floating-5">
               <span>
