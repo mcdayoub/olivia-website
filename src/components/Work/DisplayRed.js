@@ -95,7 +95,7 @@ const DisplayRed = styled.ul`
   }
   .floating {
     animation-name: floating;
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
@@ -105,7 +105,7 @@ const DisplayRed = styled.ul`
       transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 7.5px);
+      transform: translate(0, 8px);
     }
     to {
       transform: translate(0, -0px);
@@ -120,67 +120,67 @@ const DisplayRed = styled.ul`
 
   @keyframes floating-2 {
     from {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 15px);
+      transform: translate(0, 7.5px);
     }
     to {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
   }
   .floating-3 {
     animation-name: floating-3;
-    animation-duration: 5s;
+    animation-duration: 3.75s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
 
   @keyframes floating-3 {
     from {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, -5px);
+      transform: translate(0, 5px);
     }
     to {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
   }
   .floating-4 {
     animation-name: floating-4;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
 
   @keyframes floating-4 {
     from {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 15px);
+      transform: translate(0, 7.5px);
     }
     to {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
   }
   .floating-5 {
     animation-name: floating-5;
-    animation-duration: 5s;
+    animation-duration: 2.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
 
   @keyframes floating-5 {
     from {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 15px);
+      transform: translate(0, 4px);
     }
     to {
-      transform: translate(0, 2.5px);
+      transform: translate(0, 0px);
     }
   }
 `;
