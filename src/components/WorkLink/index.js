@@ -7,6 +7,15 @@ import Uparrow from './Uparrow.png';
 import FadeIn from 'react-lazyload-fadein';
 
 import { animateScroll as scroll } from 'react-scroll';
+const sizeHeight = {
+  tablet: '1000px',
+  bigmonitor: '1300px'
+};
+
+const deviceHeight = {
+  tablet: `(min-height: ${sizeHeight.tablet})`,
+  bigmonitor: `(min-height: ${sizeHeight.bigmonitor})`
+};
 const size = {
   resize: '1000px'
 };
@@ -242,6 +251,7 @@ const Display = styled.ul`
       width: 100%;
       padding-bottom: 50px;
     }
+
     .uparrow {
       padding-bottom: 50px;
       text-align: center;
@@ -251,6 +261,7 @@ const Display = styled.ul`
     .uparrow img {
       padding-bottom: 10px;
       height: 25px;
+      padding-top: 1000px;
     }
     .uparrow h3 {
       font-weight: normal;
@@ -358,6 +369,7 @@ const Display2 = styled.ul`
   }
   .imageContainer {
     text-align: center;
+    padding-bottom: 500px;
   }
   .imageContainer img {
     width: 100%;
@@ -458,46 +470,6 @@ class LinkGallery extends Component {
     scroll.scrollToTop();
   }
   render() {
-    const WideScreen = (
-      <Display>
-        <div className="container">
-          <div className="container-3">
-            <Gallery
-              className="gallery"
-              imgList={this.props.photos}
-              title={this.props.title}
-              subtitle={this.props.subtitle}
-              descriptionOne={this.props.descriptionOne}
-              descriptionTwo={this.props.descriptionTwo}
-            />
-            <div className="uparrow" onClick={this.scrollToTop}>
-              <img src={Uparrow} alt="hello" />
-              <h3>up please</h3>
-            </div>
-          </div>
-        </div>
-      </Display>
-    );
-    const ThinScreen = (
-      <Display2>
-        <div className="container">
-          <div className="container-3">
-            <Gallery
-              className="gallery"
-              imgList={this.props.photos}
-              title={this.props.title}
-              subtitle={this.props.subtitle}
-              descriptionOne={this.props.descriptionOne}
-              descriptionTwo={this.props.descriptionTwo}
-            />
-            <div className="uparrow" onClick={this.scrollToTop}>
-              <img src={Uparrow} alt="hello" />
-              <h3>up please</h3>
-            </div>
-          </div>
-        </div>
-      </Display2>
-    );
     return (
       <div>
         <NavBarOlivia Logo={Logo} work={bold} color={'#fc4242'} />
@@ -512,7 +484,11 @@ class LinkGallery extends Component {
                 descriptionOne={this.props.descriptionOne}
                 descriptionTwo={this.props.descriptionTwo}
               />
-              <div className="uparrow" onClick={this.scrollToTop}>
+              <div
+                className="uparrow"
+                onClick={this.scrollToTop}
+                style={{ 'padding-top': '50px' }}
+              >
                 <img src={Uparrow} alt="hello" />
                 <h3>up please</h3>
               </div>
