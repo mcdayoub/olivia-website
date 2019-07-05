@@ -83,6 +83,7 @@ class WorkForMobile extends Component {
       isHiddenImage5: true,
       selected: '',
       spinningLogo: LogoRedSpin,
+      didLoadSpinner: false,
       didLoadImg1: false,
       didLoadImg2: false,
       didLoadImg3: false,
@@ -227,7 +228,11 @@ class WorkForMobile extends Component {
       isHiddenImage5: false
     });
   }
-
+  onLoadImgSpinner = () => {
+    this.setState({
+      didLoadSpinner: true
+    });
+  };
   onLoadImg1 = () => {
     this.setState({
       didLoadImg1: true
@@ -291,7 +296,9 @@ class WorkForMobile extends Component {
     if (this.state.redirectToProject5) {
       return <Redirect push to="/clarkston" />;
     }
-
+    const style_spinner = this.state.didLoadSpinner
+      ? {}
+      : { visibility: 'hidden' };
     const style1 = this.state.didLoadImg1 ? {} : { visibility: 'hidden' };
     const style2 = this.state.didLoadImg2 ? {} : { visibility: 'hidden' };
     const style3 = this.state.didLoadImg3 ? {} : { visibility: 'hidden' };
@@ -468,6 +475,8 @@ class WorkForMobile extends Component {
                             className="centerImage-spin spin"
                             src={this.state.spinningLogo}
                             alt="hello"
+                            onLoad={this.onLoadImgSpinner}
+                            style={style_spinner}
                           />
                         </div>
                         <div>{centerImageDiv}</div>
