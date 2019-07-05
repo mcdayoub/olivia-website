@@ -265,7 +265,7 @@ class App extends Component {
                         render={() => (
                           <LinkGallery
                             photos={TDSImgList}
-                            title="TAQUERÍA DEL SOL"
+                            title="TAQUERIA DEL SOL"
                             subtitle="business concept & branding"
                             descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
                             descriptionTwo="fuck you"
@@ -291,7 +291,7 @@ class App extends Component {
                         render={() => (
                           <LinkGallery
                             photos={RecoveredImageListWeb}
-                            title="RECOVERED"
+                            title="[RECOVERED]"
                             subtitle="business concept & branding"
                             descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
                             descriptionTwo="fuck you"
@@ -376,7 +376,7 @@ class App extends Component {
                         render={() => (
                           <LinkGalleryMobile
                             photos={TDSImgList}
-                            title="TAQUERÍA DEL SOL"
+                            title="TAQUERIA DEL SOL"
                             subtitle="business concept & branding"
                             descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
                           />
@@ -398,7 +398,7 @@ class App extends Component {
                         render={() => (
                           <LinkGalleryMobile
                             photos={RecoveredImageListMobile}
-                            title="RECOVERED"
+                            title="[RECOVERED]"
                             subtitle="business concept & branding"
                             descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
                           />
