@@ -115,6 +115,14 @@ import M12Mobile from './components/MHC/ImagesMobile/MHC_Website-12.jpg';
 import M13Mobile from './components/MHC/ImagesMobile/MHC_Website-13.jpg';
 import M14Mobile from './components/MHC/ImagesMobile/MHC_Website-14.jpg';
 
+//INN
+import INN1 from './components/INN/ImagesWeb/INN_1.jpg';
+import INN2 from './components/INN/ImagesWeb/INN_2.jpg';
+import INN3 from './components/INN/ImagesWeb/INN_3.jpg';
+import INN4 from './components/INN/ImagesWeb/INN_4.jpg';
+import INN5 from './components/INN/ImagesWeb/INN_5.jpg';
+import INN7 from './components/INN/ImagesWeb/INN_7.jpg';
+
 //PROJECT IMAGE LISTS
 const imgList = [Project1Preview, Project2Preview, Nuts1, Nuts2, Nuts3];
 
@@ -168,6 +176,7 @@ const MHCImageListMobile = [
   M13Mobile,
   M14Mobile
 ];
+const INNImageListWeb = [INN1, INN2, INN3, INN4, INN5, INN7];
 
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 300, beforeChildren: true },
@@ -241,7 +250,7 @@ class App extends Component {
                         key="itsnotnuts"
                         render={() => (
                           <LinkGallery
-                            photos={imgList}
+                            photos={INNImageListWeb}
                             title="IT'S NOT NUTS"
                             subtitle="business concept & branding"
                             descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
