@@ -364,7 +364,7 @@ class App extends Component {
                         path="/itsnotnuts"
                         render={() => (
                           <LinkGalleryMobile
-                            photos={imgList}
+                            photos={INNImageListWeb}
                             title="IT'S NOT NUTS"
                             subtitle="business concept & branding"
                             descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
