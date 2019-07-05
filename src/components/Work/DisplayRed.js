@@ -76,7 +76,7 @@ const DisplayRed = styled.ul`
       position: flex;
       flex-direction: column;
       width: 100%;
-      padding-bottom: 60%;
+      padding-bottom: 40%;
     }
   }
   .container-4 {
