@@ -169,10 +169,10 @@ const DisplayRed = styled.ul`
       transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 8px);
+      transform: translate(0, -8px);
     }
     to {
-      transform: translate(0, -0px);
+      transform: translate(0, 0px);
     }
   }
   .floating-2 {
@@ -187,7 +187,7 @@ const DisplayRed = styled.ul`
       transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 7.5px);
+      transform: translate(0, -7.5px);
     }
     to {
       transform: translate(0, 0px);
@@ -205,7 +205,7 @@ const DisplayRed = styled.ul`
       transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 5px);
+      transform: translate(0, -5px);
     }
     to {
       transform: translate(0, 0px);
@@ -223,7 +223,7 @@ const DisplayRed = styled.ul`
       transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 7.5px);
+      transform: translate(0, -7.5px);
     }
     to {
       transform: translate(0, 0px);
@@ -241,7 +241,7 @@ const DisplayRed = styled.ul`
       transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 4px);
+      transform: translate(0, -4px);
     }
     to {
       transform: translate(0, 0px);
