@@ -160,72 +160,82 @@ class WorkForMobile extends Component {
     }
   }
   handleMouseOverImage1() {
-    this.setState({
-      spinningLogo: LogoRedSpin,
-      centerImgBoolean: true,
-      centerImg: TDSThumbnail,
-      isHiddenOriginal: true,
-      isHiddenImage1: false,
-      isHiddenImage2: true,
-      isHiddenImage3: true,
-      isHiddenImage4: true,
-      isHiddenImage5: true
+    this.setState((state, props) => {
+      return {
+        spinningLogo: LogoRedSpin,
+        centerImgBoolean: true,
+        centerImg: TDSThumbnail,
+        isHiddenOriginal: true,
+        isHiddenImage1: false,
+        isHiddenImage2: true,
+        isHiddenImage3: true,
+        isHiddenImage4: true,
+        isHiddenImage5: true
+      };
     });
   }
 
   handleMouseOverImage2() {
-    this.setState({
-      spinningLogo: LogoGreenSpin,
-      centerImgBoolean: true,
-      centerImg: INNThumbnail,
-      isHiddenOriginal: true,
+    this.setState((state, props) => {
+      return {
+        spinningLogo: LogoGreenSpin,
+        centerImgBoolean: true,
+        centerImg: INNThumbnail,
+        isHiddenOriginal: true,
 
-      isHiddenImage1: true,
-      isHiddenImage2: false,
-      isHiddenImage3: true,
-      isHiddenImage4: true,
-      isHiddenImage5: true
+        isHiddenImage1: true,
+        isHiddenImage2: false,
+        isHiddenImage3: true,
+        isHiddenImage4: true,
+        isHiddenImage5: true
+      };
     });
   }
   handleMouseOverImage3() {
-    this.setState({
-      spinningLogo: LogoBlueSpin,
-      centerImgBoolean: true,
-      centerImg: MHCThumbnail,
-      isHiddenOriginal: true,
+    this.setState((state, props) => {
+      return {
+        spinningLogo: LogoBlueSpin,
+        centerImgBoolean: true,
+        centerImg: MHCThumbnail,
+        isHiddenOriginal: true,
 
-      isHiddenImage1: true,
-      isHiddenImage2: true,
-      isHiddenImage3: false,
-      isHiddenImage4: true,
-      isHiddenImage5: true
+        isHiddenImage1: true,
+        isHiddenImage2: true,
+        isHiddenImage3: false,
+        isHiddenImage4: true,
+        isHiddenImage5: true
+      };
     });
   }
   handleMouseOverImage4() {
-    this.setState({
-      spinningLogo: LogoRedSpin,
-      centerImgBoolean: true,
-      centerImg: RECThumbnail,
-      isHiddenOriginal: true,
+    this.setState((state, props) => {
+      return {
+        spinningLogo: LogoRedSpin,
+        centerImgBoolean: true,
+        centerImg: RECThumbnail,
+        isHiddenOriginal: true,
 
-      isHiddenImage1: true,
-      isHiddenImage2: true,
-      isHiddenImage3: true,
-      isHiddenImage4: false,
-      isHiddenImage5: true
+        isHiddenImage1: true,
+        isHiddenImage2: true,
+        isHiddenImage3: true,
+        isHiddenImage4: false,
+        isHiddenImage5: true
+      };
     });
   }
   handleMouseOverImage5() {
-    this.setState({
-      spinningLogo: LogoGreenSpin,
-      centerImgBoolean: true,
-      centerImg: COCThumbnail,
-      isHiddenOriginal: true,
-      isHiddenImage1: true,
-      isHiddenImage2: true,
-      isHiddenImage3: true,
-      isHiddenImage4: true,
-      isHiddenImage5: false
+    this.setState((state, props) => {
+      return {
+        spinningLogo: LogoGreenSpin,
+        centerImgBoolean: true,
+        centerImg: COCThumbnail,
+        isHiddenOriginal: true,
+        isHiddenImage1: true,
+        isHiddenImage2: true,
+        isHiddenImage3: true,
+        isHiddenImage4: true,
+        isHiddenImage5: false
+      };
     });
   }
   onLoadImgSpinner = () => {
