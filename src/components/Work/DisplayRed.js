@@ -36,7 +36,7 @@ const DisplayRed = styled.ul`
     .container-2 {
       position: absolute;
       left: 50%;
-      top: 50%;
+      top: 40%;
       margin-left: -212.5px;
       margin-top: -212.5px;
     }
@@ -52,7 +52,7 @@ const DisplayRed = styled.ul`
     .container-2-spin {
       position: absolute;
       left: 50%;
-      top: 50%;
+      top: 40%;
       margin-left: -250px;
       margin-top: -250px;
     }
@@ -76,7 +76,7 @@ const DisplayRed = styled.ul`
       position: flex;
       flex-direction: column;
       width: 100%;
-      padding-bottom: 50%;
+      padding-bottom: 90%;
     }
   }
   .container-4 {
