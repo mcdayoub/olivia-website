@@ -2,6 +2,20 @@ import React, { Component } from 'react';
 
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import posed from 'react-pose';
+const Box = posed.div({
+  hoverable: true,
+  pressable: true,
+  init: {
+    scale: 1
+  },
+  hover: {
+    scale: 1.1
+  },
+  press: {
+    scale: 1.1
+  }
+});
 
 const NavBarStyle = styled.ul`
   background: white;
@@ -33,14 +47,29 @@ const NavBarStyle = styled.ul`
     padding-left: 30px;
   }
   .column2 {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     float: right;
     padding-top: 13px;
     padding-right: 0px;
     text-align: right;
   }
   .links {
-    padding-right: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .contact {
+    padding-right: 40px;
+    padding-left: 20px;
+  }
+  .hoverlink {
+  }
+  .hoverlink:hover {
+  }
+  span {
+  }
+  .extra {
+    padding-right: 10px;
   }
 `;
 
@@ -55,26 +84,52 @@ export default class NavBarOlivia extends Component {
             </Link>
           </div>
           <div className="column2">
-            <Link
-              to={{ pathname: '/work', state: 'desiredState' }}
-              style={this.props.work}
-            >
-              work
-            </Link>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/rgbqueen/"
-              style={this.props.instagram}
-            >
-              latest
-            </a>
-            <Link to="/about" style={this.props.about}>
-              about
-            </Link>
-            <Link to="/contact" style={this.props.contact}>
-              contact
-            </Link>
+            <div style={{ 'text-align': 'center' }}>
+              <Box>
+                <Link
+                  to={{ pathname: '/work', state: 'desiredState' }}
+                  style={this.props.work}
+                  className="links hoverlink"
+                >
+                  <span>work</span>
+                </Link>
+              </Box>
+            </div>
+            <div>
+              <Box>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.instagram.com/rgbqueen/"
+                  style={this.props.instagram}
+                  className="links hoverlink"
+                >
+                  <span>latest</span>
+                </a>
+              </Box>
+            </div>
+            <div>
+              <Box>
+                <Link
+                  to="/about"
+                  style={this.props.about}
+                  className="links hoverlink"
+                >
+                  <span className="extra">about</span>
+                </Link>
+              </Box>
+            </div>
+            <div>
+              <Box>
+                <Link
+                  to="/contact"
+                  style={this.props.contact}
+                  className="contact hoverlink"
+                >
+                  <span>contact</span>
+                </Link>
+              </Box>
+            </div>
           </div>
         </div>
       </NavBarStyle>
