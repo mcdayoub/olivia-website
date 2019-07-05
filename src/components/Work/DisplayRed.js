@@ -16,9 +16,7 @@ const DisplayRed = styled.ul`
   body {
     margin: 0;
   }
-
   height: 100%;
-
   .containerForPreview {
     display: flex;
     width: 100%;
@@ -59,14 +57,12 @@ const DisplayRed = styled.ul`
       margin-top: -300px;
     }
   }
-
   .container-3 {
     position: flex;
     flex-direction: column;
     width: 100%;
     padding-bottom: 40px;
   }
-
   @media ${device.tablet} {
     .container-3 {
       position: flex;
@@ -90,7 +86,6 @@ const DisplayRed = styled.ul`
     text-align: right;
     float: left;
   }
-
   .spinner {
   }
   .logo {
@@ -107,7 +102,6 @@ const DisplayRed = styled.ul`
       width: 500px;
     }
   }
-
   .previewImage {
     height: 30px;
     width: 30px;
@@ -124,7 +118,6 @@ const DisplayRed = styled.ul`
       width: 500px;
     }
   }
-
   .centerImage-spin {
     height: 400px;
     width: 400px;
@@ -135,7 +128,6 @@ const DisplayRed = styled.ul`
       width: 600px;
     }
   }
-
   .spin {
     -webkit-animation: spin 25s linear infinite;
     -moz-animation: spin 25s linear infinite;
@@ -163,7 +155,6 @@ const DisplayRed = styled.ul`
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
-
   @keyframes floating {
     from {
       transform: translate(0, 0px);
@@ -181,7 +172,6 @@ const DisplayRed = styled.ul`
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
-
   @keyframes floating-2 {
     from {
       transform: translate(0, 0px);
@@ -199,7 +189,6 @@ const DisplayRed = styled.ul`
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
-
   @keyframes floating-3 {
     from {
       transform: translate(0, 0px);
@@ -217,7 +206,6 @@ const DisplayRed = styled.ul`
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
-
   @keyframes floating-4 {
     from {
       transform: translate(0, 0px);
@@ -235,7 +223,6 @@ const DisplayRed = styled.ul`
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
-
   @keyframes floating-5 {
     from {
       transform: translate(0, 0px);

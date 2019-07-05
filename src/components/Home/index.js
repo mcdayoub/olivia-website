@@ -8,6 +8,20 @@ import imgLogoRedSpin from './LogoRedSpin.png';
 import imgLogoGreenSpin from './LogoGreenSpin.png';
 import imgLogoBlueSpin from './LogoBlueSpin.png';
 import Polaroid from '../About/Olivia_Polaroid_Final.jpg';
+import posed from 'react-pose';
+const Box = posed.div({
+  hoverable: true,
+  pressable: true,
+  init: {
+    scale: 1
+  },
+  hover: {
+    scale: 1.1
+  },
+  press: {
+    scale: 1.1
+  }
+});
 
 const DisplayRed = styled.ul`
   background: #f4f4f4;
@@ -34,6 +48,7 @@ const DisplayRed = styled.ul`
     padding-top: 19px;
     padding-bottom: 19px;
     padding-left: 25px;
+    align-items: left;
   }
 
   .container-3 {
@@ -45,6 +60,7 @@ const DisplayRed = styled.ul`
     padding-top: 19px;
     padding-bottom: 19px;
     padding-right: 25px;
+    overflow: auto;
   }
 
   .container-4 {
@@ -155,11 +171,15 @@ class Home extends Component {
         </div>
         <div className="container">
           <div className="left container-2">
-            <div className="topLeft">
-              <Link to="/work">work</Link>
+            <div style={{ width: '20px' }}>
+              <Box>
+                <Link to="/work">work</Link>
+              </Box>
             </div>
-            <div className="bottomLeft">
-              <Link to="/about">about</Link>
+            <div style={{ width: '20px' }}>
+              <Box>
+                <Link to="/about">about</Link>
+              </Box>
             </div>
           </div>
           <div className="container-4">
@@ -171,18 +191,18 @@ class Home extends Component {
               onClick={this.handleChange}
             />
           </div>
-          <div className="right container-3">
-            <div className="topRight">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.instagram.com/rgbqueen/"
-              >
-                latest
-              </a>
-            </div>
+          <div className="right container-3" style={{ width: '100%' }}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/rgbqueen/"
+            >
+              <Box style={{ width: '100px', float: 'right' }}>latest </Box>
+            </a>
             <div className="bottomRight">
-              <Link to="/contact">contact</Link>
+              <Box style={{ width: '100px', float: 'right' }}>
+                <Link to="/contact">contact</Link>
+              </Box>
             </div>
           </div>
         </div>
