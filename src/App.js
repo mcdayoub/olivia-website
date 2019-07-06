@@ -255,7 +255,10 @@ class App extends Component {
                             photos={INNImageListWeb}
                             title="IT'S NOT NUTS"
                             subtitle="business concept & branding"
-                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                            descriptionOne="Chances are, you know somebody with a nut allergy or maybe you even suffer from the allergy yourself. I’m one of these people, so I know it can be incredibly difficult to eat at bakeries due to the abundance of products containing nuts and the fear of cross-contamination."
+                            descriptionTwo=" is a concept for a 100% nut-free bakery that sells a variety of items ranging from baked treats to everyday bread necessities. Because it can be inconvenient for people to go out of their way just to buy bread and baked goods, there is a delivery system in place for easy and consistent ordering. The brand assets also include an allergy card to be filled out by those with allergies other than nuts. The bakery strives to create a safe environment for everyone to eat at.
+                            The colorful but clean branding is intended to bring a playful feel to a serious matter and to be as clear as possible for the safety and peace of mind of the customers."
+                            italic="It's Not Nuts"
                           />
                         )}
                       />
@@ -305,7 +308,7 @@ class App extends Component {
                           <LinkGallery
                             photos={MHCImageListWeb}
                             title="MENTAL HEALTH CHAMPIONS"
-                            subtitle="business concept & branding"
+                            subtitle="social asset creation"
                             descriptionOne="Mental Health Champions is a campaign fighting mental health stigma. Mental health conditions are experienced by millions of people around the world, and although these conditions are not uncommon, they are often stigmatized when people don’t know much about them."
                             descriptionTwo="With this campaign, you sign up to receive weekly texts or emails containing downloadable artwork filled with informational messages on mental health and the stigma associated. These images are intended to be shared on social media."
                           />
@@ -367,7 +370,10 @@ class App extends Component {
                             photos={INNImageListWeb}
                             title="IT'S NOT NUTS"
                             subtitle="business concept & branding"
-                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                            descriptionOne="Chances are, you know somebody with a nut allergy or maybe you even suffer from the allergy yourself. I’m one of these people, so I know it can be incredibly difficult to eat at bakeries due to the abundance of products containing nuts and the fear of cross-contamination."
+                            descriptionTwo=" is a concept for a 100% nut-free bakery that sells a variety of items ranging from baked treats to everyday bread necessities. Because it can be inconvenient for people to go out of their way just to buy bread and baked goods, there is a delivery system in place for easy and consistent ordering. The brand assets also include an allergy card to be filled out by those with allergies other than nuts. The bakery strives to create a safe environment for everyone to eat at.
+                            The colorful but clean branding is intended to bring a playful feel to a serious matter and to be as clear as possible for the safety and peace of mind of the customers."
+                            italic="It's Not Nuts "
                           />
                         )}
                       />
@@ -410,7 +416,7 @@ class App extends Component {
                           <LinkGalleryMobile
                             photos={MHCImageListMobile}
                             title="MENTAL HEALTH CHAMPIONS"
-                            subtitle="business concept & branding"
+                            subtitle="social asset creation"
                             descriptionOne="Mental Health Champions is a campaign fighting mental health stigma. Mental health conditions are experienced by millions of people around the world, and although these conditions are not uncommon, they are often stigmatized when people don’t know much about them."
                             descriptionTwo="With this campaign, you sign up to receive weekly texts or emails containing downloadable artwork filled with informational messages on mental health and the stigma associated. These images are intended to be shared on social media."
                           />

@@ -171,7 +171,12 @@ function Gallery(props) {
           <h3 className="description">{props.descriptionOne}</h3>
         </div>
         <div className="descriptionColumnTwo">
-          <h3 className="description">{props.descriptionTwo}</h3>
+          <h3 className="description">
+            <span style={{ 'font-style': 'italic' }} className="italic">
+              {props.italic}
+            </span>
+            {props.descriptionTwo}
+          </h3>
         </div>
       </div>
       <div className="imageContainer">{images}</div>
@@ -213,6 +218,7 @@ class LinkGallery extends Component {
                 subtitle={this.props.subtitle}
                 descriptionOne={this.props.descriptionOne}
                 descriptionTwo={this.props.descriptionTwo}
+                italic={this.props.italic}
               />
               <div
                 className="uparrow"
