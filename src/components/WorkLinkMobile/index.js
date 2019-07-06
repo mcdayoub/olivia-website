@@ -84,10 +84,10 @@ const Display = styled.ul`
     text-align: center;
   }
   .subtitleContainer {
-    padding-top: 15px;
+    padding-top: 10px;
     text-align: center;
   }
-  .descriptionContainer {
+  /* .descriptionContainer {
     display: flex;
     padding-top: 30px;
     justify-content: center;
@@ -99,6 +99,26 @@ const Display = styled.ul`
     padding-right: 10px;
     align-content: center;
     align-items: center;
+  } */
+
+  .descriptionContainer {
+    position: relative;
+    padding-top: 40px;
+    justify-content: center;
+    align-content: center;
+    text-align: left;
+    padding-bottom: 40px;
+  }
+  .descriptionColumnOne {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+  .descriptionColumnTwo {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
   }
   .imageContainer {
     text-align: center;
@@ -149,6 +169,9 @@ function Gallery(props) {
       <div className="descriptionContainer">
         <div className="descriptionColumnOne">
           <h3 className="description">{props.descriptionOne}</h3>
+        </div>
+        <div className="descriptionColumnTwo">
+          <h3 className="description">{props.descriptionTwo}</h3>
         </div>
       </div>
       <div className="imageContainer">{images}</div>
