@@ -27,36 +27,31 @@ const device = {
 const Display = styled.ul`
   background: white;
   color: black;
-
   .container {
     display: block;
     justify-content: flex-start;
     height: 100%;
   }
-
   .container-2 {
     display: flex;
     flex-direction: column;
     text-align: left;
     padding-left: 35px;
   }
-
   .container-3 {
     display: flex;
     padding-left: 0px;
     flex-wrap: wrap;
-    padding-top: 100px;
+    padding-top: 50px;
     justify-content: center;
     flex-direction: column;
   }
-
   .container-3::-webkit-scrollbar {
     display: none;
   }
   .photoDiv {
     padding: 5px;
   }
-
   .logo {
     height: 200px;
   }
@@ -66,7 +61,6 @@ const Display = styled.ul`
   a {
     text-decoration: none;
   }
-
   a:visited {
     color: black;
   }
@@ -82,7 +76,6 @@ const Display = styled.ul`
     height: 200px;
     width: 200px;
   }
-
   .title {
     font-size: 32px;
     font-weight: normal;
@@ -105,36 +98,33 @@ const Display = styled.ul`
     text-align: center;
   }
   .descriptionContainer {
-    display: flex;
+    position: relative;
     padding-top: 40px;
     justify-content: center;
+    align-content: center;
     text-align: left;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   }
   .descriptionColumnOne {
-    flex-direction: column;
-    float: left;
-    width: 380px;
-    padding-right: 40px;
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+    padding-bottom: 15px;
   }
   .descriptionColumnTwo {
-    flex-direction: column;
-    float: right;
-    width: 380px;
-    padding-left: 40px;
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
   }
-
   .imageContainer {
     display: flex;
     text-align: center;
     flex-direction: column;
   }
-
   .imageContainer img {
     width: 1000px;
     padding-bottom: 50px;
   }
-
   .uparrow {
     padding-bottom: 50px;
     text-align: center;
@@ -160,7 +150,6 @@ const Display = styled.ul`
       text-align: left;
       padding-left: 35px;
     }
-
     .container-3 {
       display: flex;
       flex-direction: row;
@@ -176,7 +165,6 @@ const Display = styled.ul`
     .photoDiv {
       padding: 5px;
     }
-
     .logo {
       height: 200px;
     }
@@ -186,7 +174,6 @@ const Display = styled.ul`
     a {
       text-decoration: none;
     }
-
     a:visited {
       color: black;
     }
@@ -202,9 +189,8 @@ const Display = styled.ul`
       height: 200px;
       width: 200px;
     }
-
     .title {
-      font-size: 25px;
+      font-size: 32px;
       font-weight: normal;
       border-bottom: 2px solid currentColor;
     }
@@ -224,25 +210,23 @@ const Display = styled.ul`
       text-align: center;
     }
     .descriptionContainer {
-      display: flex;
-      padding-top: 30px;
+      position: relative;
+      padding-top: 40px;
       justify-content: center;
+      align-content: center;
       text-align: left;
-      padding-bottom: 30px;
+      padding-bottom: 60px;
     }
     .descriptionColumnOne {
-      width: 40%;
-      padding-left: 100px;
-      padding-right: 30px;
-      align-content: center;
-      align-items: center;
+      position: relative;
+      width: 50%;
+      margin: 0 auto;
+      padding-bottom: 15px;
     }
     .descriptionColumnTwo {
-      width: 40%;
-      padding-right: 100px;
-      padding-left: 30px;
-      align-content: center;
-      align-items: center;
+      position: relative;
+      width: 50%;
+      margin: 0 auto;
     }
     .imageContainer {
       text-align: center;
@@ -251,7 +235,6 @@ const Display = styled.ul`
       width: 100%;
       padding-bottom: 50px;
     }
-
     .uparrow {
       padding-bottom: 50px;
       text-align: center;
@@ -265,126 +248,6 @@ const Display = styled.ul`
     .uparrow h3 {
       font-weight: normal;
     }
-  }
-`;
-const Display2 = styled.ul`
-  background: white;
-  color: black;
-
-  .container {
-    display: flex;
-    justify-content: flex-start;
-    height: 100%;
-  }
-  .container-2 {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding-left: 35px;
-  }
-
-  .container-3 {
-    display: flex;
-    flex-direction: row;
-    padding-left: 0px;
-    flex-wrap: wrap;
-    padding-top: 50px;
-    overflow-y: auto;
-    justify-content: center;
-  }
-  .container-3::-webkit-scrollbar {
-    display: none;
-  }
-  .photoDiv {
-    padding: 5px;
-  }
-
-  .logo {
-    height: 200px;
-  }
-  .polaroid {
-    height: 500px;
-  }
-  a {
-    text-decoration: none;
-  }
-
-  a:visited {
-    color: black;
-  }
-  .linkItem {
-    padding-left: 25px;
-    padding-bottom: 10px;
-  }
-  .resize {
-    height: 300px;
-    width: 300px;
-  }
-  .previewImage {
-    height: 200px;
-    width: 200px;
-  }
-
-  .title {
-    font-size: 25px;
-    font-weight: normal;
-    border-bottom: 2px solid currentColor;
-  }
-  .subtitle {
-    font-size: 16px;
-    font-weight: normal;
-  }
-  .description {
-    font-size: 12px;
-    font-weight: normal;
-  }
-  .titleContainer {
-    text-align: center;
-  }
-  .subtitleContainer {
-    padding-top: 15px;
-    text-align: center;
-  }
-  .descriptionContainer {
-    display: flex;
-    padding-top: 30px;
-    justify-content: center;
-    text-align: left;
-    padding-bottom: 30px;
-  }
-  .descriptionColumnOne {
-    width: 40%;
-    padding-left: 100px;
-    padding-right: 30px;
-    align-content: center;
-    align-items: center;
-  }
-  .descriptionColumnTwo {
-    width: 40%;
-    padding-right: 100px;
-    padding-left: 30px;
-    align-content: center;
-    align-items: center;
-  }
-  .imageContainer {
-    text-align: center;
-  }
-  .imageContainer img {
-    width: 100%;
-    padding-bottom: 50px;
-  }
-  .uparrow {
-    padding-bottom: 50px;
-    text-align: center;
-    font-weight: normal;
-    font-size: 12px;
-  }
-  .uparrow img {
-    padding-bottom: 10px;
-    height: 25px;
-  }
-  .uparrow h3 {
-    font-weight: normal;
   }
 `;
 

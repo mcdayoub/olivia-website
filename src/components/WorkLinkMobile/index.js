@@ -189,6 +189,7 @@ class LinkGallery extends Component {
                 title={this.props.title}
                 subtitle={this.props.subtitle}
                 descriptionOne={this.props.descriptionOne}
+                descriptionTwo={this.props.descriptionTwo}
               />
               <div
                 className="uparrow"

@@ -251,7 +251,7 @@ class Work extends Component {
       return <Redirect push to="/itsnotnuts" />;
     }
     if (this.state.redirectToProject3) {
-      return <Redirect push to="/mentalhealthchampions" />;
+      return <Redirect push to="/mhc" />;
     }
     if (this.state.redirectToProject4) {
       return <Redirect push to="/recovered" />;

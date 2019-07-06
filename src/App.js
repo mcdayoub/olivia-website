@@ -299,15 +299,15 @@ class App extends Component {
                         )}
                       />
                       <Route
-                        path="/mentalhealthchampions"
-                        key="mentalhealthchampions"
+                        path="/mhc"
+                        key="mhc"
                         render={() => (
                           <LinkGallery
                             photos={MHCImageListWeb}
                             title="MENTAL HEALTH CHAMPIONS"
                             subtitle="business concept & branding"
-                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
-                            descriptionTwo="fuck you"
+                            descriptionOne="Mental Health Champions is a campaign fighting mental health stigma. Mental health conditions are experienced by millions of people around the world, and although these conditions are not uncommon, they are often stigmatized when people don’t know much about them."
+                            descriptionTwo="With this campaign, you sign up to receive weekly texts or emails containing downloadable artwork filled with informational messages on mental health and the stigma associated. These images are intended to be shared on social media."
                           />
                         )}
                       />
@@ -405,13 +405,14 @@ class App extends Component {
                         )}
                       />
                       <Route
-                        path="/mentalhealthchampions"
+                        path="/mhc"
                         render={() => (
                           <LinkGalleryMobile
                             photos={MHCImageListMobile}
                             title="MENTAL HEALTH CHAMPIONS"
                             subtitle="business concept & branding"
-                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                            descriptionOne="Mental Health Champions is a campaign fighting mental health stigma. Mental health conditions are experienced by millions of people around the world, and although these conditions are not uncommon, they are often stigmatized when people don’t know much about them."
+                            descriptionTwo="With this campaign, you sign up to receive weekly texts or emails containing downloadable artwork filled with informational messages on mental health and the stigma associated. These images are intended to be shared on social media."
                           />
                         )}
                       />
