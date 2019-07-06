@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const size = {
   mobileS: '550px',
   mobileM: '600px',
-  mobileL: '736px',
+  mobileL: '750px',
   tablet: '834px'
 };
 
@@ -31,16 +31,25 @@ const DisplayRed = styled.ul`
   .container-2 {
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 45%;
     margin-left: -125px;
     margin-top: -125px;
   }
   .container-2-spin {
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 45%;
     margin-left: -150px;
     margin-top: -150px;
+  }
+  @media ${device.mobileL} {
+    .container-3 {
+      position: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      padding-bottom: 22%;
+    }
   }
 
   .container-3 {
@@ -48,7 +57,7 @@ const DisplayRed = styled.ul`
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    padding-bottom: 25%;
+    padding-bottom: 15%;
   }
   .container-4 {
     display: flex;
