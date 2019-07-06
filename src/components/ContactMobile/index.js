@@ -101,6 +101,7 @@ class ContactFormMobile extends React.Component {
     this.state = {
       name: '',
       email: '',
+      subject: '',
       message: '',
       buttonText: 'send it!',
       title: 'leave me a note',
@@ -136,8 +137,11 @@ class ContactFormMobile extends React.Component {
     })
       .then(
         this.setState({
-          buttonText: 'sent!',
-          title: 'thanks for your message!'
+          buttonText: 'cool, ttyl!',
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
         })
       )
       .catch(error => alert(error));
@@ -147,7 +151,7 @@ class ContactFormMobile extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, message } = this.state;
+    const { name, email, subject, message } = this.state;
     return (
       <div>
         <MobileNavBarOlivia
@@ -185,7 +189,7 @@ class ContactFormMobile extends React.Component {
                   name="name"
                   value={name}
                   onChange={this.handleChange}
-                  placeholder="your name"
+                  placeholder="name"
                   required
                   id="name"
                 />
@@ -196,8 +200,19 @@ class ContactFormMobile extends React.Component {
                   name="email"
                   value={email}
                   onChange={this.handleChange}
-                  placeholder="your email"
+                  placeholder="email"
                   required
+                />
+              </p>
+              <p>
+                <input
+                  type="text"
+                  name="subject"
+                  value={subject}
+                  onChange={this.handleChange}
+                  placeholder="subject"
+                  required
+                  id="subject"
                 />
               </p>
               <p>

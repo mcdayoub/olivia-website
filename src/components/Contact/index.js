@@ -109,6 +109,7 @@ class ContactForm extends React.Component {
       name: '',
       email: '',
       message: '',
+      subject: '',
       buttonText: 'send it!',
       title: 'leave me a note'
     };
@@ -125,9 +126,9 @@ class ContactForm extends React.Component {
       .then(
         this.setState({
           buttonText: 'cool, ttyl!',
-
           name: '',
           email: '',
+          subject: '',
           message: ''
         })
       )
@@ -138,7 +139,7 @@ class ContactForm extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, message } = this.state;
+    const { name, email, subject, message } = this.state;
     return (
       <div classname="hey" style={{ height: '100%' }}>
         <NavBarOlivia Logo={Logo} contact={bold} color={'#425bea'} />
@@ -162,7 +163,7 @@ class ContactForm extends React.Component {
                     name="name"
                     value={name}
                     onChange={this.handleChange}
-                    placeholder="your name"
+                    placeholder="name"
                     required
                     id="name"
                   />
@@ -173,9 +174,20 @@ class ContactForm extends React.Component {
                     name="email"
                     value={email}
                     onChange={this.handleChange}
-                    placeholder="your email"
+                    placeholder="email"
                     required
                     id="email"
+                  />
+                </p>
+                <p>
+                  <input
+                    type="text"
+                    name="subject"
+                    value={subject}
+                    onChange={this.handleChange}
+                    placeholder="subject"
+                    required
+                    id="subject"
                   />
                 </p>
                 <p>
