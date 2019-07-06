@@ -74,9 +74,7 @@ const Display = styled.ul`
   .buttonDiv {
     display: flex;
     padding-top: 20px;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
+    text-align: left;
   }
   .buttonDiv img {
     height: 30px;
