@@ -77,7 +77,7 @@ const Display = styled.ul`
     font-weight: normal;
   }
   .description {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
   }
   .titleContainer {
