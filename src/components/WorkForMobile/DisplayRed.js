@@ -48,7 +48,7 @@ const DisplayRed = styled.ul`
       flex-direction: column;
       justify-content: flex-end;
       width: 100%;
-      padding-bottom: 22%;
+      padding-bottom: 20%;
     }
   }
 
