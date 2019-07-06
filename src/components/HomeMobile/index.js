@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import imgLogoRed from '../Home/LogoRed.png';
-import imgLogoGreen from '../Home/LogoGreen.png';
-import imgLogoBlue from '../Home/LogoBlue.png';
+import imgLogoRed from './LogoRedWhite.png';
+import imgLogoGreen from './LogoGreenWhite.png';
+import imgLogoBlue from './LogoBlueWhite.png';
 import imgLogoRedSpin from '../Home/LogoRedSpin.png';
 import imgLogoGreenSpin from '../Home/LogoGreenSpin.png';
 import imgLogoBlueSpin from '../Home/LogoBlueSpin.png';
@@ -24,7 +24,7 @@ const device = {
 };
 
 const DisplayMobile = styled.ul`
-  background: #f4f4f4;
+  background: white;
   color: ${props => props.color};
   font-size: 16px;
   font-weight: bold;
@@ -74,6 +74,7 @@ const DisplayMobile = styled.ul`
 `;
 
 const DisplayLogo = styled.ul`
+  background: #f4f4f4;
   @media ${device.mobileS} {
     .logo {
       height: 280px;
