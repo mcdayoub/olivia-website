@@ -116,7 +116,7 @@ const DisplayMobile = styled.ul`
 
 const Paragraph = styled.ul`
   font-size: 18px;
-  width: 20px;
+  width: 250px;
 `;
 const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
 const notbold = { 'padding-right': '60px' };
