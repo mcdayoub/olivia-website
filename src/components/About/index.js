@@ -42,7 +42,7 @@ const Display = styled.ul`
     text-align: left;
     margin-right: auto;
     justify-content: center;
-    flex-basis: 20%;
+    width: 250px;
   }
 
   .logo {
@@ -104,11 +104,8 @@ const About = () => (
         </div>
         <div className="container-4">
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat.
+            Hi, I’m Olivia, an Atlanta-based graphic designer specializing in
+            brand design and all things color.
           </Paragraph>
           <div className="buttonDiv">
             <Box>

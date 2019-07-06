@@ -116,7 +116,7 @@ const DisplayMobile = styled.ul`
 
 const Paragraph = styled.ul`
   font-size: 18px;
-  width: 300px;
+  width: 20px;
 `;
 const bold = { 'padding-right': '60px', 'font-weight': 'bold' };
 const notbold = { 'padding-right': '60px' };
@@ -139,10 +139,8 @@ const AboutMobile = () => (
       </div>
       <div className="container-3">
         <Paragraph>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Hi, I’m Olivia, an Atlanta-based graphic designer specializing in
+          brand design and all things color.
         </Paragraph>
       </div>
       <div className="container-3">
