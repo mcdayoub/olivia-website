@@ -269,9 +269,9 @@ class App extends Component {
                           <LinkGallery
                             photos={TDSImgList}
                             title="TAQUERIA DEL SOL"
-                            subtitle="business concept & branding"
-                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
-                            descriptionTwo="fuck you"
+                            subtitle="menu & collateral"
+                            descriptionOne="Taqueria del Sol is one of the best spots in Atlanta for great tacos and margaritas. The food is so great that customers routinely wait in a long line before finally arriving at the counter."
+                            descriptionTwo="To speed up the process and increase drink sales, the new menu layout provides a one-page glance at the food and beverages being sold. The menu shows both drinks and food on the same page, encouraging customers to purchase drinks while waiting in line. Also, customers are ready to order as soon as they’ve reached the counter."
                           />
                         )}
                       />
@@ -282,9 +282,9 @@ class App extends Component {
                           <LinkGallery
                             photos={ClarkstonImageListWeb}
                             title="CITY OF CLARKSTON"
-                            subtitle="business concept & branding"
-                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
-                            descriptionTwo="fuck you"
+                            subtitle="city branding & guidelines"
+                            descriptionOne="Clarkston is a small but unique town located east of Atlanta and is known for a couple things: its circular city limits and its diversity. Clarkston has become a safe haven and home to refugees and as a city, they welcome these individuals with open arms."
+                            descriptionTwo="The new brand for Clarkston was a comprehensive identity project to better define who Clarkston is as well as their goals for their future. Intensive research and design execution resulted in providing a clear brand identity and set of assets that proudly reflect the community."
                           />
                         )}
                       />
@@ -295,9 +295,10 @@ class App extends Component {
                           <LinkGallery
                             photos={RecoveredImageListWeb}
                             title="[RECOVERED]"
-                            subtitle="business concept & branding"
-                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
-                            descriptionTwo="fuck you"
+                            subtitle="event planning & branding"
+                            descriptionOne=" was a graphic design exhibition showcasing the work of Georgia State University’s graduating BFA Graphic Design class of 2019. A team composed of myself and two of my classmates took on all of the tasks required to make the event possible including: location scouting, branding and design, sponsorship acquisition, internal and external communications, as well as budgeting and expensing."
+                            descriptionTwo="We created a dynamic brand that extended to posters, invitations, banners, social assets, a website, merchandise, and directional signage. The show was funded through local sponsors and donations. Guests at the show included family, friends, local artists, and local design agencies. Through the success of the show, we were able to showcase the work of Georgia State’s students and set the bar high for the future of the graphic design program."
+                            italic2="[RECOVERED]"
                           />
                         )}
                       />
@@ -310,7 +311,7 @@ class App extends Component {
                             title="MENTAL HEALTH CHAMPIONS"
                             subtitle="social asset creation"
                             descriptionOne="Mental Health Champions is a campaign fighting mental health stigma. Mental health conditions are experienced by millions of people around the world, and although these conditions are not uncommon, they are often stigmatized when people don’t know much about them."
-                            descriptionTwo="With this campaign, you sign up to receive weekly texts or emails containing downloadable artwork filled with informational messages on mental health and the stigma associated. These images are intended to be shared on social media."
+                            descriptionTwo="To become a mental health champion, you can sign up to receive weekly texts or emails containing downloadable illustrations filled with informational messages on mental health and the stigma associated. These images are intended to be shared on social media. Visit actionminded.org to sign up and view more artwork from myself and other artists."
                           />
                         )}
                       />
@@ -383,8 +384,9 @@ class App extends Component {
                           <LinkGalleryMobile
                             photos={TDSImgList}
                             title="TAQUERIA DEL SOL"
-                            subtitle="business concept & branding"
-                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                            subtitle="menu & collateral"
+                            descriptionOne="Taqueria del Sol is one of the best spots in Atlanta for great tacos and margaritas. The food is so great that customers routinely wait in a long line before finally arriving at the counter."
+                            descriptionTwo="To speed up the process and increase drink sales, the new menu layout provides a one-page glance at the food and beverages being sold. The menu shows both drinks and food on the same page, encouraging customers to purchase drinks while waiting in line. Also, customers are ready to order as soon as they’ve reached the counter."
                           />
                         )}
                       />
@@ -394,8 +396,9 @@ class App extends Component {
                           <LinkGalleryMobile
                             photos={ClarkstonImageListMobile}
                             title="CITY OF CLARKSTON"
-                            subtitle="business concept & branding"
-                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                            subtitle="city branding & guidelines"
+                            descriptionOne="Clarkston is a small but unique town located east of Atlanta and is known for a couple things: its circular city limits and its diversity. Clarkston has become a safe haven and home to refugees and as a city, they welcome these individuals with open arms."
+                            descriptionTwo="The new brand for Clarkston was a comprehensive identity project to better define who Clarkston is as well as their goals for their future. Intensive research and design execution resulted in providing a clear brand identity and set of assets that proudly reflect the community."
                           />
                         )}
                       />
@@ -405,8 +408,10 @@ class App extends Component {
                           <LinkGalleryMobile
                             photos={RecoveredImageListMobile}
                             title="[RECOVERED]"
-                            subtitle="business concept & branding"
-                            descriptionOne="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie"
+                            subtitle="event planning & branding"
+                            descriptionOne=" was a graphic design exhibition showcasing the work of Georgia State University’s graduating BFA Graphic Design class of 2019. A team composed of myself and two of my classmates took on all of the tasks required to make the event possible including: location scouting, branding and design, sponsorship acquisition, internal and external communications, as well as budgeting and expensing."
+                            descriptionTwo="We created a dynamic brand that extended to posters, invitations, banners, social assets, a website, merchandise, and directional signage. The show was funded through local sponsors and donations. Guests at the show included family, friends, local artists, and local design agencies. Through the success of the show, we were able to showcase the work of Georgia State’s students and set the bar high for the future of the graphic design program."
+                            italic2="[RECOVERED]"
                           />
                         )}
                       />

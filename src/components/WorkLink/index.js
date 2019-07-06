@@ -107,13 +107,13 @@ const Display = styled.ul`
   }
   .descriptionColumnOne {
     position: relative;
-    width: 700px;
+    width: 550px;
     margin: 0 auto;
     padding-bottom: 15px;
   }
   .descriptionColumnTwo {
     position: relative;
-    width: 700px;
+    width: 550px;
     margin: 0 auto;
   }
   .imageContainer {
@@ -278,7 +278,12 @@ function Gallery(props) {
       </div>
       <div className="descriptionContainer">
         <div className="descriptionColumnOne">
-          <h3 className="description">{props.descriptionOne}</h3>
+          <h3 className="description">
+            <span style={{ 'font-style': 'italic' }} className="italic">
+              {props.italic2}
+            </span>
+            {props.descriptionOne}
+          </h3>
         </div>
         <div className="descriptionColumnTwo">
           <h3 className="description">
@@ -350,6 +355,7 @@ class LinkGallery extends Component {
                 descriptionOne={this.props.descriptionOne}
                 descriptionTwo={this.props.descriptionTwo}
                 italic={this.props.italic}
+                italic2={this.props.italic2}
               />
               <div
                 className="uparrow"
