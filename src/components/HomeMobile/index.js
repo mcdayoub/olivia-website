@@ -17,10 +17,10 @@ const size = {
 };
 
 const device = {
-  mobileS: `(min-width: 320px) and (max-width: 480px)`,
-  mobileM: `(min-width: 481px) and (max-width: 767px)`,
-  mobileL: `(min-width: 768px) and (max-width: 1024px) `,
-  tablet: `(min-width: 1025px) and (max-width: 1280px)`
+  mobileS: `(min-height: 300px) and (max-height: 570px)`,
+  mobileM: `(min-height: 571px) and (max-height: 668px)`,
+  mobileL: `(min-height: 669px) and (max-height: 813px) `,
+  tablet: `(min-height: 1025px) and (max-height: 1280px)`
 };
 
 const DisplayMobile = styled.ul`
@@ -74,16 +74,6 @@ const DisplayMobile = styled.ul`
 `;
 
 const DisplayLogo = styled.ul`
-  @media ${device.mobileM} {
-    .logo {
-      height: 280px;
-      position: absolute;
-      left: 50%;
-      top: 30%;
-      margin-left: -140px;
-      margin-top: -140px;
-    }
-  }
   @media ${device.mobileS} {
     .logo {
       height: 280px;
