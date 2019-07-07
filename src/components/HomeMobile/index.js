@@ -53,7 +53,7 @@ const DisplayMobile = styled.ul`
   }
   @media ${device.mobileS} {
     .nav-items {
-      padding-bottom: 8%;
+      padding-bottom: 7%;
     }
   }
   @media ${device.mobileM} {
@@ -76,12 +76,12 @@ const DisplayMobile = styled.ul`
 const DisplayLogo = styled.ul`
   @media ${device.mobileS} {
     .logo {
-      height: 280px;
+      height: 240px;
       position: absolute;
       left: 50%;
       top: 30%;
-      margin-left: -140px;
-      margin-top: -140px;
+      margin-left: -120px;
+      margin-top: -120px;
     }
   }
   @media ${device.mobileM} {
