@@ -53,7 +53,7 @@ const DisplayMobile = styled.ul`
   }
   @media ${device.mobileS} {
     .nav-items {
-      padding-bottom: 10%;
+      padding-bottom: 8%;
     }
   }
   @media ${device.mobileM} {
