@@ -55,23 +55,23 @@ const DisplayMobile = styled.ul`
   .logo {
     height: 200px;
   }
-  @media ${deviceHeight.mobileSH} {
+  @media ${device.mobileS} {
     .polaroid {
       height: 350px;
     }
   }
 
-  @media ${deviceHeight.mobileMH} {
+  @media ${device.mobileM} {
     .polaroid {
       height: 400px;
     }
   }
-  @media ${deviceHeight.mobileLH} {
+  @media ${device.mobileL} {
     .polaroid {
       height: 450px;
     }
   }
-  @media ${deviceHeight.tabletH} {
+  @media ${device.tablet} {
     .polaroid {
       height: 500px;
     }
