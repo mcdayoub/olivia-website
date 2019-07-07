@@ -11,10 +11,10 @@ const size = {
 };
 
 const device = {
-  mobileS: `(max-height: ${size.mobileS})`,
-  mobileM: `(max-height: ${size.mobileM})`,
-  mobileL: `(max-height: ${size.mobileL})`,
-  tablet: `(max-height: ${size.tablet})`
+  mobileS: `(min-device-height: 300px) and (max-device-height: 569px)`,
+  mobileM: `(min-device-height: 570px) and (max-device-height: 668px)`,
+  mobileL: `(min-device-height: 669px) and (max-device-height: 813px)`,
+  tablet: `(min-device-height: 1025px) and (max-device-height: 1280px)`
 };
 
 const NavBarStyle = styled.ul`
@@ -56,49 +56,14 @@ const NavBarStyle = styled.ul`
     height: 22px;
     padding-top: 8.25px;
   }
-`;
-
-const LinksStyle = styled.ul`
-  background: white;
-  color: ${props => props.color};
-  font-size: 16px;
-  top: 0;
-  a {
-    text-decoration: none;
-    font-weight: bold;
-    color: inherit;
-  }
-  a:visited {
-    color: ${props => props.color};
-  }
-  @media ${device.tablet} {
-    .nav-items {
-      padding-bottom: 13%;
-    }
-  }
-  @media ${device.mobileL} {
-    .nav-items {
-      padding-bottom: 13%;
-    }
-  }
-  @media ${device.mobileM} {
-    .nav-items {
-      padding-bottom: 12%;
-    }
-  }
   @media ${device.mobileS} {
-    .nav-items {
-      padding-bottom: 10%;
+    .hamburger {
+      height: 20px;
+      padding-top: 8.25px;
     }
-  }
-
-  .container-4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 100%;
-    text-align: center;
-    height: 100vh;
+    .logo {
+      height: 35px;
+    }
   }
 `;
 
