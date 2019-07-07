@@ -86,12 +86,12 @@ const DisplayLogo = styled.ul`
   }
   @media ${device.mobileM} {
     .logo {
-      height: 280px;
+      height: 260px;
       position: absolute;
       left: 50%;
       top: 30%;
-      margin-left: -140px;
-      margin-top: -140px;
+      margin-left: -130px;
+      margin-top: -130px;
     }
   }
   @media ${device.mobileL} {
