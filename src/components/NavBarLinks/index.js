@@ -71,6 +71,15 @@ const LinksStyle = styled.ul`
     justify-content: space-evenly;
     padding-top: 50%;
   }
+  @media ${device.mobileS} {
+    .container-4 {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      justify-content: space-evenly;
+      padding-top: 100%;
+    }
+  }
   .xbutton {
     height: 20px;
     width: 20px;
