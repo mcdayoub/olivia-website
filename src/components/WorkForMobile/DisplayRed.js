@@ -8,10 +8,10 @@ const size = {
 };
 
 const device = {
-  mobileS: `(min-height: ${size.mobileS})`,
-  mobileM: `(min-height: ${size.mobileM})`,
-  mobileL: `(min-height: ${size.mobileL})`,
-  tablet: `(min-height: ${size.tablet})`
+  mobileS: `(min-device-height: 300px) and (max-device-height: 569px)`,
+  mobileM: `(min-device-height: 570px) and (max-device-height: 668px)`,
+  mobileL: `(min-device-height: 669px) and (max-device-height: 813px)`,
+  tablet: `(min-device-height: 1025px) and (max-device-height: 1280px)`
 };
 const DisplayRed = styled.ul`
   background: white;
@@ -48,7 +48,7 @@ const DisplayRed = styled.ul`
       flex-direction: column;
       justify-content: flex-end;
       width: 100%;
-      padding-bottom: 20%;
+      padding-bottom: 25%;
     }
   }
 
@@ -57,7 +57,34 @@ const DisplayRed = styled.ul`
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    padding-bottom: 15%;
+    padding-bottom: 20%;
+  }
+  @media ${device.mobileL} {
+    .container-3 {
+      position: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      padding-bottom: 20%;
+    }
+  }
+  @media ${device.mobileM} {
+    .container-3 {
+      position: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      padding-bottom: 10%;
+    }
+  }
+  @media ${device.mobileS} {
+    .container-3 {
+      position: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      padding-bottom: 7%;
+    }
   }
   .container-4 {
     display: flex;
