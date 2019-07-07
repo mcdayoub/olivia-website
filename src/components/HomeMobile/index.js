@@ -13,7 +13,7 @@ const size = {
   mobileS: '550px',
   mobileM: '600px',
   mobileL: '720px',
-  tablet: '720px'
+  tablet: '1025px'
 };
 
 const device = {
