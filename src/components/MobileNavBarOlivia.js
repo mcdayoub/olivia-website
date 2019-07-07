@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const size = {
-  mobileS: '667px',
+  mobileS: '400px',
   mobileM: '600px',
   mobileL: '736px',
   tablet: '834px'

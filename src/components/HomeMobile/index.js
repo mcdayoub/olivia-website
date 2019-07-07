@@ -10,7 +10,7 @@ import imgLogoBlueSpin from '../Home/LogoBlueSpin.png';
 import Polaroid from '../About/Olivia_Polaroid_Final.jpg';
 
 const size = {
-  mobileS: '400px',
+  mobileS: '550px',
   mobileM: '600px',
   mobileL: '720px',
   tablet: '720px'
@@ -53,7 +53,7 @@ const DisplayMobile = styled.ul`
   }
   @media ${device.mobileS} {
     .nav-items {
-      padding-bottom: 8%;
+      padding-bottom: 10%;
     }
   }
   @media ${device.mobileM} {
