@@ -14,10 +14,10 @@ const size = {
 };
 
 const device = {
-  mobileS: `(min-height: ${size.mobileS})`,
-  mobileM: `(min-height: ${size.mobileM})`,
-  mobileL: `(min-height: ${size.mobileL})`,
-  tablet: `(min-height: ${size.tablet})`
+  mobileS: `(min-device-height: 300px) and (max-device-height: 569px)`,
+  mobileM: `(min-device-height: 570px) and (max-device-height: 668px)`,
+  mobileL: `(min-device-height: 669px) and (max-device-height: 813px)`,
+  tablet: `(min-device-height: 1025px) and (max-device-height: 1280px)`
 };
 
 const LinksStyle = styled.ul`
@@ -40,7 +40,7 @@ const LinksStyle = styled.ul`
   }
   @media ${device.mobileM} {
     .nav-items {
-      padding-bottom: 12%;
+      padding-bottom: 7%;
     }
   }
   @media ${device.mobileL} {
@@ -50,7 +50,7 @@ const LinksStyle = styled.ul`
   }
   @media ${device.tablet} {
     .nav-items {
-      padding-bottom: 13%;
+      padding-bottom: 15%;
     }
   }
 
