@@ -119,6 +119,30 @@ const DisplayRed = styled.ul`
     height: 300px;
     width: 300px;
   }
+  @media ${device.mobileS} {
+    .centerImage {
+      height: 200px;
+      width: 200px;
+    }
+    .centerImage-spin {
+      height: 250px;
+      width: 250px;
+    }
+    .container-2 {
+      position: absolute;
+      left: 50%;
+      top: 45%;
+      margin-left: -100px;
+      margin-top: -100px;
+    }
+    .container-2-spin {
+      position: absolute;
+      left: 50%;
+      top: 45%;
+      margin-left: -125px;
+      margin-top: -125px;
+    }
+  }
 
   .spin {
     -webkit-animation: spin 25s linear infinite;
