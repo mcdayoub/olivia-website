@@ -149,7 +149,7 @@ const AboutMobile = () => (
             <button>RESUMÉ</button>
           </a>
           <a
-            href="https://www.linkedin.com/in/olivia-dirickson-179b88148/"
+            href="https://www.linkedin.com/in/oliviadirickson/"
             target="_blank"
             rel="noopener noreferrer"
           >
