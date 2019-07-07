@@ -33,7 +33,7 @@ const device = {
   mobileS: `(min-device-height: 300px) and (max-device-height: 569px)`,
   mobileM: `(min-device-height: 570px) and (max-device-height: 668px)`,
   mobileL: `(min-device-height: 669px) and (max-device-height: 813px)`,
-  tablet: `(min-device-height: 1025px) and (max-device-height: 1280px)`
+  tablet: `(min-device-height: 814px) and (max-device-height: 1280px)`
 };
 
 const DisplayMobile = styled.ul`
