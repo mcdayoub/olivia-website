@@ -17,10 +17,10 @@ const size = {
 };
 
 const device = {
-  mobileS: `(min-height: 300px) and (max-height: 570px)`,
-  mobileM: `(min-height: 571px) and (max-height: 668px)`,
-  mobileL: `(min-height: 669px) and (max-height: 813px) `,
-  tablet: `(min-height: 1025px) and (max-height: 1280px)`
+  mobileS: `(min-device-height: 300px) and (max-device-height: 500px)`,
+  mobileM: `(min-device-height: 501px) and (max-device-height: 668px)`,
+  mobileL: `(min-device-height: 669px) and (max-device-height: 813px)`,
+  tablet: `(min-device-height: 1025px) and (max-device-height: 1280px)`
 };
 
 const DisplayMobile = styled.ul`
@@ -53,12 +53,12 @@ const DisplayMobile = styled.ul`
   }
   @media ${device.mobileS} {
     .nav-items {
-      padding-bottom: 7%;
+      padding-bottom: 8%;
     }
   }
   @media ${device.mobileM} {
     .nav-items {
-      padding-bottom: 12%;
+      padding-bottom: 10%;
     }
   }
   @media ${device.mobileL} {
