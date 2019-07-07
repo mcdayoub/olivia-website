@@ -10,10 +10,10 @@ import imgLogoBlueSpin from '../Home/LogoBlueSpin.png';
 import Polaroid from '../About/Olivia_Polaroid_Final.jpg';
 
 const size = {
-  mobileS: '550px',
-  mobileM: '600px',
-  mobileL: '720px',
-  tablet: '1025px'
+  mobileS: '650px',
+  mobileM: '760px',
+  mobileL: '1150px',
+  tablet: '1680px'
 };
 
 const device = {
