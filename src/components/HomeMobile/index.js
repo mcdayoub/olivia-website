@@ -63,12 +63,12 @@ const DisplayMobile = styled.ul`
   }
   @media ${device.mobileL} {
     .nav-items {
-      padding-bottom: 10%;
+      padding-bottom: 12%;
     }
   }
   @media ${device.tablet} {
     .nav-items {
-      padding-bottom: 10%;
+      padding-bottom: 12%;
     }
   }
 `;
