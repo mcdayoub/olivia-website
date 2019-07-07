@@ -11,10 +11,10 @@ const size = {
 };
 
 const device = {
-  mobileS: `(min-height: ${size.mobileS})`,
-  mobileM: `(min-height: ${size.mobileM})`,
-  mobileL: `(min-height: ${size.mobileL})`,
-  tablet: `(min-height: ${size.tablet})`
+  mobileS: `(max-height: ${size.mobileS})`,
+  mobileM: `(max-height: ${size.mobileM})`,
+  mobileL: `(max-height: ${size.mobileL})`,
+  tablet: `(max-height: ${size.tablet})`
 };
 
 const NavBarStyle = styled.ul`
