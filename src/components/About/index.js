@@ -42,7 +42,7 @@ const Display = styled.ul`
     text-align: left;
     margin-right: auto;
     justify-content: center;
-    width: 250px;
+    width: 240px;
   }
 
   .logo {
