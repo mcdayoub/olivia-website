@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
+import { Helmet } from 'react-helmet';
 
 //PRELOAD LOGO
 
@@ -212,6 +213,13 @@ class App extends Component {
     if (!isMobile) {
       return (
         <div className="App" style={{ height: '100%' }}>
+          <Helmet>
+            <title>Olivia Dirickson | Graphic Designer</title>
+            <meta
+              name="description"
+              content="Hi, I’m Olivia, an Atlanta-based graphic designer specializing in brand design and all things color."
+            />
+          </Helmet>
           <Router>
             <Route
               style={{ height: '100%' }}
@@ -326,6 +334,13 @@ class App extends Component {
     } else {
       return (
         <div>
+          <Helmet>
+            <title>Olivia Dirickson | Graphic Designer</title>
+            <meta
+              name="description"
+              content="Hi, I’m Olivia, an Atlanta-based graphic designer specializing in brand design and all things color."
+            />
+          </Helmet>
           <Router>
             <Route
               style={{ height: '100%' }}

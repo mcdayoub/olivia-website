@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import request from 'superagent';
-import Preview from './Preview';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from './LogoRed.png';
-import Nuts1 from './Nuts/Nuts1.png';
-import Nuts2 from './Nuts/Nuts2.png';
-import Nuts3 from './Nuts/Nuts3.png';
 import DisplayRed from './DisplayRed';
 import CenterImg from './Nuts/Nuts1.png';
 import './index.css';
