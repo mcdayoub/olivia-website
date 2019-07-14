@@ -103,7 +103,7 @@ const Display = styled.ul`
     justify-content: center;
     align-content: center;
     text-align: left;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
   .descriptionColumnOne {
     position: relative;
@@ -215,7 +215,7 @@ const Display = styled.ul`
       justify-content: center;
       align-content: center;
       text-align: left;
-      padding-bottom: 60px;
+      padding-bottom: 40px;
     }
     .descriptionColumnOne {
       position: relative;
@@ -262,7 +262,7 @@ function Gallery(props) {
             src={image}
             onLoad={onload}
             className="galleryImage"
-            offset={500}
+            offset={150}
           />
         )}
       />
