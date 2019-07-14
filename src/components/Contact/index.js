@@ -111,7 +111,7 @@ class ContactForm extends React.Component {
       message: '',
       subject: '',
       buttonText: 'send it!',
-      title: 'leave me a note'
+      title: "let's work"
     };
   }
 

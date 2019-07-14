@@ -86,7 +86,7 @@ const Display = styled.ul`
     font-weight: normal;
   }
   .description {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: normal;
   }
   .titleContainer {
@@ -107,13 +107,13 @@ const Display = styled.ul`
   }
   .descriptionColumnOne {
     position: relative;
-    width: 550px;
+    width: 600px;
     margin: 0 auto;
     padding-bottom: 15px;
   }
   .descriptionColumnTwo {
     position: relative;
-    width: 550px;
+    width: 600px;
     margin: 0 auto;
   }
   .imageContainer {
@@ -199,7 +199,7 @@ const Display = styled.ul`
       font-weight: normal;
     }
     .description {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: normal;
     }
     .titleContainer {

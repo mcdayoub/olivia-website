@@ -104,7 +104,7 @@ class ContactFormMobile extends React.Component {
       subject: '',
       message: '',
       buttonText: 'send it!',
-      title: 'leave me a note',
+      title: "let's work",
       height: window.innerHeight
     };
   }
