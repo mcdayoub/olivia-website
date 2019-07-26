@@ -31,6 +31,7 @@ const Display = styled.ul`
     display: block;
     justify-content: flex-start;
     height: 100%;
+    background: white;
   }
   .container-2 {
     display: flex;
@@ -98,7 +99,6 @@ const Display = styled.ul`
     text-align: center;
   }
   .descriptionContainer {
-    position: relative;
     padding-top: 40px;
     justify-content: center;
     align-content: center;
@@ -106,13 +106,11 @@ const Display = styled.ul`
     padding-bottom: 40px;
   }
   .descriptionColumnOne {
-    position: relative;
     width: 600px;
     margin: 0 auto;
     padding-bottom: 15px;
   }
   .descriptionColumnTwo {
-    position: relative;
     width: 600px;
     margin: 0 auto;
   }
@@ -210,7 +208,6 @@ const Display = styled.ul`
       text-align: center;
     }
     .descriptionContainer {
-      position: relative;
       padding-top: 40px;
       justify-content: center;
       align-content: center;
@@ -218,13 +215,11 @@ const Display = styled.ul`
       padding-bottom: 40px;
     }
     .descriptionColumnOne {
-      position: relative;
       width: 50%;
       margin: 0 auto;
       padding-bottom: 15px;
     }
     .descriptionColumnTwo {
-      position: relative;
       width: 50%;
       margin: 0 auto;
     }
@@ -278,20 +273,20 @@ function Gallery(props) {
       </div>
       <div className="descriptionContainer">
         <div className="descriptionColumnOne">
-          <h3 className="description">
+          <h2 className="description">
             <span style={{ 'font-style': 'italic' }} className="italic">
               {props.italic2}
             </span>
             {props.descriptionOne}
-          </h3>
+          </h2>
         </div>
         <div className="descriptionColumnTwo">
-          <h3 className="description">
+          <h2 className="description">
             <span style={{ 'font-style': 'italic' }} className="italic">
               {props.italic}
             </span>
             {props.descriptionTwo}
-          </h3>
+          </h2>
         </div>
       </div>
       <div className="imageContainer">{images}</div>
