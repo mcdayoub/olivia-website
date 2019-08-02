@@ -8,6 +8,7 @@ import imgLogoRedSpin from './LogoRedSpin.png';
 import imgLogoGreenSpin from './LogoGreenSpin.png';
 import imgLogoBlueSpin from './LogoBlueSpin.png';
 import Polaroid from '../About/Olivia_Polaroid_Final.jpg';
+
 import posed from 'react-pose';
 const Box = posed.div({
   hoverable: true,
@@ -136,7 +137,8 @@ class Home extends Component {
       color: colorArray[random],
       logo: fullImgArray[random][0],
       logoSpin: fullImgArray[random][1],
-      number: random
+      number: random,
+      loading: false
     });
   }
   handleChange() {
