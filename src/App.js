@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Switch, BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import { Helmet } from 'react-helmet';
-
-//PRELOAD LOGO
 
 //PRELOAD POLAROID
 //TRANSITION IMPORTS
@@ -16,11 +14,11 @@ import Work from './components/Work';
 import Instagram from './components/Instagram';
 import Contact from './components/Contact';
 import LinkGallery from './components/WorkLink';
-import Nuts1 from './components/Work/Nuts/Nuts1.png';
-import Nuts2 from './components/Work/Nuts/Nuts2.png';
-import Nuts3 from './components/Work/Nuts/Nuts3.png';
-import Project1Preview from './components/Work/Project1Preview.png';
-import Project2Preview from './components/Work/Project2Preview.png';
+// import Nuts1 from './components/Work/Nuts/Nuts1.png';
+// import Nuts2 from './components/Work/Nuts/Nuts2.png';
+// import Nuts3 from './components/Work/Nuts/Nuts3.png';
+// import Project1Preview from './components/Work/Project1Preview.png';
+// import Project2Preview from './components/Work/Project2Preview.png';
 
 //MOBILE IMPORTS
 import HomeMobile from './components/HomeMobile';
@@ -29,7 +27,6 @@ import ContactFormMobile from './components/ContactMobile';
 import NavBarLinksMobile from './components/NavBarLinks';
 import WorkMobile from './components/WorkMobile';
 import LinkGalleryMobile from './components/WorkLinkMobile';
-import WorkMOBILETRIAL from './components/WorkMOBILETRIAL';
 import WorkForMobile from './components/WorkForMobile';
 
 //PROJECT IMPORTS
@@ -127,8 +124,6 @@ import INN7 from './components/INN/ImagesWeb/INN_7.jpg';
 import INN8 from './components/INN/ImagesWeb/INN_8.jpg';
 
 //PROJECT IMAGE LISTS
-const imgList = [Project1Preview, Project2Preview, Nuts1, Nuts2, Nuts3];
-
 const TDSImgList = [TDS1, TDS2, TDS3, TDS4, TDS5, TDS6];
 const ClarkstonImageListWeb = [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10];
 const ClarkstonImageListMobile = [

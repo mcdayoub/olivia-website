@@ -7,15 +7,7 @@ import Uparrow from './Uparrow.png';
 import FadeIn from 'react-lazyload-fadein';
 
 import { animateScroll as scroll } from 'react-scroll';
-const sizeHeight = {
-  tablet: '1000px',
-  bigmonitor: '1300px'
-};
 
-const deviceHeight = {
-  tablet: `(min-height: ${sizeHeight.tablet})`,
-  bigmonitor: `(min-height: ${sizeHeight.bigmonitor})`
-};
 const size = {
   resize: '1000px'
 };

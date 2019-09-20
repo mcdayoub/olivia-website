@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from './LogoBlue.png';
 import Hamburger from './HamburgerBlue.png';

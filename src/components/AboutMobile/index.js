@@ -1,33 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from './LogoGreen.png';
 import Hamburger from './HamburgerGreen.png';
 import Resume from '../Resume/OliviaDirickson_Resume.pdf';
 import Polaroid from './Olivia_Polaroid_Final.jpg';
 import LinkedIn from './LinkedIn.png';
-
-const sizeHeight = {
-  mobileSH: '550px',
-  mobileMH: '625px',
-  mobileLH: '736px',
-  tabletH: '834px'
-};
-
-const deviceHeight = {
-  mobileSH: `(min-height: ${sizeHeight.mobileSH})`,
-  mobileMH: `(min-height: ${sizeHeight.mobileMH})`,
-  mobileLH: `(min-height: ${sizeHeight.mobileLH})`,
-  tabletH: `(min-height: ${sizeHeight.tabletH})`
-};
-
-const size = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px'
-};
 
 const device = {
   mobileS: `(min-device-height: 300px) and (max-device-height: 569px)`,

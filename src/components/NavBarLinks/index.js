@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import RedX from './RedX.png';
 import GreenX from './GreenX.png';
 import BlueX from './BlueX.png';
-
-const size = {
-  mobileS: '550px',
-  mobileM: '600px',
-  mobileL: '736px',
-  tablet: '834px'
-};
 
 const device = {
   mobileS: `(min-device-height: 300px) and (max-device-height: 569px)`,
@@ -130,9 +123,6 @@ class NavBarLinksMobile extends Component {
   };
 
   render() {
-    const handleBurgerClick = () => {
-      this.setState({ color: this.props.location.aboutProps.color });
-    };
     return (
       <div style={{ height: this.state.height }}>
         <LinksStyle color={this.state.color}>

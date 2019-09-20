@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
-const size = {
-  mobileS: '400px',
-  mobileM: '600px',
-  mobileL: '736px',
-  tablet: '834px'
-};
+import { Link } from 'react-router-dom';
 
 const device = {
   mobileS: `(min-device-height: 300px) and (max-device-height: 569px)`,
@@ -78,9 +71,6 @@ class MobileNavBarOlivia extends Component {
   }
 
   render() {
-    const handleBurgerClick = () => {
-      this.setState({ showlinks: true });
-    };
     return (
       <div>
         <NavBarStyle color={this.props.color}>

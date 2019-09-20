@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import posed from 'react-pose';
 const Box = posed.div({
   hoverable: true,

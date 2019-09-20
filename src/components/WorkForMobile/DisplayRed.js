@@ -1,11 +1,4 @@
-import React, { Component } from 'react';
 import styled from 'styled-components';
-const size = {
-  mobileS: '550px',
-  mobileM: '600px',
-  mobileL: '750px',
-  tablet: '834px'
-};
 
 const device = {
   mobileS: `(min-device-height: 300px) and (max-device-height: 569px)`,

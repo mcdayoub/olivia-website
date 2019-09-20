@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import imgLogoRed from './LogoRedWhite.png';
 import imgLogoGreen from './LogoGreenWhite.png';
 import imgLogoBlue from './LogoBlueWhite.png';
@@ -8,13 +8,6 @@ import imgLogoRedSpin from '../Home/LogoRedSpin.png';
 import imgLogoGreenSpin from '../Home/LogoGreenSpin.png';
 import imgLogoBlueSpin from '../Home/LogoBlueSpin.png';
 import Polaroid from '../About/Olivia_Polaroid_Final.jpg';
-
-const size = {
-  mobileS: '400px',
-  mobileM: '760px',
-  mobileL: '1150px',
-  tablet: '1680px'
-};
 
 const device = {
   mobileS: `(min-device-height: 300px) and (max-device-height: 569px)`,
