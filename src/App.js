@@ -14,11 +14,6 @@ import Work from './components/Work';
 import Instagram from './components/Instagram';
 import Contact from './components/Contact';
 import LinkGallery from './components/WorkLink';
-// import Nuts1 from './components/Work/Nuts/Nuts1.png';
-// import Nuts2 from './components/Work/Nuts/Nuts2.png';
-// import Nuts3 from './components/Work/Nuts/Nuts3.png';
-// import Project1Preview from './components/Work/Project1Preview.png';
-// import Project2Preview from './components/Work/Project2Preview.png';
 
 //MOBILE IMPORTS
 import HomeMobile from './components/HomeMobile';
