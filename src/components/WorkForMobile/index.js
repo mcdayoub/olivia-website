@@ -1,25 +1,13 @@
 import React, { Component } from 'react';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
-import Logo from './LogoRed.png';
+import Logo from '../Icons/LogoRed.png';
 import DisplayRed from './DisplayRed';
 import CenterImg from './Nuts/Nuts1.png';
 import './index.css';
-// import CenterImgPicker from './CenterImgPicker';
-// import Image1 from './Nuts/Nuts1.png';
-// import Image2 from './Nuts/Nuts2.png';
-// import Image3 from './Nuts/Nuts3.png';
-// import Photo1 from './TDS/Photo1.png';
+
 import { Redirect } from 'react-router';
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 import posed from 'react-pose';
-
-// import Project1Preview from './Project1Preview.png';
-// import Project1PreviewCopy from './Project1Previewcopy.png';
-// import Project1PreviewCopy2 from './Project1Previewcopy2.png';
-
-// import Project2Preview from './Project2Preview.png';
-// import Project2PreviewCopy from './Project2Previewcopy.png';
-// import Project2PreviewCopy2 from './Project2Previewcopy2.png';
 
 import LogoRedSpin from './LogoRedSpin.png';
 import LogoGreenSpin from './LogoGreenSpin.png';
@@ -37,7 +25,7 @@ import RECThumbnail from '../WorkThumbnails/THUMBNAIL_4.png';
 import COCThumbnail from '../WorkThumbnails/THUMBNAIL_5.png';
 import ThumbnailText from '../WorkThumbnails/THUMBNAIL_TEXT.png';
 
-import Hamburger from './HamburgerRed.png';
+import Hamburger from '../Icons/HamburgerRed.png';
 
 const Box = posed.div({
   hoverable: true,

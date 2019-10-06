@@ -7,7 +7,7 @@ import imgLogoBlue from './LogoBlue.png';
 import imgLogoRedSpin from './LogoRedSpin.png';
 import imgLogoGreenSpin from './LogoGreenSpin.png';
 import imgLogoBlueSpin from './LogoBlueSpin.png';
-import Polaroid from '../About/Olivia_Polaroid_Final.jpg';
+import Polaroid from '../Icons/Olivia_Polaroid_Final.jpg';
 
 import posed from 'react-pose';
 const Box = posed.div({

@@ -104,7 +104,6 @@ class NavBarLinksMobile extends Component {
       if (this.props.location.aboutProps.color !== '') {
         this.setState({ color: this.props.location.aboutProps.color });
       }
-      console.log(this.state.color);
       if (this.props.location.aboutProps.color === '#425bea') {
         this.setState({ colorX: BlueX });
       } else if (this.props.location.aboutProps.color === '#04ad84') {

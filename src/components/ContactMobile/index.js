@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
-import Logo from './LogoBlue.png';
-import Hamburger from './HamburgerBlue.png';
+import Logo from '../Icons/LogoBlue.png';
+import Hamburger from '../Icons/HamburgerBlue.png';
 
 const DisplayMobile = styled.ul`
   background: white;

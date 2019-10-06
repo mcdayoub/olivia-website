@@ -7,7 +7,7 @@ import imgLogoBlue from './LogoBlueWhite.png';
 import imgLogoRedSpin from '../Home/LogoRedSpin.png';
 import imgLogoGreenSpin from '../Home/LogoGreenSpin.png';
 import imgLogoBlueSpin from '../Home/LogoBlueSpin.png';
-import Polaroid from '../About/Olivia_Polaroid_Final.jpg';
+import Polaroid from '../Icons/Olivia_Polaroid_Final.jpg';
 
 const device = {
   mobileS: `(min-device-height: 300px) and (max-device-height: 569px)`,

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavBarOlivia from '../NavBarOlivia';
-import Logo from './LogoGreen.png';
+import Logo from '../Icons/LogoGreen.png';
 import Resume from '../Resume/OliviaDirickson_Resume.pdf';
-import Polaroid from './Olivia_Polaroid_Final.jpg';
-import LinkedIn from './LinkedIn.png';
+import Polaroid from '../Icons/Olivia_Polaroid_Final.jpg';
+import LinkedIn from '../Icons/LinkedIn.png';
 import posed from 'react-pose';
 const Box = posed.div({
   hoverable: true,

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavBarOlivia from '../NavBarOlivia';
-import Logo from './LogoRed.png';
+import Logo from '../Icons/LogoRed.png';
 import DisplayRed from './DisplayRed';
 import CenterImg from './Nuts/Nuts1.png';
 import './index.css';

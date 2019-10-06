@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
-import Logo from './LogoGreen.png';
-import Hamburger from './HamburgerGreen.png';
+import Logo from '../Icons/LogoGreen.png';
+import Hamburger from '../Icons/HamburgerGreen.png';
 import Resume from '../Resume/OliviaDirickson_Resume.pdf';
-import Polaroid from './Olivia_Polaroid_Final.jpg';
-import LinkedIn from './LinkedIn.png';
+import Polaroid from '../Icons/Olivia_Polaroid_Final.jpg';
+import LinkedIn from '../Icons/LinkedIn.png';
 
 const device = {
   mobileS: `(min-device-height: 300px) and (max-device-height: 569px)`,

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavBarOlivia from '../NavBarOlivia';
-import Logo from './LogoBlue.png';
+import Logo from '../Icons/LogoBlue.png';
 import './index.css';
 import posed from 'react-pose';
 const Box = posed.div({
