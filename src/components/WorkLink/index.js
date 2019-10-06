@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import NavBarOlivia from '../NavBarOlivia';
-import Logo from './LogoRed.png';
-import Uparrow from './Uparrow.png';
+import Logo from '../Icons/LogoRed.png';
+import Uparrow from '../Icons/Uparrow.png';
 import FadeIn from 'react-lazyload-fadein';
 
 import { animateScroll as scroll } from 'react-scroll';

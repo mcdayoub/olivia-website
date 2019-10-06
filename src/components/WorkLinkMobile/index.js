@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
-import Logo from './LogoRed.png';
-import Hamburger from './HamburgerRed.png';
-import Uparrow from './Uparrow.png';
+import Logo from '../Icons/LogoRed.png';
+import Hamburger from '../Icons/HamburgerRed.png';
+import Uparrow from '../Icons/Uparrow.png';
 import FadeIn from 'react-lazyload-fadein';
 
 import { animateScroll as scroll } from 'react-scroll';

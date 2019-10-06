@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import NavBarOlivia from '../NavBarOlivia';
 import Logo from '../Icons/LogoRed.png';
-import DisplayRed from './DisplayRed';
-import CenterImg from './Nuts/Nuts1.png';
+import Display from './Display';
 import './index.css';
 import { Redirect } from 'react-router';
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 import posed from 'react-pose';
 
-import LogoRedSpin from './LogoRedSpin.png';
-import LogoGreenSpin from './LogoGreenSpin.png';
-import LogoBlueSpin from './LogoBlueSpin.png';
+import LogoRedSpin from '../Icons/LogoRedSpin.png';
+import LogoGreenSpin from '../Icons/LogoGreenSpin.png';
+import LogoBlueSpin from '../Icons/LogoBlueSpin.png';
 
 //DOTS
-import DotRed from './DotRed.png';
-import DotGreen from './DotGreen.png';
-import DotBlue from './DotBlue.png';
+import DotRed from '../Icons/DotRed.png';
+import DotGreen from '../Icons/DotGreen.png';
+import DotBlue from '../Icons/DotBlue.png';
 //THUMBNAILS
 import TDSThumbnail from '../WorkThumbnails/THUMBNAIL_1.png';
 import INNThumbnail from '../WorkThumbnails/THUMBNAIL_2.png';
@@ -46,7 +45,6 @@ class Work extends Component {
     this.state = {
       isHidden: false,
       galleryIsHidden: true,
-      centerImg: CenterImg,
       centerImgBoolean: true,
       photos: [],
       title: '',
@@ -86,7 +84,6 @@ class Work extends Component {
     this.setState({
       isHidden: false,
       galleryIsHidden: true,
-      centerImg: CenterImg,
       centerImgBoolean: false,
       photos: [],
       title: '',
@@ -111,7 +108,6 @@ class Work extends Component {
       this.setState({
         isHidden: false,
         galleryIsHidden: true,
-        centerImg: CenterImg,
         centerImgBoolean: false,
         photos: [],
         title: '',
@@ -412,7 +408,7 @@ class Work extends Component {
           hidden={this.state.isHidden}
           style={{ height: 'calc(100% - 75px)' }}
         >
-          <DisplayRed>
+          <Display>
             <div className="containerForPreview">
               <div>{projects}</div>
               <DropTarget targetKey="1" onHit={this.droppedImageOne.bind(this)}>
@@ -448,7 +444,7 @@ class Work extends Component {
                 </DropTarget>
               </DropTarget>
             </div>
-          </DisplayRed>
+          </Display>
         </div>
       </div>
     );

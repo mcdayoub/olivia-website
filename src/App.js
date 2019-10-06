@@ -31,97 +31,97 @@ import WorkForMobile from './components/WorkForMobile';
 
 //PROJECT IMPORTS
 //TDS IMPORTS - BOTH WEB AND MOBILE
-import TDS1 from './components/TDS/Images/TAQUERIADELSOL_1.jpg';
-import TDS2 from './components/TDS/Images/TAQUERIADELSOL_2.jpg';
-import TDS3 from './components/TDS/Images/TAQUERIADELSOL_3.jpg';
-import TDS4 from './components/TDS/Images/TAQUERIADELSOL_4.jpg';
-import TDS5 from './components/TDS/Images/TAQUERIADELSOL_5.jpg';
-import TDS6 from './components/TDS/Images/TAQUERIADELSOL_6.jpg';
+import TDS1 from './components/Projects/TDS/Images/TAQUERIADELSOL_1.jpg';
+import TDS2 from './components/Projects/TDS/Images/TAQUERIADELSOL_2.jpg';
+import TDS3 from './components/Projects/TDS/Images/TAQUERIADELSOL_3.jpg';
+import TDS4 from './components/Projects/TDS/Images/TAQUERIADELSOL_4.jpg';
+import TDS5 from './components/Projects/TDS/Images/TAQUERIADELSOL_5.jpg';
+import TDS6 from './components/Projects/TDS/Images/TAQUERIADELSOL_6.jpg';
 
 //CLARKSTON IMPORTS
 //WEB
-import C1 from './components/Clarkston/ImagesWeb/Clarkston_Website-01.jpg';
-import C2 from './components/Clarkston/ImagesWeb/Clarkston_Website-02.jpg';
-import C3 from './components/Clarkston/ImagesWeb/Clarkston_Website-03.jpg';
-import C4 from './components/Clarkston/ImagesWeb/Clarkston_Website-04.jpg';
-import C5 from './components/Clarkston/ImagesWeb/Clarkston_Website-05.jpg';
-import C6 from './components/Clarkston/ImagesWeb/Clarkston_Website-06.jpg';
-import C7 from './components/Clarkston/ImagesWeb/Clarkston_Website-07.jpg';
-import C8 from './components/Clarkston/ImagesWeb/Clarkston_Website-08.jpg';
-import C9 from './components/Clarkston/ImagesWeb/Clarkston_Website-09.jpg';
-import C10 from './components/Clarkston/ImagesWeb/Clarkston_Website-10.jpg';
+import C1 from './components/Projects/Clarkston/ImagesWeb/Clarkston_Website-01.jpg';
+import C2 from './components/Projects/Clarkston/ImagesWeb/Clarkston_Website-02.jpg';
+import C3 from './components/Projects/Clarkston/ImagesWeb/Clarkston_Website-03.jpg';
+import C4 from './components/Projects/Clarkston/ImagesWeb/Clarkston_Website-04.jpg';
+import C5 from './components/Projects/Clarkston/ImagesWeb/Clarkston_Website-05.jpg';
+import C6 from './components/Projects/Clarkston/ImagesWeb/Clarkston_Website-06.jpg';
+import C7 from './components/Projects/Clarkston/ImagesWeb/Clarkston_Website-07.jpg';
+import C8 from './components/Projects/Clarkston/ImagesWeb/Clarkston_Website-08.jpg';
+import C9 from './components/Projects/Clarkston/ImagesWeb/Clarkston_Website-09.jpg';
+import C10 from './components/Projects/Clarkston/ImagesWeb/Clarkston_Website-10.jpg';
 //MOBILE
-import CMobile1 from './components/Clarkston/ImagesMobile/Clarkston_Website-01.jpg';
-import CMobile2 from './components/Clarkston/ImagesMobile/Clarkston_Website-02.jpg';
-import CMobile3 from './components/Clarkston/ImagesMobile/Clarkston_Website-03.jpg';
-import CMobile4 from './components/Clarkston/ImagesMobile/Clarkston_Website-04.jpg';
-import CMobile5 from './components/Clarkston/ImagesMobile/Clarkston_Website-05.jpg';
-import CMobile6 from './components/Clarkston/ImagesMobile/Clarkston_Website-06.jpg';
-import CMobile7 from './components/Clarkston/ImagesMobile/Clarkston_Website-07.jpg';
-import CMobile8 from './components/Clarkston/ImagesMobile/Clarkston_Website-08.jpg';
-import CMobile9 from './components/Clarkston/ImagesMobile/Clarkston_Website-09.jpg';
-import CMobile10 from './components/Clarkston/ImagesMobile/Clarkston_Website-10.jpg';
-import CMobile11 from './components/Clarkston/ImagesMobile/Clarkston_Website-11.jpg';
-import CMobile12 from './components/Clarkston/ImagesMobile/Clarkston_Website-12.jpg';
-import CMobile13 from './components/Clarkston/ImagesMobile/Clarkston_Website-13.jpg';
-import CMobile14 from './components/Clarkston/ImagesMobile/Clarkston_Website-14.jpg';
+import CMobile1 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-01.jpg';
+import CMobile2 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-02.jpg';
+import CMobile3 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-03.jpg';
+import CMobile4 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-04.jpg';
+import CMobile5 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-05.jpg';
+import CMobile6 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-06.jpg';
+import CMobile7 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-07.jpg';
+import CMobile8 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-08.jpg';
+import CMobile9 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-09.jpg';
+import CMobile10 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-10.jpg';
+import CMobile11 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-11.jpg';
+import CMobile12 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-12.jpg';
+import CMobile13 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-13.jpg';
+import CMobile14 from './components/Projects/Clarkston/ImagesMobile/Clarkston_Website-14.jpg';
 
 //RECOVERED IMPORTS
 //WEB
-import R1 from './components/Recovered/ImagesWeb/Recovered_Website-01.jpg';
-import R2 from './components/Recovered/ImagesWeb/Recovered_Website-02.jpg';
-import R3 from './components/Recovered/ImagesWeb/Recovered_Website-03.jpg';
-import R4 from './components/Recovered/ImagesWeb/Recovered_Website-04.jpg';
-import R5 from './components/Recovered/ImagesWeb/Recovered_Website-05.jpg';
-import R6 from './components/Recovered/ImagesWeb/Recovered_Website-06.jpg';
-import R7 from './components/Recovered/ImagesWeb/Recovered_Website-07.jpg';
+import R1 from './components/Projects/Recovered/ImagesWeb/Recovered_Website-01.jpg';
+import R2 from './components/Projects/Recovered/ImagesWeb/Recovered_Website-02.jpg';
+import R3 from './components/Projects/Recovered/ImagesWeb/Recovered_Website-03.jpg';
+import R4 from './components/Projects/Recovered/ImagesWeb/Recovered_Website-04.jpg';
+import R5 from './components/Projects/Recovered/ImagesWeb/Recovered_Website-05.jpg';
+import R6 from './components/Projects/Recovered/ImagesWeb/Recovered_Website-06.jpg';
+import R7 from './components/Projects/Recovered/ImagesWeb/Recovered_Website-07.jpg';
 //MOBILE
-import R1Mobile from './components/Recovered/ImagesMobile/Recovered_Website-01.jpg';
-import R2Mobile from './components/Recovered/ImagesMobile/Recovered_Website-02.jpg';
-import R3Mobile from './components/Recovered/ImagesMobile/Recovered_Website-03.jpg';
-import R4Mobile from './components/Recovered/ImagesMobile/Recovered_Website-04.jpg';
-import R5Mobile from './components/Recovered/ImagesMobile/Recovered_Website-05.jpg';
-import R6Mobile from './components/Recovered/ImagesMobile/Recovered_Website-06.jpg';
-import R7Mobile from './components/Recovered/ImagesMobile/Recovered_Website-07.jpg';
-import R8Mobile from './components/Recovered/ImagesMobile/Recovered_Website-08.jpg';
-import R9Mobile from './components/Recovered/ImagesMobile/Recovered_Website-09.jpg';
-import R10Mobile from './components/Recovered/ImagesMobile/Recovered_Website-10.jpg';
-import R11Mobile from './components/Recovered/ImagesMobile/Recovered_Website-11.jpg';
+import R1Mobile from './components/Projects/Recovered/ImagesMobile/Recovered_Website-01.jpg';
+import R2Mobile from './components/Projects/Recovered/ImagesMobile/Recovered_Website-02.jpg';
+import R3Mobile from './components/Projects/Recovered/ImagesMobile/Recovered_Website-03.jpg';
+import R4Mobile from './components/Projects/Recovered/ImagesMobile/Recovered_Website-04.jpg';
+import R5Mobile from './components/Projects/Recovered/ImagesMobile/Recovered_Website-05.jpg';
+import R6Mobile from './components/Projects/Recovered/ImagesMobile/Recovered_Website-06.jpg';
+import R7Mobile from './components/Projects/Recovered/ImagesMobile/Recovered_Website-07.jpg';
+import R8Mobile from './components/Projects/Recovered/ImagesMobile/Recovered_Website-08.jpg';
+import R9Mobile from './components/Projects/Recovered/ImagesMobile/Recovered_Website-09.jpg';
+import R10Mobile from './components/Projects/Recovered/ImagesMobile/Recovered_Website-10.jpg';
+import R11Mobile from './components/Projects/Recovered/ImagesMobile/Recovered_Website-11.jpg';
 
 //MHC IMPORTS
 //WEB
-import M1 from './components/MHC/ImagesWeb/MHC_Website-01.jpg';
-import M2 from './components/MHC/ImagesWeb/MHC_Website-02.jpg';
-import M3 from './components/MHC/ImagesWeb/MHC_Website-03.jpg';
-import M4 from './components/MHC/ImagesWeb/MHC_Website-04.jpg';
-import M5 from './components/MHC/ImagesWeb/MHC_Website-05.jpg';
-import M6 from './components/MHC/ImagesWeb/MHC_Website-06.jpg';
-import M7 from './components/MHC/ImagesWeb/MHC_Website-07.jpg';
+import M1 from './components/Projects/MHC/ImagesWeb/MHC_Website-01.jpg';
+import M2 from './components/Projects/MHC/ImagesWeb/MHC_Website-02.jpg';
+import M3 from './components/Projects/MHC/ImagesWeb/MHC_Website-03.jpg';
+import M4 from './components/Projects/MHC/ImagesWeb/MHC_Website-04.jpg';
+import M5 from './components/Projects/MHC/ImagesWeb/MHC_Website-05.jpg';
+import M6 from './components/Projects/MHC/ImagesWeb/MHC_Website-06.jpg';
+import M7 from './components/Projects/MHC/ImagesWeb/MHC_Website-07.jpg';
 //MOBILE
-import M1Mobile from './components/MHC/ImagesMobile/MHC_Website-01.jpg';
-import M2Mobile from './components/MHC/ImagesMobile/MHC_Website-02.jpg';
-import M3Mobile from './components/MHC/ImagesMobile/MHC_Website-03.jpg';
-import M4Mobile from './components/MHC/ImagesMobile/MHC_Website-04.jpg';
-import M5Mobile from './components/MHC/ImagesMobile/MHC_Website-05.jpg';
-import M6Mobile from './components/MHC/ImagesMobile/MHC_Website-06.jpg';
-import M7Mobile from './components/MHC/ImagesMobile/MHC_Website-07.jpg';
-import M8Mobile from './components/MHC/ImagesMobile/MHC_Website-08.jpg';
-import M9Mobile from './components/MHC/ImagesMobile/MHC_Website-09.jpg';
-import M10Mobile from './components/MHC/ImagesMobile/MHC_Website-10.jpg';
-import M11Mobile from './components/MHC/ImagesMobile/MHC_Website-11.jpg';
-import M12Mobile from './components/MHC/ImagesMobile/MHC_Website-12.jpg';
-import M13Mobile from './components/MHC/ImagesMobile/MHC_Website-13.jpg';
-import M14Mobile from './components/MHC/ImagesMobile/MHC_Website-14.jpg';
+import M1Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-01.jpg';
+import M2Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-02.jpg';
+import M3Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-03.jpg';
+import M4Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-04.jpg';
+import M5Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-05.jpg';
+import M6Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-06.jpg';
+import M7Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-07.jpg';
+import M8Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-08.jpg';
+import M9Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-09.jpg';
+import M10Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-10.jpg';
+import M11Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-11.jpg';
+import M12Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-12.jpg';
+import M13Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-13.jpg';
+import M14Mobile from './components/Projects/MHC/ImagesMobile/MHC_Website-14.jpg';
 
 //INN
-import INN1 from './components/INN/ImagesWeb/INN_1.jpg';
-import INN2 from './components/INN/ImagesWeb/INN_2.jpg';
-import INN3 from './components/INN/ImagesWeb/INN_3.jpg';
-import INN4 from './components/INN/ImagesWeb/INN_4.jpg';
-import INN5 from './components/INN/ImagesWeb/INN_5.jpg';
-import INN6 from './components/INN/ImagesWeb/INN_6.jpg';
-import INN7 from './components/INN/ImagesWeb/INN_7.jpg';
-import INN8 from './components/INN/ImagesWeb/INN_8.jpg';
+import INN1 from './components/Projects/INN/ImagesWeb/INN_1.jpg';
+import INN2 from './components/Projects/INN/ImagesWeb/INN_2.jpg';
+import INN3 from './components/Projects/INN/ImagesWeb/INN_3.jpg';
+import INN4 from './components/Projects/INN/ImagesWeb/INN_4.jpg';
+import INN5 from './components/Projects/INN/ImagesWeb/INN_5.jpg';
+import INN6 from './components/Projects/INN/ImagesWeb/INN_6.jpg';
+import INN7 from './components/Projects/INN/ImagesWeb/INN_7.jpg';
+import INN8 from './components/Projects/INN/ImagesWeb/INN_8.jpg';
 
 //PROJECT IMAGE LISTS
 const TDSImgList = [TDS1, TDS2, TDS3, TDS4, TDS5, TDS6];

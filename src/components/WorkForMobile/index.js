@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MobileNavBarOlivia from '../MobileNavBarOlivia';
 import Logo from '../Icons/LogoRed.png';
-import DisplayRed from './DisplayRed';
+import Display from './Display';
 import CenterImg from './Nuts/Nuts1.png';
 import './index.css';
 
@@ -9,14 +9,14 @@ import { Redirect } from 'react-router';
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 import posed from 'react-pose';
 
-import LogoRedSpin from './LogoRedSpin.png';
-import LogoGreenSpin from './LogoGreenSpin.png';
-import LogoBlueSpin from './LogoBlueSpin.png';
+import LogoRedSpin from '../Icons/LogoRedSpin.png';
+import LogoGreenSpin from '../Icons/LogoGreenSpin.png';
+import LogoBlueSpin from '../Icons/LogoBlueSpin.png';
 
 //DOTS
-import DotRed from './DotRed.png';
-import DotGreen from './DotGreen.png';
-import DotBlue from './DotBlue.png';
+import DotRed from '../Icons/DotRed.png';
+import DotGreen from '../Icons/DotGreen.png';
+import DotBlue from '../Icons/DotBlue.png';
 //THUMBNAILS
 import TDSThumbnail from '../WorkThumbnails/THUMBNAIL_1.png';
 import INNThumbnail from '../WorkThumbnails/THUMBNAIL_2.png';
@@ -443,7 +443,7 @@ class WorkForMobile extends Component {
           Hamburger={Hamburger}
         />
 
-        <DisplayRed>
+        <Display>
           <div className="containerForPreview">
             <div>{projects}</div>
             <DropTarget targetKey="1" onHit={this.droppedImageOne.bind(this)}>
@@ -478,7 +478,7 @@ class WorkForMobile extends Component {
               </DropTarget>
             </DropTarget>
           </div>
-        </DisplayRed>
+        </Display>
       </div>
     );
   }
